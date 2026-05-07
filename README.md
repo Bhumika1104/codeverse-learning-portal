@@ -129,7 +129,7 @@ The main objective of this project is to provide a modern platform for students 
 
 ![Screenshot 14](screenshots/14.jpg)
 
-# 👩‍💻 Developer
+
 
 **Bhumika Lalit Patil**  
 Computer Engineering Student  
