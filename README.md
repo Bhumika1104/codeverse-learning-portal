@@ -131,7 +131,7 @@ The main objective of this project is to provide a modern platform for students 
 
 
 
-**Bhumika Lalit Patil**  
+**Bhumika Patil**  
 Computer Engineering Student  
 Aspiring Java Full Stack Developer
 
