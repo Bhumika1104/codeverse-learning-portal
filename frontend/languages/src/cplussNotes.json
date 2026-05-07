@@ -1,0 +1,286 @@
+{
+  "C++": [
+   {
+      "title": "1. Syntax & Structure",
+      "sections": [
+        {
+          "type": "definition",
+          "heading": "The Architectural Blueprint",
+          "text": "C++ is a high-performance, compiled language that offers a unique blend of high-level abstractions and low-level hardware manipulation. Its structure is strictly organized into modules to ensure efficiency. A C++ source file (.cpp) undergoes a rigorous transformation process involving the Preprocessor, the Compiler, and the Linker before it becomes an executable program."
+        },
+        {
+          "type": "list",
+          "heading": "Deep Dive into Components",
+          "items": [
+            "**Preprocessor Directives (#):** Instructions like `#include <iostream>` are not statements but signals to the preprocessor to copy-paste the header file's content into your source code. `#define` is used to create macros that replace text globally.",
+            "**Global Namespace & std:** Namespaces prevent 'name collisions' in large projects. `using namespace std;` brings the Standard Library into global scope, allowing you to use `cout` instead of `std::cout`.",
+            "**The main() Function:** This is the heart of the program. The Operating System hands control to this function. It returns an integer status code to the OS (0 means success, non-zero means an error).",
+            "**Semicolons & Braces:** Semicolons (`;`) mark the end of a logical instruction, while curly braces (`{}`) define 'scope'—the boundary where variables live and die."
+          ]
+        },
+        {
+          "type": "textblock",
+          "heading": "Compilation Process",
+          "text": "1. **Preprocessing:** Expanding macros and including files.\n2. **Compilation:** Converting C++ code into Assembly code.\n3. **Assembly:** Converting Assembly to Machine Code (Object files).\n4. **Linking:** Combining object files and libraries into one executable."
+        }
+      ]
+    },
+    {
+      "title": "2. Variables & Data Types",
+      "sections": [
+        {
+          "type": "textblock",
+          "heading": "Memory Management & Data Representation",
+          "text": "Variables in C++ are symbolic names for memory addresses. The data type determines how many bits are allocated and how those bits are interpreted (e.g., as a whole number or a character)."
+        },
+        {
+          "type": "list",
+          "heading": "The Hierarchy of Types",
+          "items": [
+            "**Primitive Types:** The building blocks like `int` (integers), `float`/`double` (decimals), `char` (ASCII characters), and `bool` (logic).",
+            "**User-Defined Types:** Using `struct`, `union`, and `class` to create custom complex types.",
+            "**Type Modifiers:** `long`, `short`, `signed`, and `unsigned`. For example, `unsigned int` ignores negative numbers to double the positive range.",
+            "**Constant Qualifier (const):** Declares a variable as 'read-only'. Any attempt to change a `const` variable results in a compile-time error."
+          ]
+        },
+        {
+          "type": "syntax",
+          "heading": "Variable Initialization",
+          "text": "Modern C++ (C++11 and later) prefers 'Brace Initialization' to prevent narrowing conversions:\nint x {5};\ndouble y {4.5};"
+        }
+      ]
+    },
+    {
+      "title": "3. Input/Output (The Stream System)",
+      "sections": [
+        {
+          "type": "definition",
+          "heading": "Understanding Streams",
+          "text": "C++ treats I/O as a continuous 'stream' of bytes. This abstraction allows the same code to interact with the screen, a file, or a network socket seamlessly."
+        },
+        {
+          "type": "list",
+          "heading": "I/O Mechanisms",
+          "items": [
+            "**Standard Output (cout):** Part of the `ostream` class. It uses the insertion operator (`<<`) to push data into the output buffer.",
+            "**Standard Input (cin):** Part of the `istream` class. It uses the extraction operator (`>>`) to pull data from the input buffer. It stops at whitespace (spaces, tabs, newlines).",
+            "**Buffer Flushing:** `endl` not only creates a newline but also forces the output buffer to empty (flush) to the screen immediately. `\\n` is more efficient for high-speed output as it doesn't force a flush."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "4. Conditional Statements",
+      "sections": [
+        {
+          "type": "textblock",
+          "heading": "Flow Control & Logical Branching",
+          "text": "Conditionals allow the program to make decisions at runtime. This logic is based on boolean evaluation (0 is false, any non-zero is true)."
+        },
+        {
+          "type": "list",
+          "heading": "Decision Structures",
+          "items": [
+            "**If-Else Ladder:** Used for range-based conditions (e.g., if marks > 90).",
+            "**Switch-Case:** A jump table optimization. It is faster than `if-else` for many discrete constant values. It only works with integral types (int, char, enum).",
+            "**Ternary Operator:** A shorthand for `if-else`. Syntax: `condition ? value_if_true : value_if_false;`."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "5. Loops (Iteration Logic)",
+      "sections": [
+        {
+          "type": "textblock",
+          "heading": "Repetitive Execution",
+          "text": "Loops repeat a block of code until a termination condition is met. Improper loop logic leads to 'Infinite Loops', which hang the program."
+        },
+        {
+          "type": "list",
+          "heading": "Loop Varieties",
+          "items": [
+            "**for loop:** The 'Counter' loop. Contains initialization, condition, and increment in one line.",
+            "**while loop:** The 'Event' loop. It runs as long as a condition is true. Used when you don't know the exact count in advance.",
+            "**do-while loop:** The 'Post-condition' loop. Ensures the body executes at least once because the check happens at the end.",
+            "**Nested Loops:** Used for multi-dimensional data like grids or matrices."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "6. Functions",
+      "sections": [
+        {
+          "type": "definition",
+          "heading": "Modularization & Scope",
+          "text": "Functions divide a large problem into smaller, testable units. Each function has its own 'local scope'—variables declared inside a function are invisible outside it."
+        },
+        {
+          "type": "list",
+          "heading": "Advanced Concepts",
+          "items": [
+            "**Parameter Passing:** 'Pass by Value' (copy) vs 'Pass by Reference' (original). References use `&` and are more efficient for large objects as they avoid copying.",
+            "**Overloading:** Defining multiple functions with the same name but different signatures. The compiler chooses the right one based on arguments.",
+            "**Recursion:** A function calling itself. Requires a 'Base Case' to prevent infinite recursion and stack overflow."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "7. Arrays & Strings",
+      "sections": [
+        {
+          "type": "textblock",
+          "heading": "Contiguous Data & Text",
+          "text": "Arrays store multiple elements of the same type in a single block of memory. Strings are specialized arrays used for text."
+        },
+        {
+          "type": "list",
+          "heading": "Details",
+          "items": [
+            "**Array Decay:** An array name acts as a constant pointer to its first element when passed to a function.",
+            "**std::string Class:** Unlike C-style character arrays (`char[]`), the C++ string class is dynamic, safe, and supports intuitive operators like `+` for joining strings.",
+            "**Boundaries:** C++ does not perform 'Bounds Checking'. Accessing `arr[10]` on a size 5 array causes 'Undefined Behavior'."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "8. Pointers & References",
+      "sections": [
+        {
+          "type": "textblock",
+          "heading": "Memory Addressing",
+          "text": "Pointers are variables that store memory addresses. References are aliases for existing memory locations."
+        },
+        {
+          "type": "list",
+          "heading": "Deep Theory",
+          "items": [
+            "**Dereferencing (*):** Accessing the value stored at the address a pointer holds.",
+            "**Nullptr:** In modern C++, `nullptr` is used instead of `NULL` or `0` for empty pointers to prevent type errors.",
+            "**Arithmetic:** You can increment a pointer to point to the next element in an array. The jump distance is based on the data type's size."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Second Level: 1. Object-Oriented Programming (OOP)",
+      "sections": [
+        {
+          "type": "definition",
+          "heading": "The OOP Paradigm",
+          "text": "OOP is a design philosophy that organizes software as a collection of objects that interact with each other. It shifts the focus from 'what the program does' to 'what entities the program manages'."
+        },
+        {
+          "type": "list",
+          "heading": "Pillars of OOP",
+          "items": [
+            "**Encapsulation:** Hiding the internal state (private data) and requiring all interaction to occur through a well-defined interface (public methods).",
+            "**Abstraction:** Simplifying complex systems by modeling classes based on essential properties.",
+            "**Inheritance:** Reusing code by allowing a 'Child' class to inherit fields and methods from a 'Parent' class.",
+            "**Polymorphism:** The ability of different objects to respond to the same function call in their own unique way."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Second Level: 2. Constructors & Destructors",
+      "sections": [
+        {
+          "type": "textblock",
+          "heading": "The Lifecycle of an Object",
+          "text": "Special member functions that manage an object's birth and death."
+        },
+        {
+          "type": "list",
+          "heading": "Types and Purpose",
+          "items": [
+            "**Default Constructor:** Initializes variables to zero or default values.",
+            "**Parameterized Constructor:** Passes initial values at the time of creation.",
+            "**Copy Constructor:** Creates a new object as a deep copy of an existing one.",
+            "**Destructor (~):** Automatically called when an object goes out of scope. Used to free heap memory or close file handles."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Second Level: 3. Operator Overloading",
+      "sections": [
+        {
+          "type": "textblock",
+          "heading": "Customizing Basic Operators",
+          "text": "Allows user-defined types (classes) to use standard operators like `+`, `-`, `*`, or `<<`. This makes custom objects behave like built-in types."
+        },
+        {
+          "type": "syntax",
+          "heading": "Rules",
+          "text": "You cannot create NEW operators (like **); you can only overload existing ones. At least one operand must be a user-defined type."
+        }
+      ]
+    },
+    {
+      "title": "Second Level: 4. Inheritance & Polymorphism",
+      "sections": [
+        {
+          "type": "list",
+          "heading": "Hierarchy & Runtime Flexibility",
+          "items": [
+            "**Base vs Derived:** The derived class inherits all non-private members of the base class.",
+            "**Virtual Functions:** Declared in the base class. They enable 'Late Binding' (Runtime Polymorphism), ensuring the correct derived function is called even through a base class pointer.",
+            "**Abstract Classes:** Classes containing at least one 'Pure Virtual Function' (`= 0`). They serve only as blueprints and cannot be instantiated."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Second Level: 5. Templates",
+      "sections": [
+        {
+          "type": "definition",
+          "heading": "Generic Programming",
+          "text": "Templates allow you to write a single function or class that works with any data type. The compiler generates a specific version of the code for each type you use (this is called instantiation)."
+        }
+      ]
+    },
+    {
+      "title": "Second Level: 6. Exception Handling",
+      "sections": [
+        {
+          "type": "textblock",
+          "heading": "Runtime Error Management",
+          "text": "Traditional error handling (return codes) is often ignored. Exceptions provide a dedicated channel to signal and handle errors."
+        },
+        {
+          "type": "list",
+          "heading": "Mechanism",
+          "items": [
+            "**try:** The block containing code that might fail.",
+            "**throw:** Signals an error by sending an object (usually an error message or code).",
+            "**catch:** The block that intercepts the thrown object and handles the situation."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Second Level: 7. Standard Template Library (STL)",
+      "sections": [
+        {
+          "type": "definition",
+          "heading": "Industrial Grade Tools",
+          "text": "The STL is a massive collection of generic classes and functions. Using STL is preferred over writing custom data structures for speed and reliability."
+        },
+        {
+          "type": "list",
+          "heading": "Three Components",
+          "items": [
+            "**Containers:** Objects that store data. `vector` (dynamic array), `list` (linked list), `map` (key-value dictionary), `set` (unique values).",
+            "**Algorithms:** Global functions like `sort()`, `find()`, and `reverse()` that operate on containers.",
+            "**Iterators:** Objects that bridge algorithms and containers, allowing you to move through elements without knowing the internal structure (like a pointer)."
+          ]
+        }
+      ]
+    }
+  ]
+}

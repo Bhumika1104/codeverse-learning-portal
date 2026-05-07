@@ -1,0 +1,1583 @@
+{
+  "Python": [
+
+   {
+  "title": "1. Variables & Data Types",
+  "sections": [
+
+    {
+      "type": "heading",
+      "heading": "1. Definition"
+    },
+    {
+      "type": "definition",
+      "text": "Variables in Python are used to store data values. Python is dynamically typed, meaning you don’t need to declare the type explicitly."
+    },
+    {
+      "type": "text",
+      "text": "👉 Type is decided at runtime\n👉 Variables are created on assignment\n👉 No need to declare data type"
+    },
+
+    {
+      "type": "heading",
+      "heading": "2. Variable Rules"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Must start with letter or underscore (_)",
+        "Cannot start with number",
+        "Cannot use keywords (if, else, for)",
+        "Case-sensitive (name ≠ Name)"
+      ]
+    },
+
+    {
+      "type": "code",
+      "language": "python",
+      "code": "name = \"Bhumika\"\n_age = 20\ntotalMarks = 95"
+    },
+
+    {
+      "type": "heading",
+      "heading": "3. Internal Working"
+    },
+    {
+      "type": "text",
+      "text": "👉 Python variables store object references\n👉 Multiple variables can point to same memory\n👉 Memory is managed using reference counting and garbage collection"
+    },
+
+    {
+      "type": "image",
+      "heading": "Python Variable Memory Representation",
+      "url": "https://images.openai.com/static-rsc-4/vM82M9VqMe7x7AjFr_fqeK2UWp3B93ikf9ZgYGQ4-nSfRTEs8dVe5jnz3GK0I53PsndFDARo7ZZVCDg2L-XrO3jFs3wcb4ZixIyuMLc83YVZhuGDja-Tu3jwbfK0O3GQ1hgBAZlPneU7iPePLVyRyobTz5dUGhosP6ZLuoyXKUE?purpose=inline"
+    },
+
+    {
+      "type": "code",
+      "language": "python",
+      "code": "x = 10\ny = x\nprint(id(x), id(y))"
+    },
+
+    {
+      "type": "heading",
+      "heading": "4. Data Types"
+    },
+    {
+      "type": "text",
+      "text": "Python provides multiple built-in data types:"
+    },
+
+    {
+      "type": "list",
+      "items": [
+        "int → Integer (10, -5)",
+        "float → Decimal (10.5)",
+        "complex → Complex (2+3j)",
+        "str → String",
+        "list → Mutable collection",
+        "tuple → Immutable collection",
+        "set → Unique unordered values",
+        "dict → Key-value pairs"
+      ]
+    },
+
+    {
+      "type": "image",
+      "heading": "Python Data Types Overview",
+      "url": "https://media.geeksforgeeks.org/wp-content/uploads/20230601165809/python-data-types.png"
+    },
+
+    {
+      "type": "code",
+      "language": "python",
+      "code": "a = 10\nb = 5.5\nc = 2 + 3j\n\nname = \"Python\"\nlst = [1,2,3]\ntup = (4,5,6)\ns = {1,2,3}\n\nd = {\"name\": \"Bhumika\", \"marks\": 95}"
+    },
+
+    {
+      "type": "heading",
+      "heading": "5. Type Checking"
+    },
+    {
+      "type": "code",
+      "language": "python",
+      "code": "x = 10\nprint(type(x))"
+    },
+
+    {
+      "type": "heading",
+      "heading": "6. Type Casting"
+    },
+    {
+      "type": "code",
+      "language": "python",
+      "code": "x = \"10\"\ny = int(x)\n\na = 5\nb = float(a)"
+    },
+
+    {
+      "type": "heading",
+      "heading": "7. Multiple Assignment"
+    },
+    {
+      "type": "code",
+      "language": "python",
+      "code": "a, b, c = 1, 2, 3"
+    },
+
+    {
+      "type": "heading",
+      "heading": "8. Dynamic Typing"
+    },
+    {
+      "type": "code",
+      "language": "python",
+      "code": "x = 10\nx = \"Hello\""
+    },
+
+    {
+      "type": "heading",
+      "heading": "9. Key Points"
+    },
+    {
+      "type": "list",
+      "items": [
+        "No need to declare type",
+        "Everything is object",
+        "Stores reference not value",
+        "Flexible and easy to use"
+      ]
+    }
+
+  ]
+},
+
+{
+  "title": "2. Input / Output",
+  "sections": [
+
+    {
+      "type": "heading",
+      "heading": "1. Definition"
+    },
+    {
+      "type": "definition",
+      "text": "Input and Output operations in Python allow interaction between the user and the program. Input is used to take data from the user, while output is used to display results."
+    },
+    {
+      "type": "text",
+      "text": "👉 input() is used to take user input\n👉 print() is used to display output\n👉 Input is always taken as string by default"
+    },
+
+    {
+      "type": "heading",
+      "heading": "2. Input Function"
+    },
+    {
+      "type": "text",
+      "text": "The input() function takes input from the user and returns it as a string."
+    },
+
+    {
+      "type": "image",
+      "heading": "Python Input Flow",
+      "url": "https://media.geeksforgeeks.org/wp-content/uploads/20220803131706/pythoninputoutput.png"
+    },
+
+    {
+      "type": "code",
+      "language": "python",
+      "code": "name = input(\"Enter your name: \")\nprint(name)"
+    },
+
+    {
+      "type": "heading",
+      "heading": "3. Type Casting in Input"
+    },
+    {
+      "type": "text",
+      "text": "Since input() returns string, we need type casting for numbers."
+    },
+
+    {
+      "type": "code",
+      "language": "python",
+      "code": "age = int(input(\"Enter age: \"))\nprice = float(input(\"Enter price: \"))"
+    },
+
+    {
+      "type": "heading",
+      "heading": "4. Output Function"
+    },
+    {
+      "type": "text",
+      "text": "print() function is used to display output on the screen."
+    },
+
+    {
+      "type": "image",
+      "heading": "Python Output Display",
+      "url": "https://media.geeksforgeeks.org/wp-content/uploads/20230607152953/python-functions.png"
+    },
+
+    {
+      "type": "code",
+      "language": "python",
+      "code": "print(\"Hello World\")\nprint(10)\nprint(\"Age:\", 20)"
+    },
+
+    {
+      "type": "heading",
+      "heading": "5. Formatting Output"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Using comma ( , )",
+        "Using + operator",
+        "Using f-string (best method)"
+      ]
+    },
+
+    {
+      "type": "code",
+      "language": "python",
+      "code": "name = \"Bhumika\"\nage = 20\n\nprint(\"Name:\", name)\nprint(\"Name: \" + name)\nprint(f\"Name: {name}, Age: {age}\")"
+    },
+
+    {
+      "type": "heading",
+      "heading": "6. Escape Characters"
+    },
+    {
+      "type": "list",
+      "items": [
+        "\\n → New line",
+        "\\t → Tab space",
+        "\\\" → Double quote",
+        "\\' → Single quote"
+      ]
+    },
+
+    {
+      "type": "code",
+      "language": "python",
+      "code": "print(\"Hello\\nWorld\")\nprint(\"Hello\\tPython\")"
+    },
+
+    {
+      "type": "heading",
+      "heading": "7. Taking Multiple Inputs"
+    },
+    {
+      "type": "code",
+      "language": "python",
+      "code": "a, b = input(\"Enter two numbers: \").split()\nprint(a, b)"
+    },
+
+    {
+      "type": "heading",
+      "heading": "8. Key Points"
+    },
+    {
+      "type": "list",
+      "items": [
+        "input() always returns string",
+        "Use type casting for numbers",
+        "print() is used for output",
+        "f-strings are best for formatting",
+        "Supports multiple inputs"
+      ]
+    }
+
+  ]
+},
+
+{
+  "title": "3. Loops & Conditions",
+  "sections": [
+
+    {
+      "type": "heading",
+      "heading": "1. Definition"
+    },
+    {
+      "type": "definition",
+      "text": "Loops execute a block of code repeatedly, while conditional statements control the flow of execution based on conditions."
+    },
+    {
+      "type": "text",
+      "text": "👉 Conditions decide WHAT to execute\n👉 Loops decide HOW MANY TIMES to execute\n👉 Very important for logic building & interviews"
+    },
+
+    {
+      "type": "heading",
+      "heading": "2. Conditional Statements (if, elif, else)"
+    },
+
+    {
+      "type": "image",
+      "heading": "If-Else Flowchart",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/If-Then-Else-diagram.svg/512px-If-Then-Else-diagram.svg.png"
+    },
+
+    {
+      "type": "text",
+      "text": "👉 if → checks condition\n👉 elif → multiple conditions\n👉 else → default case"
+    },
+
+    {
+      "type": "code",
+      "language": "python",
+      "code": "marks = 75\n\nif marks >= 90:\n    print(\"Grade A\")\nelif marks >= 60:\n    print(\"Grade B\")\nelse:\n    print(\"Fail\")"
+    },
+
+    {
+      "type": "heading",
+      "heading": "3. for Loop"
+    },
+
+    {
+      "type": "image",
+      "heading": "For Loop Flow",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/For-loop-diagram.svg/512px-For-loop-diagram.svg.png"
+    },
+
+    {
+      "type": "text",
+      "text": "👉 Used when number of iterations is known\n👉 Works with range(), list, string"
+    },
+
+    {
+      "type": "code",
+      "language": "python",
+      "code": "for i in range(1, 6):\n    print(i)"
+    },
+
+    {
+      "type": "heading",
+      "heading": "4. while Loop"
+    },
+
+    {
+      "type": "image",
+      "heading": "While Loop Flow",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/While-loop-diagram.svg/512px-While-loop-diagram.svg.png"
+    },
+
+    {
+      "type": "text",
+      "text": "👉 Used when condition is important\n👉 Runs until condition becomes False"
+    },
+
+    {
+      "type": "code",
+      "language": "python",
+      "code": "x = 1\nwhile x <= 5:\n    print(x)\n    x += 1"
+    },
+
+    {
+      "type": "heading",
+      "heading": "5. Loop Control Statements"
+    },
+
+    {
+      "type": "image",
+      "heading": "Break Continue Flow",
+      "url": "https://media.geeksforgeeks.org/wp-content/uploads/20230323181041/Break-and-Continue.png"
+    },
+
+    {
+      "type": "list",
+      "items": [
+        "break → stops loop immediately",
+        "continue → skips current iteration",
+        "pass → placeholder (does nothing)"
+      ]
+    },
+
+    {
+      "type": "code",
+      "language": "python",
+      "code": "for i in range(5):\n    if i == 3:\n        break\n    print(i)"
+    },
+
+    {
+      "type": "heading",
+      "heading": "6. Nested Loops"
+    },
+    {
+      "type": "text",
+      "text": "👉 Loop inside another loop\n👉 Used in patterns & matrix problems"
+    },
+
+    {
+      "type": "code",
+      "language": "python",
+      "code": "for i in range(3):\n    for j in range(3):\n        print(i, j)"
+    },
+
+    {
+      "type": "heading",
+      "heading": "7. Key Points"
+    },
+    {
+      "type": "list",
+      "items": [
+        "if-else controls flow",
+        "for loop for fixed iteration",
+        "while loop for condition-based iteration",
+        "break/continue optimize loops"
+      ]
+    }
+
+  ]
+},
+
+{
+  "title": "4. Lists, Tuples, Sets",
+  "sections": [
+
+    {
+      "type": "heading",
+      "heading": "1. Definition"
+    },
+    {
+      "type": "definition",
+      "text": "Lists, Tuples, and Sets are Python data structures used to store multiple values in a single variable."
+    },
+
+    {
+      "type": "image",
+      "heading": "Python Collections Overview",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Python_collections.svg/512px-Python_collections.svg.png"
+    },
+
+    {
+      "type": "heading",
+      "heading": "2. List"
+    },
+    {
+      "type": "text",
+      "text": "👉 Ordered\n👉 Mutable (can change)\n👉 Allows duplicates"
+    },
+
+    {
+      "type": "code",
+      "language": "python",
+      "code": "lst = [10, 20, 30]\nlst.append(40)\nlst[0] = 5\nprint(lst)"
+    },
+
+    {
+      "type": "heading",
+      "heading": "3. Tuple"
+    },
+    {
+      "type": "text",
+      "text": "👉 Ordered\n👉 Immutable (cannot change)\n👉 Faster than list"
+    },
+
+    {
+      "type": "code",
+      "language": "python",
+      "code": "tup = (1, 2, 3)\nprint(tup)"
+    },
+
+    {
+      "type": "heading",
+      "heading": "4. Set"
+    },
+    {
+      "type": "text",
+      "text": "👉 Unordered\n👉 No duplicate values\n👉 Fast operations"
+    },
+
+    {
+      "type": "code",
+      "language": "python",
+      "code": "s = {1, 2, 3, 3}\nprint(s)"
+    },
+
+    {
+      "type": "heading",
+      "heading": "5. Operations"
+    },
+    {
+      "type": "list",
+      "items": [
+        "List → append(), remove(), sort()",
+        "Tuple → count(), index()",
+        "Set → add(), remove(), union()"
+      ]
+    },
+
+    {
+      "type": "heading",
+      "heading": "6. Difference (Important)"
+    },
+    {
+      "type": "list",
+      "items": [
+        "List → Mutable, ordered, duplicates allowed",
+        "Tuple → Immutable, ordered",
+        "Set → Unordered, unique elements"
+      ]
+    },
+
+    {
+      "type": "heading",
+      "heading": "7. Key Points"
+    },
+    {
+      "type": "list",
+      "items": [
+        "List most used",
+        "Tuple for fixed data",
+        "Set for unique values",
+        "All support loops"
+      ]
+    }
+
+  ]
+},
+
+{
+  "title": "5. Functions & Modules",
+  "sections": [
+
+    {
+      "type": "heading",
+      "heading": "1. Functions"
+    },
+    {
+      "type": "definition",
+      "text": "A function is a reusable block of code that performs a specific task."
+    },
+    {
+      "type": "text",
+      "text": "👉 Reduces code duplication\n👉 Improves readability\n👉 Makes debugging easy"
+    },
+
+    {
+      "type": "image",
+      "heading": "Function Working Diagram",
+      "url": "https://media.geeksforgeeks.org/wp-content/uploads/20230607152953/python-functions.png"
+    },
+
+    {
+      "type": "heading",
+      "heading": "2. Syntax"
+    },
+    {
+      "type": "code",
+      "language": "python",
+      "code": "def function_name(parameters):\n    return value"
+    },
+
+    {
+      "type": "heading",
+      "heading": "3. Example"
+    },
+    {
+      "type": "code",
+      "language": "python",
+      "code": "def add(a, b):\n    return a + b\n\nprint(add(5, 3))"
+    },
+
+    {
+      "type": "heading",
+      "heading": "4. Types of Functions"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Built-in → print(), len()",
+        "User-defined → created by user",
+        "Lambda → anonymous function"
+      ]
+    },
+
+    {
+      "type": "code",
+      "language": "python",
+      "code": "add = lambda a, b: a + b"
+    },
+
+    {
+      "type": "heading",
+      "heading": "5. Arguments"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Positional arguments",
+        "Keyword arguments",
+        "Default arguments",
+        "Variable-length (*args, **kwargs)"
+      ]
+    },
+
+    {
+      "type": "code",
+      "language": "python",
+      "code": "def demo(a, b=10):\n    print(a, b)\n\ndemo(5)\ndemo(5,20)"
+    },
+
+    {
+      "type": "heading",
+      "heading": "6. Return Statement"
+    },
+    {
+      "type": "code",
+      "language": "python",
+      "code": "def square(x):\n    return x * x"
+    },
+
+    {
+      "type": "heading",
+      "heading": "7. Recursion"
+    },
+    {
+      "type": "code",
+      "language": "python",
+      "code": "def fact(n):\n    if n == 1:\n        return 1\n    return n * fact(n-1)"
+    },
+
+    {
+      "type": "heading",
+      "heading": "8. Modules"
+    },
+    {
+      "type": "definition",
+      "text": "A module is a file containing Python code that can be reused."
+    },
+
+    {
+      "type": "image",
+      "heading": "Module Working Diagram",
+      "url": "https://media.geeksforgeeks.org/wp-content/uploads/20230607152953/python-functions.png"
+    },
+
+    {
+      "type": "heading",
+      "heading": "9. Using Modules"
+    },
+    {
+      "type": "code",
+      "language": "python",
+      "code": "import math\nprint(math.sqrt(16))"
+    },
+
+    {
+      "type": "heading",
+      "heading": "10. Import Methods"
+    },
+    {
+      "type": "code",
+      "language": "python",
+      "code": "import math\nfrom math import sqrt\nimport math as m"
+    },
+
+    {
+      "type": "heading",
+      "heading": "11. Key Points"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Functions reuse logic",
+        "Modules reuse files",
+        "Important for large projects"
+      ]
+    }
+
+  ]
+},
+
+{
+  "title": "6. Basic File Handling",
+  "sections": [
+
+    {
+      "type": "heading",
+      "heading": "1. Definition"
+    },
+    {
+      "type": "definition",
+      "text": "File handling allows storing and retrieving data from files permanently."
+    },
+
+    {
+      "type": "image",
+      "heading": "File Handling Process",
+      "url": "https://media.geeksforgeeks.org/wp-content/uploads/20230323181041/Break-and-Continue.png"
+    },
+
+    {
+      "type": "heading",
+      "heading": "2. Steps"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Open file",
+        "Perform operation",
+        "Close file"
+      ]
+    },
+
+    {
+      "type": "heading",
+      "heading": "3. Open File"
+    },
+    {
+      "type": "code",
+      "language": "python",
+      "code": "file = open(\"data.txt\", \"r\")"
+    },
+
+    {
+      "type": "heading",
+      "heading": "4. File Modes"
+    },
+    {
+      "type": "list",
+      "items": [
+        "r → Read",
+        "w → Write",
+        "a → Append",
+        "x → Create",
+        "b → Binary"
+      ]
+    },
+
+    {
+      "type": "heading",
+      "heading": "5. Reading File"
+    },
+    {
+      "type": "code",
+      "language": "python",
+      "code": "file = open(\"data.txt\", \"r\")\nprint(file.read())\nfile.close()"
+    },
+
+    {
+      "type": "heading",
+      "heading": "6. Writing File"
+    },
+    {
+      "type": "code",
+      "language": "python",
+      "code": "file = open(\"data.txt\", \"w\")\nfile.write(\"Hello Python\")\nfile.close()"
+    },
+
+    {
+      "type": "heading",
+      "heading": "7. Append File"
+    },
+    {
+      "type": "code",
+      "language": "python",
+      "code": "file = open(\"data.txt\", \"a\")\nfile.write(\"\\nNew Line\")\nfile.close()"
+    },
+
+    {
+      "type": "heading",
+      "heading": "8. with Statement"
+    },
+    {
+      "type": "code",
+      "language": "python",
+      "code": "with open(\"data.txt\", \"r\") as file:\n    print(file.read())"
+    },
+
+    {
+      "type": "heading",
+      "heading": "9. File Methods"
+    },
+    {
+      "type": "list",
+      "items": [
+        "read()",
+        "readline()",
+        "readlines()",
+        "write()"
+      ]
+    },
+
+    {
+      "type": "image",
+      "heading": "File Pointer Diagram",
+      "url": "https://media.geeksforgeeks.org/wp-content/uploads/20230601165809/python-data-types.png"
+    },
+
+    {
+      "type": "heading",
+      "heading": "10. Pointer Functions"
+    },
+    {
+      "type": "code",
+      "language": "python",
+      "code": "file.tell()\nfile.seek(0)"
+    },
+
+    {
+      "type": "heading",
+      "heading": "11. Key Points"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Always close file",
+        "Use with statement",
+        "Data stored permanently",
+        "Important for real-world apps"
+      ]
+    }
+
+  ]
+},
+
+{
+  "title": "1. OOP in Python",
+  "sections": [
+
+    {
+      "type": "heading",
+      "heading": "1. Definition"
+    },
+    {
+      "type": "definition",
+      "text": "Object-Oriented Programming (OOP) is a programming paradigm based on objects and classes that helps in organizing code in a structured and reusable way."
+    },
+    {
+      "type": "text",
+      "text": "👉 Used for real-world modeling\n👉 Improves code reusability\n👉 Makes large projects manageable"
+    },
+
+    {
+      "type": "image",
+      "heading": "OOP Concepts Diagram",
+      "url": "https://images.openai.com/static-rsc-4/xBnXKpLZbHLjyZL3VCV2Mpjk_weSkxvECIXv8OXNJEwygT0JLfEe08BnGtN7MwDnBAPW1xlaCk9dKZI3Jig8XBvfXbMYYQaI5QzN5CQA3LJY59jKgp7nBl2nvFP6OEpVG5hiQq2c-wjzvO_H1aGkjcgIIgNCpUqabC5G5scBAeM?purpose=inline"
+    },
+
+    {
+      "type": "heading",
+      "heading": "2. Class & Object"
+    },
+    {
+      "type": "text",
+      "text": "👉 Class = blueprint\n👉 Object = real instance"
+    },
+    {
+      "type": "code",
+      "language": "python",
+      "code": "class Student:\n    def __init__(self, name):\n        self.name = name\n\ns1 = Student(\"Bhumika\")\nprint(s1.name)"
+    },
+
+    {
+      "type": "heading",
+      "heading": "3. Constructor (__init__)"
+    },
+    {
+      "type": "text",
+      "text": "👉 Automatically called when object is created\n👉 Used to initialize variables"
+    },
+
+    {
+      "type": "heading",
+      "heading": "4. Encapsulation"
+    },
+    {
+      "type": "text",
+      "text": "👉 Data hiding using private variables\n👉 Improves security"
+    },
+    {
+      "type": "code",
+      "language": "python",
+      "code": "class Bank:\n    def __init__(self):\n        self.__balance = 1000\n\n    def get_balance(self):\n        return self.__balance"
+    },
+
+    {
+      "type": "heading",
+      "heading": "5. Inheritance"
+    },
+    {
+      "type": "text",
+      "text": "👉 Reuse code from parent class\n👉 Types: Single, Multiple, Multilevel"
+    },
+    {
+      "type": "code",
+      "language": "python",
+      "code": "class Animal:\n    def sound(self):\n        print(\"Sound\")\n\nclass Dog(Animal):\n    def bark(self):\n        print(\"Bark\")"
+    },
+
+    {
+      "type": "heading",
+      "heading": "6. Polymorphism"
+    },
+    {
+      "type": "text",
+      "text": "👉 Same function behaves differently based on input"
+    },
+    {
+      "type": "code",
+      "language": "python",
+      "code": "def add(a, b):\n    return a + b"
+    },
+
+    {
+      "type": "heading",
+      "heading": "7. Abstraction"
+    },
+    {
+      "type": "text",
+      "text": "👉 Hide implementation details\n👉 Use abstract classes"
+    },
+
+    {
+      "type": "heading",
+      "heading": "8. Key Points"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Class = blueprint",
+        "Object = instance",
+        "Encapsulation = data hiding",
+        "Inheritance = reuse",
+        "Polymorphism = flexibility",
+        "Abstraction = hide complexity"
+      ]
+    }
+
+  ]
+},
+{
+  "title": "2. Decorators & Generators",
+  "sections": [
+
+    {
+      "type": "heading",
+      "heading": "1. Decorators"
+    },
+    {
+      "type": "definition",
+      "text": "A decorator is a function that modifies the behavior of another function without changing its original code."
+    },
+    {
+      "type": "text",
+      "text": "👉 Used for logging, authentication\n👉 Helps avoid code repetition\n👉 Uses @ syntax"
+    },
+
+    {
+      "type": "image",
+      "heading": "Decorator Working Diagram",
+      "url": "https://images.openai.com/static-rsc-4/y8JViimh896IMqmSlZalSLQIgz2gGEu9_lEE8fE-xttz5bMpfr7QEJbjhjR3JtdyeyaBhquJJ9lzG7AXWogFoc_kU-_L8e7ulRN6PKlWfzwA1um9OygDSF0wsxEMNEJpiXrKx4lKYw9hPp1lxpMvFdBF8wY8SrmGwHyvxPBe62Q?purpose=inline"
+    },
+
+    {
+      "type": "text",
+      "text": "A decorator takes a function, wraps it, and returns a new function with added behavior. It does not modify the original function directly. :contentReference[oaicite:0]{index=0}"
+    },
+
+    {
+      "type": "code",
+      "language": "python",
+      "code": "def my_decorator(func):\n    def wrapper():\n        print(\"Before\")\n        func()\n        print(\"After\")\n    return wrapper\n\n@my_decorator\ndef hello():\n    print(\"Hello\")\n\nhello()"
+    },
+
+    {
+      "type": "heading",
+      "heading": "2. Advantages of Decorators"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Code reusability",
+        "Clean and readable code",
+        "Avoid duplication",
+        "Easy to extend functionality"
+      ]
+    },
+
+    {
+      "type": "heading",
+      "heading": "3. Generators"
+    },
+    {
+      "type": "definition",
+      "text": "A generator is a function that returns values one by one using yield instead of returning all values at once."
+    },
+
+    {
+      "type": "text",
+      "text": "👉 Uses yield keyword\n👉 Memory efficient\n👉 Generates values lazily"
+    },
+
+    {
+      "type": "text",
+      "text": "Generator functions pause execution at each yield and resume later, maintaining their state. :contentReference[oaicite:1]{index=1}"
+    },
+
+    {
+      "type": "code",
+      "language": "python",
+      "code": "def count(n):\n    for i in range(n):\n        yield i\n\nfor num in count(3):\n    print(num)"
+    },
+
+    {
+      "type": "heading",
+      "heading": "4. Generator Working"
+    },
+    {
+      "type": "text",
+      "text": "👉 Execution pauses at yield\n👉 Continues from same point on next call\n👉 Works like iterator"
+    },
+
+    {
+      "type": "heading",
+      "heading": "5. Generator vs Function"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Function → return",
+        "Generator → yield",
+        "Function → returns all at once",
+        "Generator → returns one by one",
+        "Generator is memory efficient"
+      ]
+    },
+
+    {
+      "type": "heading",
+      "heading": "6. Key Points"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Decorator modifies function behavior",
+        "Generator produces values lazily",
+        "Both are advanced Python concepts",
+        "Important for interviews"
+      ]
+    }
+
+  ]
+},
+
+{
+  "title": "3. Error Handling",
+  "sections": [
+
+    {
+      "type": "heading",
+      "heading": "1. Definition"
+    },
+    {
+      "type": "definition",
+      "text": "Error handling in Python is used to manage runtime errors (exceptions) so that the program does not crash and continues execution smoothly."
+    },
+    {
+      "type": "text",
+      "text": "👉 Exceptions are runtime errors that interrupt normal program flow\n👉 Python provides try, except, else, finally to handle them\n👉 Helps in building robust and fault-tolerant applications"
+    },
+
+    {
+      "type": "image",
+      "heading": "Exception Handling Flow",
+      "url": "file_000000003d3c7206ad137f586255f59b"
+    },
+
+    {
+      "type": "heading",
+      "heading": "2. How Exception Handling Works"
+    },
+    {
+      "type": "text",
+      "text": "When an error occurs inside try block, Python searches for a matching except block. If found, it executes that block; otherwise, the program stops. finally block always executes. :contentReference[oaicite:0]{index=0}"
+    },
+
+    {
+      "type": "heading",
+      "heading": "3. Types of Errors"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Syntax Error → occurs before execution",
+        "Runtime Error (Exception) → occurs during execution",
+        "Logical Error → incorrect output without error"
+      ]
+    },
+
+    {
+      "type": "heading",
+      "heading": "4. try-except Syntax"
+    },
+    {
+      "type": "code",
+      "language": "python",
+      "code": "try:\n    x = int(input())\nexcept ValueError:\n    print(\"Invalid input\")"
+    },
+
+    {
+      "type": "heading",
+      "heading": "5. Multiple Exception Handling"
+    },
+    {
+      "type": "code",
+      "language": "python",
+      "code": "try:\n    x = int(\"abc\")\nexcept ValueError:\n    print(\"Value Error\")\nexcept TypeError:\n    print(\"Type Error\")"
+    },
+
+    {
+      "type": "heading",
+      "heading": "6. else and finally"
+    },
+    {
+      "type": "code",
+      "language": "python",
+      "code": "try:\n    x = 10 / 2\nexcept:\n    print(\"Error\")\nelse:\n    print(\"Success\")\nfinally:\n    print(\"Always executes\")"
+    },
+
+    {
+      "type": "heading",
+      "heading": "7. Raise Exception"
+    },
+    {
+      "type": "code",
+      "language": "python",
+      "code": "if age < 0:\n    raise ValueError(\"Invalid age\")"
+    },
+
+    {
+      "type": "heading",
+      "heading": "8. Custom Exception"
+    },
+    {
+      "type": "code",
+      "language": "python",
+      "code": "class MyError(Exception):\n    pass"
+    },
+
+    {
+      "type": "heading",
+      "heading": "9. Key Points"
+    },
+    {
+      "type": "list",
+      "items": [
+        "try block → risky code",
+        "except → handles error",
+        "else → runs if no error",
+        "finally → always executes",
+        "raise → create exception"
+      ]
+    }
+
+  ]
+},
+{
+  "title": "4. Working with JSON",
+  "sections": [
+
+    {
+      "type": "heading",
+      "heading": "1. Definition"
+    },
+    {
+      "type": "definition",
+      "text": "JSON (JavaScript Object Notation) is a lightweight data format used for storing and exchanging data between systems."
+    },
+
+    {
+      "type": "image",
+      "heading": "JSON Structure",
+      "url": "https://images.openai.com/static-rsc-4/m9buYWlmymcxZEWx0KICU_-bC4k_Dq_ZWBxfzxCwAtMO7fjCppG5PXGa9dBtItcCbB4EUMRpWfKXTGQkVWWqgZqcDeZbNwbpAXNspY2L6X6Cky8EAy8zsqHYKMn6NrndQzVOky4LxPYhQF9EVMjGCTExYBktM1hvsxUOUzApM1I?purpose=inline"
+    },
+
+    {
+      "type": "heading",
+      "heading": "2. Features"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Lightweight and easy to read",
+        "Language-independent",
+        "Used in APIs and web applications",
+        "Similar to Python dictionary"
+      ]
+    },
+
+    {
+      "type": "heading",
+      "heading": "3. JSON to Python"
+    },
+    {
+      "type": "code",
+      "language": "python",
+      "code": "import json\n\ndata = '{\"name\": \"Bhumika\"}'\nobj = json.loads(data)"
+    },
+
+    {
+      "type": "heading",
+      "heading": "4. Python to JSON"
+    },
+    {
+      "type": "code",
+      "language": "python",
+      "code": "import json\n\ndata = {\"name\": \"Bhumika\"}\njson_data = json.dumps(data)"
+    },
+
+    {
+      "type": "heading",
+      "heading": "5. File Handling with JSON"
+    },
+    {
+      "type": "code",
+      "language": "python",
+      "code": "with open(\"data.json\", \"r\") as f:\n    data = json.load(f)"
+    },
+
+    {
+      "type": "heading",
+      "heading": "6. Key Points"
+    },
+    {
+      "type": "list",
+      "items": [
+        "loads() → JSON to Python",
+        "dumps() → Python to JSON",
+        "Used in APIs",
+        "Easy data exchange format"
+      ]
+    }
+
+  ]
+},
+{
+  "title": "5. Virtual Environments",
+  "sections": [
+
+    {
+      "type": "heading",
+      "heading": "1. Definition"
+    },
+    {
+      "type": "definition",
+      "text": "A virtual environment is an isolated environment that allows you to install Python packages separately for each project."
+    },
+
+    {
+      "type": "image",
+      "heading": "Virtual Environment Working",
+      "url": "https://images.openai.com/static-rsc-4/AfE5H72_LqsxdQhgP_wyV5y3KFw0Y8BuhwqU_PvLTaGHTR5AS-_rEGDByATCD2KspWvao3sQzrpJT99-283jhqtyWPscvHD1IZtZ_CrxgSaDokY4r2e3yoONT6lC6yk6Z8lrr5JKKrh-wPK5uXXcLX9x2TVvkiOLgEv5OwIj7T4?purpose=inline"
+    },
+
+    {
+      "type": "heading",
+      "heading": "2. Why Use Virtual Environment"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Avoid version conflicts",
+        "Project isolation",
+        "Safe dependency management",
+        "Professional development practice"
+      ]
+    },
+
+    {
+      "type": "heading",
+      "heading": "3. Create Environment"
+    },
+    {
+      "type": "code",
+      "language": "bash",
+      "code": "python -m venv myenv"
+    },
+
+    {
+      "type": "heading",
+      "heading": "4. Activate"
+    },
+    {
+      "type": "code",
+      "language": "bash",
+      "code": "myenv\\Scripts\\activate"
+    },
+
+    {
+      "type": "heading",
+      "heading": "5. Install Packages"
+    },
+    {
+      "type": "code",
+      "language": "bash",
+      "code": "pip install numpy"
+    },
+
+    {
+      "type": "heading",
+      "heading": "6. Deactivate"
+    },
+    {
+      "type": "code",
+      "language": "bash",
+      "code": "deactivate"
+    },
+
+    {
+      "type": "heading",
+      "heading": "7. Key Points"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Isolated Python environment",
+        "Independent packages",
+        "Used in real-world projects",
+        "Prevents dependency issues"
+      ]
+    }
+
+  ]
+},
+{
+  "title": "6. NumPy Basics",
+  "sections": [
+
+    {
+      "type": "heading",
+      "heading": "1. Definition"
+    },
+    {
+      "type": "definition",
+      "text": "NumPy (Numerical Python) is a powerful Python library used for numerical computations. It provides support for large multi-dimensional arrays and matrices along with mathematical functions to operate on them."
+    },
+    {
+      "type": "text",
+      "text": "👉 Used in Data Science, Machine Learning, AI\n👉 Faster than Python lists\n👉 Supports high-performance operations"
+    },
+
+    {
+      "type": "image",
+      "heading": "NumPy Array Structure",
+      "url": "https://images.openai.com/static-rsc-4/YgxXzMjdUPeaBR6w5ASZuZPd1swDSt0EvjTVA6zciM76Ke92ep-y_M540U-NZDKHbLoR_LRObN8ZG6sWKfm8GZkEjuV7-Ap2OL5koFDy4egilbd9Hcfdz5XCgbBrWVslKdNqAQvDPPJPB9usgadUB7bSPAfmSQZMRXfQ_keQHQ8?purpose=inlineg"
+    },
+
+    {
+      "type": "heading",
+      "heading": "2. Why NumPy is Faster"
+    },
+    {
+      "type": "text",
+      "text": "NumPy is faster than Python lists because it uses optimized C language code and stores elements in continuous memory locations. It also supports vectorized operations which eliminate the need for loops."
+    },
+
+    {
+      "type": "list",
+      "items": [
+        "Continuous memory allocation",
+        "Vectorized operations",
+        "Less memory usage",
+        "Optimized backend (C language)"
+      ]
+    },
+
+    {
+      "type": "heading",
+      "heading": "3. Installation & Import"
+    },
+    {
+      "type": "code",
+      "language": "bash",
+      "code": "pip install numpy"
+    },
+    {
+      "type": "code",
+      "language": "python",
+      "code": "import numpy as np"
+    },
+
+    {
+      "type": "heading",
+      "heading": "4. NumPy Array (ndarray)"
+    },
+    {
+      "type": "text",
+      "text": "The core object of NumPy is ndarray (N-dimensional array). It stores homogeneous data and supports multi-dimensional structures like 1D, 2D, and 3D arrays."
+    },
+
+    {
+      "type": "code",
+      "language": "python",
+      "code": "import numpy as np\narr = np.array([1,2,3])\nprint(arr)"
+    },
+
+    {
+      "type": "heading",
+      "heading": "5. Types of Arrays"
+    },
+    {
+      "type": "list",
+      "items": [
+        "1D Array → linear structure",
+        "2D Array → table format",
+        "3D Array → multiple tables"
+      ]
+    },
+
+    {
+      "type": "code",
+      "language": "python",
+      "code": "a = np.array([1,2,3])\nb = np.array([[1,2],[3,4]])\nc = np.array([[[1,2],[3,4]]])"
+    },
+
+    {
+      "type": "heading",
+      "heading": "6. Array Properties"
+    },
+    {
+      "type": "text",
+      "text": "NumPy arrays provide important attributes that describe their structure and data."
+    },
+
+    {
+      "type": "code",
+      "language": "python",
+      "code": "arr = np.array([[1,2,3],[4,5,6]])\nprint(arr.shape)\nprint(arr.ndim)\nprint(arr.size)\nprint(arr.dtype)"
+    },
+
+    {
+      "type": "list",
+      "items": [
+        "shape → dimensions (rows, columns)",
+        "ndim → number of dimensions",
+        "size → total elements",
+        "dtype → data type"
+      ]
+    },
+
+    {
+      "type": "heading",
+      "heading": "7. Creating Arrays"
+    },
+    {
+      "type": "code",
+      "language": "python",
+      "code": "np.zeros((2,2))\nnp.ones((2,2))\nnp.arange(0,10,2)\nnp.linspace(0,1,5)"
+    },
+
+    {
+      "type": "heading",
+      "heading": "8. Indexing & Slicing"
+    },
+    {
+      "type": "code",
+      "language": "python",
+      "code": "arr = np.array([1,2,3,4,5])\nprint(arr[0])\nprint(arr[1:4])"
+    },
+
+    {
+      "type": "heading",
+      "heading": "9. Array Operations"
+    },
+    {
+      "type": "text",
+      "text": "NumPy performs element-wise operations without using loops, making it faster and efficient."
+    },
+
+    {
+      "type": "code",
+      "language": "python",
+      "code": "a = np.array([1,2,3])\nb = np.array([4,5,6])\nprint(a + b)\nprint(a * b)"
+    },
+
+    {
+      "type": "heading",
+      "heading": "10. Mathematical Functions"
+    },
+    {
+      "type": "code",
+      "language": "python",
+      "code": "arr = np.array([1,2,3])\nprint(np.sqrt(arr))\nprint(np.mean(arr))\nprint(np.sum(arr))"
+    },
+
+    {
+      "type": "heading",
+      "heading": "11. Reshaping Arrays"
+    },
+    {
+      "type": "code",
+      "language": "python",
+      "code": "arr = np.array([1,2,3,4])\nnew_arr = arr.reshape(2,2)"
+    },
+
+    {
+      "type": "heading",
+      "heading": "12. Broadcasting"
+    },
+    {
+      "type": "text",
+      "text": "Broadcasting allows NumPy to perform operations on arrays of different shapes without explicit loops."
+    },
+
+    {
+      "type": "code",
+      "language": "python",
+      "code": "a = np.array([1,2,3])\nb = 2\nprint(a + b)"
+    },
+
+    {
+      "type": "heading",
+      "heading": "13. NumPy vs Python List"
+    },
+    {
+      "type": "list",
+      "items": [
+        "NumPy is faster than list",
+        "NumPy uses less memory",
+        "List requires loops, NumPy uses vectorization",
+        "NumPy used in scientific computing"
+      ]
+    },
+
+    {
+      "type": "heading",
+      "heading": "14. Applications"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Data Science",
+        "Machine Learning",
+        "Artificial Intelligence",
+        "Scientific computing",
+        "Image processing"
+      ]
+    },
+
+    {
+      "type": "heading",
+      "heading": "15. Key Points"
+    },
+    {
+      "type": "list",
+      "items": [
+        "ndarray is core object",
+        "Supports multi-dimensional arrays",
+        "Very fast and efficient",
+        "Used in modern technologies",
+        "Foundation for libraries like Pandas"
+      ]
+    }
+
+  ]
+}
+
+  ]
+}

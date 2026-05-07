@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+/* 🌈 Full Page Background */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image: url("https://static.vecteezy.com/system/resources/thumbnails/008/023/852/small/abstract-colorful-geometric-shape-background-modern-color-background-for-your-website-vector.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+}
+
+/* 🌟 Center Form Box */
+.form-container {
+  width: 380px;
+  margin: 80px auto;
+  padding: 30px;
+  
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  
+  text-align: center;
+  animation: fadeIn 1s ease;
+}
+
+/* 📝 Input Fields */
+.form-container input {
+  width: 90%;
+  padding: 12px;
+  margin: 10px 0;
+  
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  
+  background: rgba(255, 255, 255, 0.8);
+  transition: 0.3s;
+}
+
+.form-container input:focus {
+  background: white;
+  box-shadow: 0 0 8px #ffffff;
+}
+
+/* 🎯 Buttons */
+.form-container button {
+  width: 95%;
+  padding: 12px;
+  margin-top: 15px;
+
+  background: linear-gradient(45deg, #ff512f, #dd2476);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.form-container button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(255, 0, 85, 0.4);
+}
+
+/* 🔄 Switching text */
+.form-container p button {
+  width: auto;
+  padding: 5px 10px;
+  background: transparent;
+  color: #fff;
+  border-bottom: 2px solid white;
+  border-radius: 0;
+}
+
+.form-container p {
+  color: white;
+  margin-top: 15px;
+}
+
+/* ✨ Heading */
+.form-container h2 {
+  color: #fff;
+  text-shadow: 0 2px 4px black;
+}
+
+/* 🎬 Fade Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+  }
+}

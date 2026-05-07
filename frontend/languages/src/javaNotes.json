@@ -1,0 +1,2191 @@
+{
+  "Java": [
+    {
+      "title": "Introduction to Java & JVM/JDK/JRE",
+      "sections": [
+        {
+          "type": "definition",
+          "heading": "What is Java?",
+          "text": "Java is a high-level, class-based, object-oriented programming language used to build secure and robust applications."
+        },
+        {
+          "type": "list",
+          "heading": "Why is Java Popular?",
+          "items": [
+            "Platform Independent – Write Once, Run Anywhere",
+            "Secure and Robust",
+            "Supports OOP",
+            "Large Standard Library",
+            "Multi-threaded"
+          ]
+        },
+        {
+          "type": "list",
+          "heading": "Where is Java Used?",
+          "items": [
+            "Android Apps",
+            "Web Applications",
+            "Enterprise Applications",
+            "Banking Systems",
+            "Cloud Platforms",
+            "Big Data",
+            "IoT Devices"
+          ]
+        },
+        {
+          "type": "textblock",
+          "heading": "JVM (Java Virtual Machine)",
+          "text": "Executes bytecode, manages memory, performs security checks."
+        },
+        {
+          "type": "textblock",
+          "heading": "JRE (Java Runtime Environment)",
+          "text": "JVM + Libraries required to run Java programs."
+        },
+        {
+          "type": "textblock",
+          "heading": "JDK (Java Development Kit)",
+          "text": "JRE + Compiler + Debugger + Developer tools."
+        },
+        {
+          "type": "image",
+          "heading": "Java Execution Flow",
+          "url": "https://media.geeksforgeeks.org/wp-content/uploads/20251014113924503322/geeks.webp"
+        },
+        {
+          "type": "syntax",
+          "heading": "Java Execution Process",
+          "text": "Source (.java) → Compiler → Bytecode (.class) → JVM"
+        },
+        {
+          "type": "code",
+          "heading": "Hello World Program",
+          "language": "java",
+          "code": "public class Main {\n  public static void main(String[] args) {\n    System.out.println(\"Hello Java\");\n  }\n}"
+        }
+      ]
+    },
+
+    {
+      "title": "How to Install Java (Windows / Linux / macOS)",
+      "sections": [
+        {
+          "type": "steps",
+          "heading": "Install Java on Windows",
+          "steps": [
+            "Visit official Oracle website and download JDK.",
+            "Select JDK 23 Windows x64 Installer.",
+            "Run installer and click Next.",
+            "Finish installation.",
+            "Add JDK bin folder to PATH in Environment Variables.",
+            "Verify installation using java --version."
+          ]
+        },
+        {
+          "type": "image",
+          "heading": "Step-1",
+          "url": "https://media.geeksforgeeks.org/wp-content/uploads/20250103151805471945/Install-Download-Java-1.png"
+        },
+        {
+          "type": "image",
+          "heading": "Step-2",
+          "url": "https://media.geeksforgeeks.org/wp-content/uploads/20250103152129597635/Install-Download-Java-2.png"
+        },
+        {
+          "type": "image",
+          "heading": "Step-3",
+          "url": "https://media.geeksforgeeks.org/wp-content/uploads/20250103152420092770/Install-Download-Java-3.png"
+        },
+        {
+          "type": "image",
+          "heading": "Step-4",
+          "url": "https://media.geeksforgeeks.org/wp-content/uploads/20250103152609856200/Install-Download-Java-4.png"
+        },
+        {
+          "type": "image",
+          "heading": "Step-5",
+          "url": "https://media.geeksforgeeks.org/wp-content/uploads/20250103152653157325/Install-Download-Java-5.png"
+        },
+        {
+          "type": "image",
+          "heading": "Step-6",
+          "url": "https://media.geeksforgeeks.org/wp-content/uploads/20250103152735456892/Install-Download-Java-6.png"
+        },
+
+        {
+          "type": "steps",
+          "heading": "Install Java on Linux (Ubuntu)",
+          "steps": [
+            "Download the Linux .tar.gz file.",
+            "Open Terminal → Go to Downloads.",
+            "Extract file using tar command.",
+            "Move extracted JDK folder to /opt.",
+            "Set JAVA_HOME in ~/.bashrc.",
+            "Update PATH and verify installation."
+          ]
+        },
+
+        {
+          "type": "steps",
+          "heading": "Install Java on macOS",
+          "steps": [
+            "Download JDK .dmg file.",
+            "Install .pkg package.",
+            "Open Terminal and edit .zshrc.",
+            "Set JAVA_HOME path.",
+            "Apply changes via source ~/.zshrc.",
+            "Verify using java --version."
+          ]
+        }
+      ]
+    },
+
+    {
+      "title": "Variables, Data Types & Type Casting",
+      "image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAAAAACt...",
+
+      "sections": [
+        {
+          "type": "heading",
+          "heading": "1. Variables in Java"
+        },
+        {
+          "type": "definition",
+          "text": "A variable is a name given to a memory location that stores data. It acts as a container whose value can be changed during execution. Every variable in Java must have a datatype."
+        },
+        {
+          "type": "image",
+          "heading": "Variable Memory Diagram",
+          "url": "https://techvidvan.com/tutorials/wp-content/uploads/sites/2/2020/02/java-variable-declaration-its-memory-allocation.jpg"
+        },
+        {
+          "type": "heading",
+          "heading": "How Variables Work in Memory"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Variables store data in RAM.",
+            "Every variable has a memory address.",
+            "Datatype decides how much memory the variable will take.",
+            "The value can change, but datatype cannot change."
+          ]
+        },
+
+        {
+          "type": "heading",
+          "heading": "Variable Types"
+        },
+        {
+          "type": "image",
+          "heading": "Variable Types",
+          "url": "data:image/png;base64,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" 
+        },
+        {
+          "type": "list",
+          "items": [
+            "Local Variable — Declared inside method/block.",
+            "Instance Variable — Declared inside class but outside methods.",
+            "Static Variable — Declared with static keyword. Shared among all objects."
+          ]
+        },
+
+        {
+          "type": "heading",
+          "heading": "Variable Naming Rules"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Cannot start with numbers.",
+            "Can only contain a–z, A–Z, 0–9, $, _",
+            "No spaces allowed.",
+            "Java is case-sensitive.",
+            "Cannot use Java keywords."
+          ]
+        },
+
+        {
+          "type": "heading",
+          "heading": "Syntax"
+        },
+        {
+          "type": "syntax",
+          "text": "dataType variableName = value;"
+        },
+
+        {
+          "type": "heading",
+          "heading": "Example — Variables"
+        },
+        {
+          "type": "code",
+          "language": "java",
+          "code": "int age = 21;\nString name = \"Bhumika\";\nSystem.out.println(age);\nSystem.out.println(name);"
+        },
+        {
+          "type": "output",
+          "text": "21\nBhumika"
+        },
+
+        {
+          "type": "heading",
+          "heading": "2. Data Types in Java"
+        },
+        {
+          "type": "definition",
+          "text": "Data types define the type and size of data stored in a variable. Java has two categories of data types: Primitive and Non-Primitive."
+        },
+        {
+          "type": "image",
+          "heading": "Data Types Diagram",
+          "url": "https://crunchify.com/wp-content/uploads/2023/02/Java-Primitive-Data-Types-details.png"
+        },
+
+        {
+          "type": "subheading",
+          "heading": "2.1 Primitive Data Types"
+        },
+        {
+          "type": "list",
+          "items": [
+            "byte — 1 byte, range -128 to 127",
+            "short — 2 bytes, -32,768 to 32,767",
+            "int — 4 bytes, commonly used",
+            "long — 8 bytes, ends with L",
+            "float — 4 bytes, decimal values end with f",
+            "double — 8 bytes, higher precision",
+            "boolean — true/false",
+            "char — 2 bytes, single character"
+          ]
+        },
+
+        {
+          "type": "heading",
+          "heading": "Example — Primitive Data Types"
+        },
+        {
+          "type": "code",
+          "language": "java",
+          "code": "byte b = 10;\nshort s = 250;\nint num = 5000;\nlong big = 999999L;\nfloat f = 10.5f;\ndouble d = 99.99;\nboolean flag = true;\nchar grade = 'A';\n\nSystem.out.println(b);\nSystem.out.println(s);\nSystem.out.println(num);\nSystem.out.println(big);\nSystem.out.println(f);\nSystem.out.println(d);\nSystem.out.println(flag);\nSystem.out.println(grade);"
+        },
+        {
+          "type": "output",
+          "text": "10\n250\n5000\n999999\n10.5\n99.99\ntrue\nA"
+        },
+
+        {
+          "type": "subheading",
+          "heading": "2.2 Non-Primitive Data Types"
+        },
+        {
+          "type": "definition",
+          "text": "Non-primitive data types are created by programmers. They store multiple values or complex structures."
+        },
+        {
+          "type": "list",
+          "items": [
+            "String — sequence of characters",
+            "Array — collection of similar data",
+            "Class — blueprint for objects",
+            "Object — instance of class",
+            "Wrapper Classes — Integer, Double, Boolean etc."
+          ]
+        },
+
+        {
+          "type": "heading",
+          "heading": "Example — Non-Primitive Types"
+        },
+        {
+          "type": "code",
+          "language": "java",
+          "code": "String name = \"Bhumika\";\nint[] marks = {85, 90, 95};\n\nSystem.out.println(name);\nSystem.out.println(marks[0]);"
+        },
+        {
+          "type": "output",
+          "text": "Bhumika\n85"
+        },
+
+        {
+          "type": "heading",
+          "heading": "Full Example — All Primitive & Non-Primitive"
+        },
+        {
+          "type": "code",
+          "language": "java",
+          "code": "public class Demo {\n    public static void main(String[] args) {\n        byte b = 10;\n        int age = 20;\n        double price = 99.55;\n        boolean valid = true;\n        char letter = 'Z';\n        String name = \"Java\";\n        int[] nums = {1, 2, 3};\n\n        System.out.println(b);\n        System.out.println(age);\n        System.out.println(price);\n        System.out.println(valid);\n        System.out.println(letter);\n        System.out.println(name);\n        System.out.println(nums[1]);\n    }\n}"
+        },
+        {
+          "type": "output",
+          "text": "10\n20\n99.55\ntrue\nZ\nJava\n2"
+        },
+
+        {
+          "type": "heading",
+          "heading": "3. Type Casting in Java"
+        },
+        {
+          "type": "definition",
+          "text": "Type casting means converting one data type into another. Java supports two types: Implicit (Automatic) and Explicit (Manual)."
+        },
+        {
+          "type": "image",
+          "heading": "Type Casting Flow Diagram",
+          "url": "https://grotechminds.com/wp-content/uploads/2024/06/java-2-1024x512.png"
+        },
+
+        {
+          "type": "subheading",
+          "heading": "3.1 Implicit Casting (Widening)"
+        },
+        {
+          "type": "definition",
+          "text": "Converting smaller datatype into larger datatype automatically. Example: int → double."
+        },
+        {
+          "type": "code",
+          "language": "java",
+          "code": "int x = 10;\ndouble y = x;\nSystem.out.println(y);"
+        },
+        {
+          "type": "output",
+          "text": "10.0"
+        },
+
+        {
+          "type": "subheading",
+          "heading": "3.2 Explicit Casting (Narrowing)"
+        },
+        {
+          "type": "definition",
+          "text": "Converting larger datatype into smaller datatype manually. Example: double → int."
+        },
+        {
+          "type": "code",
+          "language": "java",
+          "code": "double a = 55.78;\nint b = (int) a;\nSystem.out.println(b);"
+        },
+        {
+          "type": "output",
+          "text": "55"
+        },
+
+        {
+          "type": "heading",
+          "heading": "Full Example — Implicit + Explicit Casting"
+        },
+        {
+          "type": "code",
+          "language": "java",
+          "code": "public class CastingDemo {\n    public static void main(String[] args) {\n        int p = 25;\n        double q = p;\n\n        double m = 99.99;\n        int n = (int) m;\n\n        System.out.println(q);\n        System.out.println(n);\n    }\n}"
+        },
+        {
+          "type": "output",
+          "text": "25.0\n99"
+        }
+      ]
+    },
+    {
+  "title": "Operators & Expressions",
+  "image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAAAAACt...", 
+  "sections": [
+    {
+      "type": "heading",
+      "heading": "1. What are Operators?"
+    },
+    {
+      "type": "definition",
+      "text": "Operators are symbols that perform operations on variables and values. Java provides different types of operators to manipulate data and variables."
+    },
+    {
+      "type": "heading",
+      "heading": "2. Types of Operators"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Arithmetic Operators — +, -, *, /, %",
+        "Unary Operators — +, -, ++, --, !",
+        "Relational Operators — ==, !=, >, <, >=, <=",
+        "Logical Operators — &&, ||, !",
+        "Bitwise Operators — &, |, ^, ~, <<, >>, >>>",
+        "Assignment Operators — =, +=, -=, *=, /=, %=, &=, |=, ^=",
+        "Ternary Operator — ? :"
+      ]
+    },
+    {
+      "type": "heading",
+      "heading": "3. Arithmetic Operators"
+    },
+    {
+      "type": "definition",
+      "text": "Arithmetic operators are used to perform basic mathematical operations."
+    },
+    {
+      "type": "code",
+      "language": "java",
+      "code": "int a = 10;\nint b = 5;\n\nSystem.out.println(a + b); // Addition\nSystem.out.println(a - b); // Subtraction\nSystem.out.println(a * b); // Multiplication\nSystem.out.println(a / b); // Division\nSystem.out.println(a % b); // Modulus"
+    },
+    {
+      "type": "output",
+      "text": "15\n5\n50\n2\n0"
+    },
+    {
+      "type": "heading",
+      "heading": "4. Unary Operators"
+    },
+    {
+      "type": "definition",
+      "text": "Unary operators operate on a single operand to perform operations like increment, decrement, or negation."
+    },
+    {
+      "type": "code",
+      "language": "java",
+      "code": "int x = 10;\nSystem.out.println(++x); // Pre-increment\nSystem.out.println(x++); // Post-increment\nSystem.out.println(--x); // Pre-decrement\nSystem.out.println(x--); // Post-decrement\nSystem.out.println(-x); // Unary minus\nSystem.out.println(!true); // Logical NOT"
+    },
+    {
+      "type": "output",
+      "text": "11\n11\n11\n10\n-10\nfalse"
+    },
+    {
+      "type": "heading",
+      "heading": "5. Relational Operators"
+    },
+    {
+      "type": "definition",
+      "text": "Relational operators are used to compare two values and return a boolean result (true/false)."
+    },
+    {
+      "type": "code",
+      "language": "java",
+      "code": "int a = 10, b = 20;\nSystem.out.println(a == b);\nSystem.out.println(a != b);\nSystem.out.println(a > b);\nSystem.out.println(a < b);\nSystem.out.println(a >= b);\nSystem.out.println(a <= b);"
+    },
+    {
+      "type": "output",
+      "text": "false\ntrue\nfalse\ntrue\nfalse\ntrue"
+    },
+    {
+      "type": "heading",
+      "heading": "6. Logical Operators"
+    },
+    {
+      "type": "definition",
+      "text": "Logical operators are used to combine multiple boolean expressions."
+    },
+    {
+      "type": "code",
+      "language": "java",
+      "code": "boolean p = true, q = false;\nSystem.out.println(p && q); // Logical AND\nSystem.out.println(p || q); // Logical OR\nSystem.out.println(!p);      // Logical NOT"
+    },
+    {
+      "type": "output",
+      "text": "false\ntrue\nfalse"
+    },
+    {
+      "type": "heading",
+      "heading": "7. Bitwise Operators"
+    },
+    {
+      "type": "definition",
+      "text": "Bitwise operators operate on bits of integer types to perform AND, OR, XOR, NOT, and shift operations."
+    },
+    {
+      "type": "code",
+      "language": "java",
+      "code": "int a = 5; // 0101\nint b = 3; // 0011\nSystem.out.println(a & b); // AND\nSystem.out.println(a | b); // OR\nSystem.out.println(a ^ b); // XOR\nSystem.out.println(~a);    // NOT\nSystem.out.println(a << 1); // Left shift\nSystem.out.println(a >> 1); // Right shift"
+    },
+    {
+      "type": "output",
+      "text": "1\n7\n6\n-6\n10\n2"
+    },
+    {
+      "type": "heading",
+      "heading": "8. Assignment Operators"
+    },
+    {
+      "type": "definition",
+      "text": "Assignment operators are used to assign values to variables with optional arithmetic operations."
+    },
+    {
+      "type": "code",
+      "language": "java",
+      "code": "int a = 10;\na += 5; // a = a + 5\na -= 3; // a = a - 3\na *= 2; // a = a * 2\na /= 4; // a = a / 4\na %= 3; // a = a % 3\nSystem.out.println(a);"
+    },
+    {
+      "type": "output",
+      "text": "0"
+    },
+    {
+      "type": "heading",
+      "heading": "9. Ternary Operator"
+    },
+    {
+      "type": "definition",
+      "text": "The ternary operator ( ? : ) is a shortcut for an if-else statement."
+    },
+    {
+      "type": "code",
+      "language": "java",
+      "code": "int a = 10, b = 20;\nint max = (a > b) ? a : b;\nSystem.out.println(max);"
+    },
+    {
+      "type": "output",
+      "text": "20"
+    },
+    {
+      "type": "heading",
+      "heading": "10. Expressions in Java"
+    },
+    {
+      "type": "definition",
+      "text": "An expression is a combination of variables, operators, and values that evaluates to a single value."
+    },
+    {
+      "type": "code",
+      "language": "java",
+      "code": "int a = 5, b = 10, c;\nc = a + b * 2;\nSystem.out.println(c);"
+    },
+    {
+      "type": "output",
+      "text": "25"
+    },
+    {
+      "type": "heading",
+      "heading": "Full Example — Operators & Expressions"
+    },
+    {
+      "type": "code",
+      "language": "java",
+      "code": "public class OperatorsDemo {\n    public static void main(String[] args) {\n        int a = 10, b = 5;\n        int c = a + b;\n        boolean result = (a > b) && (b < c);\n        int max = (a > b) ? a : b;\n\n        System.out.println(\"Sum: \" + c);\n        System.out.println(\"Logical Result: \" + result);\n        System.out.println(\"Max Value: \" + max);\n    }\n}"
+    },
+    {
+      "type": "output",
+      "text": "Sum: 15\nLogical Result: true\nMax Value: 10"
+    }
+  ]
+},
+{
+  "title": "Loops in Java",
+  "image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAAAAACt...",
+  "sections": [
+    {
+      "type": "heading",
+      "heading": "1. What are Loops?"
+    },
+    {
+      "type": "definition",
+      "text": "Loops are used to execute a block of code multiple times until a specified condition is false. They help reduce code repetition."
+    },
+    {
+      "type": "image",
+      "heading": "Loops Diagram",
+      "url": "https://miro.medium.com/1*pIYJGkU239glx30m0FDvZA.png"
+    },
+    {
+      "type": "heading",
+      "heading": "2. Types of Loops"
+    },
+    {
+      "type": "list",
+      "items": [
+        "For Loop — Executes code for a specific number of times.",
+        "While Loop — Executes code while a condition is true.",
+        "Do-While Loop — Executes code at least once and then repeats while condition is true.",
+        "Enhanced For Loop (for-each) — Iterates over arrays or collections."
+      ]
+    },
+    {
+      "type": "heading",
+      "heading": "3. For Loop"
+    },
+    {
+      "type": "definition",
+      "text": "The for loop repeats a block of code a fixed number of times based on the initialization, condition, and increment/decrement."
+    },
+    {
+      "type": "code",
+      "language": "java",
+      "code": "for(int i = 1; i <= 5; i++) {\n    System.out.println(\"Iteration: \" + i);\n}"
+    },
+    {
+      "type": "output",
+      "text": "Iteration: 1\nIteration: 2\nIteration: 3\nIteration: 4\nIteration: 5"
+    },
+    {
+      "type": "heading",
+      "heading": "4. While Loop"
+    },
+    {
+      "type": "definition",
+      "text": "The while loop executes a block of code repeatedly as long as the given condition is true."
+    },
+    {
+      "type": "code",
+      "language": "java",
+      "code": "int i = 1;\nwhile(i <= 5) {\n    System.out.println(\"Iteration: \" + i);\n    i++;\n}"
+    },
+    {
+      "type": "output",
+      "text": "Iteration: 1\nIteration: 2\nIteration: 3\nIteration: 4\nIteration: 5"
+    },
+    {
+      "type": "heading",
+      "heading": "5. Do-While Loop"
+    },
+    {
+      "type": "definition",
+      "text": "The do-while loop executes the code block at least once and then checks the condition for further iterations."
+    },
+    {
+      "type": "code",
+      "language": "java",
+      "code": "int i = 1;\ndo {\n    System.out.println(\"Iteration: \" + i);\n    i++;\n} while(i <= 5);"
+    },
+    {
+      "type": "output",
+      "text": "Iteration: 1\nIteration: 2\nIteration: 3\nIteration: 4\nIteration: 5"
+    },
+    {
+      "type": "heading",
+      "heading": "6. Enhanced For Loop (for-each)"
+    },
+    {
+      "type": "definition",
+      "text": "The enhanced for loop iterates over arrays or collections without using an index."
+    },
+    {
+      "type": "code",
+      "language": "java",
+      "code": "int[] numbers = {10, 20, 30, 40};\nfor(int num : numbers) {\n    System.out.println(num);\n}"
+    },
+    {
+      "type": "output",
+      "text": "10\n20\n30\n40"
+    },
+    {
+      "type": "heading",
+      "heading": "7. Nested Loops"
+    },
+    {
+      "type": "definition",
+      "text": "A nested loop is a loop inside another loop. The inner loop completes all its iterations for each iteration of the outer loop."
+    },
+    {
+      "type": "code",
+      "language": "java",
+      "code": "for(int i = 1; i <= 3; i++) {\n    for(int j = 1; j <= 2; j++) {\n        System.out.println(\"i = \" + i + \", j = \" + j);\n    }\n}"
+    },
+    {
+      "type": "output",
+      "text": "i = 1, j = 1\ni = 1, j = 2\ni = 2, j = 1\ni = 2, j = 2\ni = 3, j = 1\ni = 3, j = 2"
+    },
+    {
+      "type": "heading",
+      "heading": "8. Loop Control Statements"
+    },
+    {
+      "type": "list",
+      "items": [
+        "break — Exits the loop immediately.",
+        "continue — Skips the current iteration and continues with the next.",
+        "return — Exits from the current method (also stops loops inside)."
+      ]
+    },
+    {
+      "type": "heading",
+      "heading": "9. Full Example — Loops in Java"
+    },
+    {
+      "type": "code",
+      "language": "java",
+      "code": "public class LoopsDemo {\n    public static void main(String[] args) {\n        // For Loop\n        for(int i = 1; i <= 3; i++) {\n            System.out.println(\"For Loop Iteration: \" + i);\n        }\n\n        // While Loop\n        int j = 1;\n        while(j <= 3) {\n            System.out.println(\"While Loop Iteration: \" + j);\n            j++;\n        }\n\n        // Do-While Loop\n        int k = 1;\n        do {\n            System.out.println(\"Do-While Iteration: \" + k);\n            k++;\n        } while(k <= 3);\n\n        // Enhanced For Loop\n        int[] nums = {100, 200, 300};\n        for(int num : nums) {\n            System.out.println(\"Enhanced For: \" + num);\n        }\n    }\n}"
+    },
+    {
+      "type": "output",
+      "text": "For Loop Iteration: 1\nFor Loop Iteration: 2\nFor Loop Iteration: 3\nWhile Loop Iteration: 1\nWhile Loop Iteration: 2\nWhile Loop Iteration: 3\nDo-While Iteration: 1\nDo-While Iteration: 2\nDo-While Iteration: 3\nEnhanced For: 100\nEnhanced For: 200\nEnhanced For: 300"
+    }
+  ]
+},
+{
+  "title": "Functions & Method Overloading in Java",
+  "image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAAAAACt...",
+  "sections": [
+    {
+      "type": "heading",
+      "heading": "1. What are Functions/Methods?"
+    },
+    {
+      "type": "definition",
+      "text": "A function (or method) is a block of code that performs a specific task. Methods help in code reusability and modular programming."
+    },
+    {
+      "type": "image",
+      "heading": "Function Diagram",
+      "url": "https://www.javatpoint.com/images/method_in_java.jpg"
+    },
+    {
+      "type": "heading",
+      "heading": "2. Syntax of a Method"
+    },
+    {
+      "type": "syntax",
+      "text": "returnType methodName(parameters) {\n    // method body\n}"
+    },
+    {
+      "type": "heading",
+      "heading": "3. Example — Simple Method"
+    },
+    {
+      "type": "code",
+      "language": "java",
+      "code": "public class FunctionsDemo {\n    static void greet() {\n        System.out.println(\"Hello, Bhumika!\");\n    }\n\n    public static void main(String[] args) {\n        greet();\n    }\n}"
+    },
+    {
+      "type": "output",
+      "text": "Hello, Bhumika!"
+    },
+    {
+      "type": "heading",
+      "heading": "4. Method with Parameters"
+    },
+    {
+      "type": "code",
+      "language": "java",
+      "code": "public class FunctionsDemo {\n    static void greet(String name) {\n        System.out.println(\"Hello, \" + name + \"!\");\n    }\n\n    public static void main(String[] args) {\n        greet(\"Bhumika\");\n        greet(\"Java Learner\");\n    }\n}"
+    },
+    {
+      "type": "output",
+      "text": "Hello, Bhumika!\nHello, Java Learner!"
+    },
+    {
+      "type": "heading",
+      "heading": "5. Method with Return Type"
+    },
+    {
+      "type": "code",
+      "language": "java",
+      "code": "public class FunctionsDemo {\n    static int add(int a, int b) {\n        return a + b;\n    }\n\n    public static void main(String[] args) {\n        int result = add(10, 20);\n        System.out.println(\"Sum: \" + result);\n    }\n}"
+    },
+    {
+      "type": "output",
+      "text": "Sum: 30"
+    },
+    {
+      "type": "heading",
+      "heading": "6. Method Overloading"
+    },
+    {
+      "type": "definition",
+      "text": "Method overloading means having multiple methods in the same class with the same name but different parameters (different number or type)."
+    },
+    {
+      "type": "code",
+      "language": "java",
+      "code": "public class OverloadingDemo {\n    static int sum(int a, int b) {\n        return a + b;\n    }\n\n    static double sum(double a, double b) {\n        return a + b;\n    }\n\n    static int sum(int a, int b, int c) {\n        return a + b + c;\n    }\n\n    public static void main(String[] args) {\n        System.out.println(sum(10, 20));\n        System.out.println(sum(5.5, 4.5));\n        System.out.println(sum(1, 2, 3));\n    }\n}"
+    },
+    {
+      "type": "output",
+      "text": "30\n10.0\n6"
+    },
+    {
+      "type": "heading",
+      "heading": "7. Key Points of Method Overloading"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Methods must have the same name.",
+        "Parameters must differ in number or type.",
+        "Return type alone cannot overload a method.",
+        "Overloading improves code readability and usability."
+      ]
+    },
+    {
+      "type": "heading",
+      "heading": "8. Full Example — Functions & Overloading"
+    },
+    {
+      "type": "code",
+      "language": "java",
+      "code": "public class FullDemo {\n    static void greet() {\n        System.out.println(\"Hello!\");\n    }\n\n    static void greet(String name) {\n        System.out.println(\"Hello, \" + name);\n    }\n\n    static int multiply(int a, int b) {\n        return a * b;\n    }\n\n    static int multiply(int a, int b, int c) {\n        return a * b * c;\n    }\n\n    public static void main(String[] args) {\n        greet();\n        greet(\"Bhumika\");\n        System.out.println(\"Multiply 2 numbers: \" + multiply(2, 3));\n        System.out.println(\"Multiply 3 numbers: \" + multiply(2, 3, 4));\n    }\n}"
+    },
+    {
+      "type": "output",
+      "text": "Hello!\nHello, Bhumika\nMultiply 2 numbers: 6\nMultiply 3 numbers: 24"
+    }
+  ]
+},
+{
+  "title": "Arrays in Java",
+  "image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAAAAACt...",
+  "sections": [
+    {
+      "type": "heading",
+      "heading": "1. What is an Array?"
+    },
+    {
+      "type": "definition",
+      "text": "An array is a container object that holds a fixed number of values of a single type. Arrays help in storing multiple values in a single variable."
+    },
+    {
+      "type": "heading",
+      "heading": "2. Syntax of Array Declaration"
+    },
+    {
+      "type": "syntax",
+      "text": "datatype[] arrayName;\n// or\ndatatype arrayName[];"
+    },
+    {
+      "type": "heading",
+      "heading": "3. 1D Array Example"
+    },
+    {
+      "type": "code",
+      "language": "java",
+      "code": "public class ArrayDemo1D {\n    public static void main(String[] args) {\n        int[] numbers = {1, 2, 3, 4, 5};\n        for(int i = 0; i < numbers.length; i++) {\n            System.out.println(\"Element at index \" + i + \": \" + numbers[i]);\n        }\n    }\n}"
+    },
+    {
+      "type": "output",
+      "text": "Element at index 0: 1\nElement at index 1: 2\nElement at index 2: 3\nElement at index 3: 4\nElement at index 4: 5"
+    },
+    {
+      "type": "heading",
+      "heading": "4. 2D Array Example"
+    },
+    {
+      "type": "code",
+      "language": "java",
+      "code": "public class ArrayDemo2D {\n    public static void main(String[] args) {\n        int[][] matrix = {\n            {1, 2, 3},\n            {4, 5, 6},\n            {7, 8, 9}\n        };\n        for(int i = 0; i < matrix.length; i++) {\n            for(int j = 0; j < matrix[i].length; j++) {\n                System.out.print(matrix[i][j] + \" \");\n            }\n            System.out.println();\n        }\n    }\n}"
+    },
+    {
+      "type": "output",
+      "text": "1 2 3 \n4 5 6 \n7 8 9"
+    },
+    {
+      "type": "heading",
+      "heading": "5. Multi-dimensional Array Example"
+    },
+    {
+      "type": "code",
+      "language": "java",
+      "code": "public class ArrayDemoMulti {\n    public static void main(String[] args) {\n        int[][][] cube = new int[2][2][2];\n        int value = 1;\n        for(int i = 0; i < 2; i++) {\n            for(int j = 0; j < 2; j++) {\n                for(int k = 0; k < 2; k++) {\n                    cube[i][j][k] = value++;\n                    System.out.println(\"cube[\" + i + \"][\" + j + \"][\" + k + \"] = \" + cube[i][j][k]);\n                }\n            }\n        }\n    }\n}"
+    },
+    {
+      "type": "output",
+      "text": "cube[0][0][0] = 1\ncube[0][0][1] = 2\ncube[0][1][0] = 3\ncube[0][1][1] = 4\ncube[1][0][0] = 5\ncube[1][0][1] = 6\ncube[1][1][0] = 7\ncube[1][1][1] = 8"
+    },
+    {
+      "type": "heading",
+      "heading": "6. Key Points of Arrays"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Arrays store multiple values of the same type in a single variable.",
+        "Indexing starts from 0.",
+        "Length of an array can be accessed using arrayName.length.",
+        "Multidimensional arrays are arrays of arrays.",
+        "Array size is fixed after creation."
+      ]
+    },
+    {
+      "type": "heading",
+      "heading": "7. Full Example — 1D & 2D Arrays"
+    },
+    {
+      "type": "code",
+      "language": "java",
+      "code": "public class FullArrayDemo {\n    public static void main(String[] args) {\n        int[] nums = {10, 20, 30};\n        System.out.println(\"1D Array Elements:\");\n        for(int num : nums) {\n            System.out.println(num);\n        }\n\n        int[][] table = {{1,2},{3,4},{5,6}};\n        System.out.println(\"\\n2D Array Elements:\");\n        for(int i = 0; i < table.length; i++) {\n            for(int j = 0; j < table[i].length; j++) {\n                System.out.print(table[i][j] + \" \");\n            }\n            System.out.println();\n        }\n    }\n}"
+    },
+    {
+      "type": "output",
+      "text": "1D Array Elements:\n10\n20\n30\n\n2D Array Elements:\n1 2 \n3 4 \n5 6"
+    }
+  ]
+},
+{
+  "title": "Strings & StringBuilder in Java",
+  "image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAAAAACt...",
+  "sections": [
+    {
+      "type": "heading",
+      "heading": "1. What is a String?"
+    },
+    {
+      "type": "definition",
+      "text": "A String is a sequence of characters enclosed in double quotes. Strings are immutable in Java, meaning once created, they cannot be changed."
+    },
+    {
+      "type": "heading",
+      "heading": "2. String Declaration & Initialization"
+    },
+    {
+      "type": "syntax",
+      "text": "String str = \"Hello\";\n// or\nString str = new String(\"Hello\");"
+    },
+    {
+      "type": "heading",
+      "heading": "3. Basic String Example"
+    },
+    {
+      "type": "code",
+      "language": "java",
+      "code": "public class StringDemo {\n    public static void main(String[] args) {\n        String message = \"Hello, Bhumika!\";\n        System.out.println(message);\n    }\n}"
+    },
+    {
+      "type": "output",
+      "text": "Hello, Bhumika!"
+    },
+    {
+      "type": "heading",
+      "heading": "4. Common String Methods"
+    },
+    {
+      "type": "code",
+      "language": "java",
+      "code": "public class StringMethodsDemo {\n    public static void main(String[] args) {\n        String str = \"Java Programming\";\n        System.out.println(\"Length: \" + str.length());\n        System.out.println(\"Uppercase: \" + str.toUpperCase());\n        System.out.println(\"Lowercase: \" + str.toLowerCase());\n        System.out.println(\"Substring(5, 16): \" + str.substring(5,16));\n        System.out.println(\"Contains 'Prog': \" + str.contains(\"Prog\"));\n    }\n}"
+    },
+    {
+      "type": "output",
+      "text": "Length: 16\nUppercase: JAVA PROGRAMMING\nLowercase: java programming\nSubstring(5, 16): Programming\nContains 'Prog': true"
+    },
+    {
+      "type": "heading",
+      "heading": "5. String Concatenation"
+    },
+    {
+      "type": "code",
+      "language": "java",
+      "code": "public class StringConcatDemo {\n    public static void main(String[] args) {\n        String str1 = \"Hello\";\n        String str2 = \"World\";\n        String result = str1 + \" \" + str2;\n        System.out.println(result);\n    }\n}"
+    },
+    {
+      "type": "output",
+      "text": "Hello World"
+    },
+    {
+      "type": "heading",
+      "heading": "6. What is StringBuilder?"
+    },
+    {
+      "type": "definition",
+      "text": "StringBuilder is a mutable sequence of characters. Unlike Strings, it can be modified after creation and is more efficient for repeated modifications."
+    },
+    {
+      "type": "heading",
+      "heading": "7. StringBuilder Syntax"
+    },
+    {
+      "type": "syntax",
+      "text": "StringBuilder sb = new StringBuilder(\"Hello\");"
+    },
+    {
+      "type": "heading",
+      "heading": "8. StringBuilder Example"
+    },
+    {
+      "type": "code",
+      "language": "java",
+      "code": "public class StringBuilderDemo {\n    public static void main(String[] args) {\n        StringBuilder sb = new StringBuilder(\"Hello\");\n        sb.append(\" World\");\n        sb.insert(6, \"Java \");\n        sb.replace(0, 5, \"Hi\");\n        sb.delete(9, 14);\n        System.out.println(sb);\n    }\n}"
+    },
+    {
+      "type": "output",
+      "text": "Hi Java World"
+    },
+    {
+      "type": "heading",
+      "heading": "9. Key Points — String vs StringBuilder"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Strings are immutable, StringBuilder is mutable.",
+        "String modifications create new objects; StringBuilder modifies the same object.",
+        "StringBuilder is faster for repeated modifications.",
+        "Both classes have many useful methods for handling text."
+      ]
+    },
+    {
+      "type": "heading",
+      "heading": "10. Full Example — Strings & StringBuilder"
+    },
+    {
+      "type": "code",
+      "language": "java",
+      "code": "public class FullStringDemo {\n    public static void main(String[] args) {\n        // String Example\n        String name = \"Bhumika\";\n        System.out.println(\"Hello, \" + name);\n\n        // StringBuilder Example\n        StringBuilder sb = new StringBuilder(\"Java\");\n        sb.append(\" Programming\");\n        sb.replace(5, 16, \"World\");\n        System.out.println(sb);\n    }\n}"
+    },
+    {
+      "type": "output",
+      "text": "Hello, Bhumika\nJava World"
+    }
+  ]
+},
+{
+  "title": "OOP Basics — Class & Object in Java",
+  "image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAAAAACt...",
+  "sections": [
+    {
+      "type": "heading",
+      "heading": "1. What is Object-Oriented Programming (OOP)?"
+    },
+    {
+      "type": "definition",
+      "text": "OOP is a programming paradigm based on the concept of 'objects', which contain data (attributes) and methods (functions). Java is an object-oriented language."
+    },
+    {
+      "type": "image",
+      "heading": "OOP Concept Diagram",
+      "url": "https://www.javatpoint.com/images/java-oops-concepts.jpg"
+    },
+    {
+      "type": "heading",
+      "heading": "2. What is a Class?"
+    },
+    {
+      "type": "definition",
+      "text": "A class is a blueprint or template for creating objects. It defines the properties (variables) and behaviors (methods) of objects."
+    },
+    {
+      "type": "heading",
+      "heading": "3. What is an Object?"
+    },
+    {
+      "type": "definition",
+      "text": "An object is an instance of a class. Each object has its own copy of attributes defined in the class and can use the methods of the class."
+    },
+    {
+      "type": "heading",
+      "heading": "4. Syntax of a Class"
+    },
+    {
+      "type": "syntax",
+      "text": "class ClassName {\n    // attributes\n    // methods\n}"
+    },
+    {
+      "type": "heading",
+      "heading": "5. Example — Simple Class & Object"
+    },
+    {
+      "type": "code",
+      "language": "java",
+      "code": "class Person {\n    String name;\n    int age;\n\n    void display() {\n        System.out.println(\"Name: \" + name);\n        System.out.println(\"Age: \" + age);\n    }\n}\n\npublic class OOPDemo {\n    public static void main(String[] args) {\n        Person p1 = new Person(); // creating object\n        p1.name = \"Bhumika\";\n        p1.age = 21;\n        p1.display();\n    }\n}"
+    },
+    {
+      "type": "output",
+      "text": "Name: Bhumika\nAge: 21"
+    },
+    {
+      "type": "heading",
+      "heading": "6. Example — Multiple Objects"
+    },
+    {
+      "type": "code",
+      "language": "java",
+      "code": "class Car {\n    String brand;\n    int speed;\n\n    void show() {\n        System.out.println(\"Brand: \" + brand + \", Speed: \" + speed);\n    }\n}\n\npublic class OOPDemo2 {\n    public static void main(String[] args) {\n        Car c1 = new Car();\n        c1.brand = \"BMW\";\n        c1.speed = 150;\n        c1.show();\n\n        Car c2 = new Car();\n        c2.brand = \"Audi\";\n        c2.speed = 180;\n        c2.show();\n    }\n}"
+    },
+    {
+      "type": "output",
+      "text": "Brand: BMW, Speed: 150\nBrand: Audi, Speed: 180"
+    },
+    {
+      "type": "heading",
+      "heading": "7. Key Points of Class & Object"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Class is a blueprint; object is an instance of a class.",
+        "Objects store data in attributes and perform actions using methods.",
+        "Multiple objects can be created from the same class.",
+        "Classes improve modularity and reusability of code."
+      ]
+    },
+    {
+      "type": "heading",
+      "heading": "8. Full Example — Class with Multiple Methods"
+    },
+    {
+      "type": "code",
+      "language": "java",
+      "code": "class Student {\n    String name;\n    int rollNo;\n\n    void setData(String n, int r) {\n        name = n;\n        rollNo = r;\n    }\n\n    void displayData() {\n        System.out.println(\"Name: \" + name + \", Roll No: \" + rollNo);\n    }\n}\n\npublic class FullOOPDemo {\n    public static void main(String[] args) {\n        Student s1 = new Student();\n        s1.setData(\"Bhumika\", 101);\n        s1.displayData();\n\n        Student s2 = new Student();\n        s2.setData(\"Nikhil\", 102);\n        s2.displayData();\n    }\n}"
+    },
+    {
+      "type": "output",
+      "text": "Name: Bhumika, Roll No: 101\nName: Nikhil, Roll No: 102"
+    }
+  ]
+},
+{
+  "title": "OOP Deep Concepts in Java",
+  "image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAAAAACt...",
+  "sections": [
+    {
+      "type": "heading",
+      "heading": "1. Encapsulation"
+    },
+    {
+      "type": "definition",
+      "text": "Encapsulation is the process of wrapping data (variables) and methods into a single unit (class) and restricting access using access modifiers (private, public, protected)."
+    },
+    {
+      "type": "code",
+      "language": "java",
+      "code": "class Student {\n    private String name;\n    private int age;\n\n    public void setName(String n) {\n        name = n;\n    }\n\n    public String getName() {\n        return name;\n    }\n\n    public void setAge(int a) {\n        age = a;\n    }\n\n    public int getAge() {\n        return age;\n    }\n}\n\npublic class EncapsulationDemo {\n    public static void main(String[] args) {\n        Student s = new Student();\n        s.setName(\"Bhumika\");\n        s.setAge(21);\n        System.out.println(\"Name: \" + s.getName());\n        System.out.println(\"Age: \" + s.getAge());\n    }\n}"
+    },
+    {
+      "type": "output",
+      "text": "Name: Bhumika\nAge: 21"
+    },
+    {
+      "type": "heading",
+      "heading": "2. Inheritance"
+    },
+    {
+      "type": "definition",
+      "text": "Inheritance allows a class (child/subclass) to acquire properties and methods of another class (parent/superclass). It promotes code reusability."
+    },
+    {
+      "type": "code",
+      "language": "java",
+      "code": "class Vehicle {\n    void start() {\n        System.out.println(\"Vehicle is starting\");\n    }\n}\n\nclass Car extends Vehicle {\n    void drive() {\n        System.out.println(\"Car is driving\");\n    }\n}\n\npublic class InheritanceDemo {\n    public static void main(String[] args) {\n        Car c = new Car();\n        c.start();\n        c.drive();\n    }\n}"
+    },
+    {
+      "type": "output",
+      "text": "Vehicle is starting\nCar is driving"
+    },
+    {
+      "type": "heading",
+      "heading": "3. Polymorphism"
+    },
+    {
+      "type": "definition",
+      "text": "Polymorphism means 'many forms'. In Java, it is mainly achieved in two ways: Compile-time (method overloading) and Run-time (method overriding)."
+    },
+    {
+      "type": "code",
+      "language": "java",
+      "code": "class Animal {\n    void sound() {\n        System.out.println(\"Animal makes a sound\");\n    }\n}\n\nclass Dog extends Animal {\n    @Override\n    void sound() {\n        System.out.println(\"Dog barks\");\n    }\n}\n\npublic class PolymorphismDemo {\n    public static void main(String[] args) {\n        Animal a = new Dog(); // Run-time polymorphism\n        a.sound();\n    }\n}"
+    },
+    {
+      "type": "output",
+      "text": "Dog barks"
+    },
+    {
+      "type": "heading",
+      "heading": "4. Abstraction"
+    },
+    {
+      "type": "definition",
+      "text": "Abstraction is the concept of hiding implementation details and showing only functionality. Achieved using abstract classes or interfaces."
+    },
+    {
+      "type": "code",
+      "language": "java",
+      "code": "abstract class Shape {\n    abstract void draw();\n}\n\nclass Circle extends Shape {\n    void draw() {\n        System.out.println(\"Drawing Circle\");\n    }\n}\n\npublic class AbstractionDemo {\n    public static void main(String[] args) {\n        Shape s = new Circle();\n        s.draw();\n    }\n}"
+    },
+    {
+      "type": "output",
+      "text": "Drawing Circle"
+    },
+    {
+      "type": "heading",
+      "heading": "5. Constructors"
+    },
+    {
+      "type": "definition",
+      "text": "A constructor is a special method used to initialize objects. It has the same name as the class and no return type."
+    },
+    {
+      "type": "code",
+      "language": "java",
+      "code": "class Student {\n    String name;\n    int rollNo;\n\n    Student(String n, int r) {\n        name = n;\n        rollNo = r;\n    }\n\n    void display() {\n        System.out.println(\"Name: \" + name + \", Roll No: \" + rollNo);\n    }\n}\n\npublic class ConstructorDemo {\n    public static void main(String[] args) {\n        Student s = new Student(\"Bhumika\", 101);\n        s.display();\n    }\n}"
+    },
+    {
+      "type": "output",
+      "text": "Name: Bhumika, Roll No: 101"
+    },
+    {
+      "type": "heading",
+      "heading": "6. Key Points of OOP Deep Concepts"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Encapsulation hides data and provides controlled access.",
+        "Inheritance allows code reuse from parent class.",
+        "Polymorphism allows objects to take multiple forms.",
+        "Abstraction hides implementation and shows functionality.",
+        "Constructors initialize objects when created."
+      ]
+    }
+  ]
+},
+{
+  "title": "Constructors & This/Super Keyword in Java",
+  "image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAAAAACt...",
+  "sections": [
+    {
+      "type": "heading",
+      "heading": "1. What is a Constructor?"
+    },
+    {
+      "type": "definition",
+      "text": "A constructor is a special method used to initialize objects. It has the same name as the class and no return type."
+    },
+    {
+      "type": "code",
+      "language": "java",
+      "code": "class Student {\n    String name;\n    int rollNo;\n\n    // Constructor\n    Student(String n, int r) {\n        name = n;\n        rollNo = r;\n    }\n\n    void display() {\n        System.out.println(\"Name: \" + name + \", Roll No: \" + rollNo);\n    }\n}\n\npublic class ConstructorDemo {\n    public static void main(String[] args) {\n        Student s = new Student(\"Bhumika\", 101);\n        s.display();\n    }\n}"
+    },
+    {
+      "type": "output",
+      "text": "Name: Bhumika, Roll No: 101"
+    },
+    {
+      "type": "heading",
+      "heading": "2. Constructor Overloading"
+    },
+    {
+      "type": "definition",
+      "text": "Constructor overloading means having multiple constructors in a class with different parameter lists."
+    },
+    {
+      "type": "code",
+      "language": "java",
+      "code": "class Student {\n    String name;\n    int rollNo;\n\n    // Constructor 1\n    Student() {\n        name = \"Unknown\";\n        rollNo = 0;\n    }\n\n    // Constructor 2\n    Student(String n, int r) {\n        name = n;\n        rollNo = r;\n    }\n\n    void display() {\n        System.out.println(\"Name: \" + name + \", Roll No: \" + rollNo);\n    }\n}\n\npublic class ConstructorOverloadDemo {\n    public static void main(String[] args) {\n        Student s1 = new Student();\n        Student s2 = new Student(\"Bhumika\", 101);\n        s1.display();\n        s2.display();\n    }\n}"
+    },
+    {
+      "type": "output",
+      "text": "Name: Unknown, Roll No: 0\nName: Bhumika, Roll No: 101"
+    },
+    {
+      "type": "heading",
+      "heading": "3. This Keyword"
+    },
+    {
+      "type": "definition",
+      "text": "The 'this' keyword refers to the current object of the class. It is used to access instance variables or call constructors."
+    },
+    {
+      "type": "code",
+      "language": "java",
+      "code": "class Student {\n    String name;\n    int rollNo;\n\n    Student(String name, int rollNo) {\n        this.name = name; // refers to current object's variable\n        this.rollNo = rollNo;\n    }\n\n    void display() {\n        System.out.println(\"Name: \" + this.name + \", Roll No: \" + this.rollNo);\n    }\n}\n\npublic class ThisKeywordDemo {\n    public static void main(String[] args) {\n        Student s = new Student(\"Bhumika\", 101);\n        s.display();\n    }\n}"
+    },
+    {
+      "type": "output",
+      "text": "Name: Bhumika, Roll No: 101"
+    },
+    {
+      "type": "heading",
+      "heading": "4. Calling Constructor using This()"
+    },
+    {
+      "type": "definition",
+      "text": "A constructor can call another constructor of the same class using 'this()'. This is useful for constructor chaining."
+    },
+    {
+      "type": "code",
+      "language": "java",
+      "code": "class Student {\n    String name;\n    int rollNo;\n\n    Student() {\n        this(\"Unknown\", 0); // calling parameterized constructor\n    }\n\n    Student(String name, int rollNo) {\n        this.name = name;\n        this.rollNo = rollNo;\n    }\n\n    void display() {\n        System.out.println(\"Name: \" + name + \", Roll No: \" + rollNo);\n    }\n}\n\npublic class ThisConstructorDemo {\n    public static void main(String[] args) {\n        Student s = new Student();\n        s.display();\n    }\n}"
+    },
+    {
+      "type": "output",
+      "text": "Name: Unknown, Roll No: 0"
+    },
+    {
+      "type": "heading",
+      "heading": "5. Super Keyword"
+    },
+    {
+      "type": "definition",
+      "text": "The 'super' keyword refers to the parent class. It is used to access parent class methods, variables, or constructors."
+    },
+    {
+      "type": "code",
+      "language": "java",
+      "code": "class Vehicle {\n    String brand = \"Generic Vehicle\";\n\n    void showBrand() {\n        System.out.println(\"Brand: \" + brand);\n    }\n}\n\nclass Car extends Vehicle {\n    String brand = \"BMW\";\n\n    void showBrand() {\n        System.out.println(\"Brand: \" + brand);\n        System.out.println(\"Parent Brand: \" + super.brand); // access parent variable\n    }\n}\n\npublic class SuperKeywordDemo {\n    public static void main(String[] args) {\n        Car c = new Car();\n        c.showBrand();\n    }\n}"
+    },
+    {
+      "type": "output",
+      "text": "Brand: BMW\nParent Brand: Generic Vehicle"
+    },
+    {
+      "type": "heading",
+      "heading": "6. Key Points"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Constructors initialize objects and can be overloaded.",
+        "'this' refers to current object and can call another constructor.",
+        "'super' refers to parent class and is used to access parent members or constructors.",
+        "Constructor chaining improves code reuse.",
+        "Use 'this' and 'super' carefully to avoid confusion."
+      ]
+    }
+  ]
+},
+{
+  "title": "Inheritance & Polymorphism in Java",
+  "image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAAAAACt...",
+  "sections": [
+    {
+      "type": "heading",
+      "heading": "1. What is Inheritance?"
+    },
+    {
+      "type": "definition",
+      "text": "Inheritance is an OOP concept where a class (child/subclass) acquires the properties and methods of another class (parent/superclass). It promotes code reusability."
+    },
+    {
+      "type": "code",
+      "language": "java",
+      "code": "class Vehicle {\n    void start() {\n        System.out.println(\"Vehicle is starting\");\n    }\n}\n\nclass Car extends Vehicle {\n    void drive() {\n        System.out.println(\"Car is driving\");\n    }\n}\n\npublic class InheritanceDemo {\n    public static void main(String[] args) {\n        Car c = new Car();\n        c.start(); // inherited from Vehicle\n        c.drive();\n    }\n}"
+    },
+    {
+      "type": "output",
+      "text": "Vehicle is starting\nCar is driving"
+    },
+    {
+      "type": "heading",
+      "heading": "2. Types of Inheritance in Java"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Single Inheritance – Child inherits from one parent.",
+        "Multilevel Inheritance – Chain of inheritance (A → B → C).",
+        "Hierarchical Inheritance – Multiple classes inherit from one parent.",
+        "Java does not support multiple inheritance with classes, but interfaces can achieve it."
+      ]
+    },
+    {
+      "type": "heading",
+      "heading": "3. What is Polymorphism?"
+    },
+    {
+      "type": "definition",
+      "text": "Polymorphism means 'many forms'. An object can take multiple forms. In Java, there are two types: Compile-time polymorphism (method overloading) and Run-time polymorphism (method overriding)."
+    },
+    {
+      "type": "heading",
+      "heading": "4. Compile-Time Polymorphism (Method Overloading)"
+    },
+    {
+      "type": "code",
+      "language": "java",
+      "code": "class Calculator {\n    int add(int a, int b) {\n        return a + b;\n    }\n\n    double add(double a, double b) {\n        return a + b;\n    }\n}\n\npublic class CompileTimePolymorphismDemo {\n    public static void main(String[] args) {\n        Calculator calc = new Calculator();\n        System.out.println(calc.add(5, 10));\n        System.out.println(calc.add(5.5, 4.5));\n    }\n}"
+    },
+    {
+      "type": "output",
+      "text": "15\n10.0"
+    },
+    {
+      "type": "heading",
+      "heading": "5. Run-Time Polymorphism (Method Overriding)"
+    },
+    {
+      "type": "definition",
+      "text": "Method overriding occurs when a subclass provides its own implementation of a method already defined in its parent class."
+    },
+    {
+      "type": "code",
+      "language": "java",
+      "code": "class Animal {\n    void sound() {\n        System.out.println(\"Animal makes a sound\");\n    }\n}\n\nclass Dog extends Animal {\n    @Override\n    void sound() {\n        System.out.println(\"Dog barks\");\n    }\n}\n\npublic class RunTimePolymorphismDemo {\n    public static void main(String[] args) {\n        Animal a = new Dog(); // run-time polymorphism\n        a.sound();\n    }\n}"
+    },
+    {
+      "type": "output",
+      "text": "Dog barks"
+    },
+    {
+      "type": "heading",
+      "heading": "6. Super Keyword in Inheritance"
+    },
+    {
+      "type": "definition",
+      "text": "The 'super' keyword allows a subclass to access parent class variables, methods, or constructors."
+    },
+    {
+      "type": "code",
+      "language": "java",
+      "code": "class Vehicle {\n    void start() {\n        System.out.println(\"Vehicle is starting\");\n    }\n}\n\nclass Car extends Vehicle {\n    void start() {\n        System.out.println(\"Car is starting\");\n    }\n\n    void display() {\n        start(); // calls child method\n        super.start(); // calls parent method\n    }\n}\n\npublic class SuperKeywordInheritanceDemo {\n    public static void main(String[] args) {\n        Car c = new Car();\n        c.display();\n    }\n}"
+    },
+    {
+      "type": "output",
+      "text": "Car is starting\nVehicle is starting"
+    },
+    {
+      "type": "heading",
+      "heading": "7. Key Points"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Inheritance allows code reuse and forms parent-child relationships.",
+        "Polymorphism allows objects to take many forms.",
+        "Compile-time polymorphism uses method overloading.",
+        "Run-time polymorphism uses method overriding.",
+        "Use 'super' to access parent class members in child class."
+      ]
+    }
+  ]
+},
+{
+    "title": "Interfaces & Abstraction",
+    "sections": [
+      {
+        "type": "heading",
+        "heading": "1. What is Abstraction?"
+      },
+      {
+        "type": "definition",
+        "text": "Abstraction is hiding implementation details and showing only functionality. Achieved using abstract classes or interfaces."
+      },
+      {
+        "type": "heading",
+        "heading": "2. Abstract Class Example"
+      },
+      {
+        "type": "code",
+        "language": "java",
+        "code": "abstract class Shape {\n    abstract void draw();\n}\n\nclass Circle extends Shape {\n    void draw() {\n        System.out.println(\"Drawing Circle\");\n    }\n}\n\npublic class AbstractionDemo {\n    public static void main(String[] args) {\n        Shape s = new Circle();\n        s.draw();\n    }\n}"
+      },
+      {
+        "type": "output",
+        "text": "Drawing Circle"
+      },
+      {
+        "type": "heading",
+        "heading": "3. Interface Example"
+      },
+      {
+        "type": "code",
+        "language": "java",
+        "code": "interface Drawable {\n    void draw();\n}\n\nclass Rectangle implements Drawable {\n    public void draw() {\n        System.out.println(\"Drawing Rectangle\");\n    }\n}\n\npublic class InterfaceDemo {\n    public static void main(String[] args) {\n        Drawable d = new Rectangle();\n        d.draw();\n    }\n}"
+      },
+      {
+        "type": "output",
+        "text": "Drawing Rectangle"
+      },
+      {
+        "type": "heading",
+        "heading": "4. Key Points"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Abstraction hides implementation and shows only functionality.",
+          "Abstract class can have both abstract and non-abstract methods.",
+          "Interface can only have abstract methods (Java 8+ supports default and static methods).",
+          "A class can implement multiple interfaces but extend only one class."
+        ]
+      }
+    ]
+  },
+  {
+  "title": "Packages & Access Modifiers",
+  "sections": [
+    {
+      "type": "heading",
+      "heading": "1. What is a Package?"
+    },
+    {
+      "type": "definition",
+      "text": "A package in Java is a namespace that groups related classes and interfaces together. It helps in organizing large projects, avoiding class name conflicts, and providing access control."
+    },
+    {
+      "type": "text",
+      "text": "👉 Real-life Example: Just like folders in your computer organize files, Java packages organize classes."
+    },
+
+    {
+      "type": "image",
+      "heading": "Java Package Structure",
+      "url": "https://www.programiz.com/sites/tutorial2program/files/java-package.png"
+    },
+
+    {
+      "type": "text",
+      "text": "👉 Types of Packages:\n1. Built-in Packages – Example: java.util, java.lang\n2. User-defined Packages – Created by programmers"
+    },
+
+    {
+      "type": "code",
+      "language": "java",
+      "code": "// File: mypackage/Hello.java\npackage mypackage;\n\npublic class Hello {\n    public void greet() {\n        System.out.println(\"Hello from package!\");\n    }\n}\n\n// File: Main.java\nimport mypackage.Hello;\n\npublic class Main {\n    public static void main(String[] args) {\n        Hello h = new Hello();\n        h.greet();\n    }\n}"
+    },
+    {
+      "type": "output",
+      "text": "Hello from package!"
+    },
+
+    {
+      "type": "heading",
+      "heading": "2. Access Modifiers"
+    },
+    {
+      "type": "definition",
+      "text": "Access modifiers define the visibility (scope) of variables, methods, and classes."
+    },
+    {
+      "type": "list",
+      "items": [
+        "private — only inside the same class",
+        "default — only inside the same package",
+        "protected — same package + subclasses",
+        "public — accessible everywhere"
+      ]
+    },
+
+    {
+      "type": "image",
+      "heading": "Java Access Modifiers Diagram",
+      "url": "https://www.javatpoint.com/images/java-access-modifiers.png"
+    },
+
+    {
+      "type": "heading",
+      "heading": "3. Access Level (Easy Understanding)"
+    },
+    {
+      "type": "list",
+      "items": [
+        "private → only same class",
+        "default → same class + same package",
+        "protected → same class + package + child class",
+        "public → everywhere"
+      ]
+    },
+
+    {
+      "type": "heading",
+      "heading": "4. Example"
+    },
+    {
+      "type": "code",
+      "language": "java",
+      "code": "class Demo {\n    private int a = 10;\n    int b = 20;\n    protected int c = 30;\n    public int d = 40;\n\n    public void show() {\n        System.out.println(a + \" \" + b + \" \" + c + \" \" + d);\n    }\n}\n\npublic class Test {\n    public static void main(String[] args) {\n        Demo obj = new Demo();\n        obj.show();\n\n        System.out.println(obj.b);\n        System.out.println(obj.c);\n        System.out.println(obj.d);\n    }\n}"
+    },
+    {
+      "type": "output",
+      "text": "10 20 30 40\n20\n30\n40"
+    },
+
+    {
+      "type": "text",
+      "text": "👉 Memory Trick: private < default < protected < public"
+    }
+  ]
+},
+{
+  "title": "Collections Framework",
+  "sections": [
+    {
+      "type": "heading",
+      "heading": "1. Introduction to Collections Framework"
+    },
+    {
+      "type": "definition",
+      "text": "The Java Collections Framework (JCF) is a unified architecture for storing and manipulating groups of objects. It provides interfaces, implementations, and algorithms to handle data efficiently."
+    },
+    {
+      "type": "text",
+      "text": "👉 It replaces traditional arrays with dynamic, flexible, and powerful data structures.\n👉 It is part of java.util package.\n👉 It provides both data storage and data manipulation methods."
+    },
+
+    {
+      "type": "image",
+      "heading": "Java Collections Framework Hierarchy",
+      "url": "https://media.geeksforgeeks.org/wp-content/uploads/20230412153806/Collections-in-Java.png"
+    },
+
+    {
+      "type": "heading",
+      "heading": "2. Core Interfaces"
+    },
+    {
+      "type": "text",
+      "text": "Collection is the root interface. It has three main sub-interfaces:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "List → Ordered collection, allows duplicates",
+        "Set → Unordered, does not allow duplicates",
+        "Queue → Follows FIFO (First In First Out)"
+      ]
+    },
+    {
+      "type": "text",
+      "text": "👉 Map is NOT part of Collection interface but part of the framework."
+    },
+
+    {
+      "type": "heading",
+      "heading": "3. Important Classes"
+    },
+    {
+      "type": "list",
+      "items": [
+        "ArrayList → Dynamic array, fast access",
+        "LinkedList → Doubly linked list, fast insertion/deletion",
+        "HashSet → No duplicates, unordered",
+        "TreeSet → Sorted set",
+        "HashMap → Key-value pair, no duplicate keys",
+        "TreeMap → Sorted key-value pairs"
+      ]
+    },
+
+    {
+      "type": "heading",
+      "heading": "4. Example (ArrayList)"
+    },
+    {
+      "type": "code",
+      "language": "java",
+      "code": "import java.util.*;\n\npublic class Demo {\n    public static void main(String[] args) {\n        ArrayList<String> list = new ArrayList<>();\n\n        list.add(\"Apple\");\n        list.add(\"Banana\");\n        list.add(\"Mango\");\n\n        list.remove(\"Banana\");\n        System.out.println(list);\n\n        for(String item : list) {\n            System.out.println(item);\n        }\n    }\n}"
+    },
+
+    {
+      "type": "heading",
+      "heading": "5. Internal Working (Important)"
+    },
+    {
+      "type": "text",
+      "text": "👉 ArrayList uses a dynamic array internally.\n👉 HashMap uses hashing (hashCode + equals).\n👉 LinkedList uses nodes with pointers.\n👉 TreeSet/TreeMap use Red-Black Tree (self-balancing BST)."
+    },
+
+    {
+      "type": "heading",
+      "heading": "6. Algorithms (Collections Class)"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Collections.sort() → sorting",
+        "Collections.reverse() → reverse list",
+        "Collections.shuffle() → random order",
+        "Collections.max() / min()"
+      ]
+    },
+
+    {
+      "type": "heading",
+      "heading": "7. Advantages"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Dynamic memory allocation",
+        "Reusable data structures",
+        "High performance",
+        "Rich API support"
+      ]
+    }
+  ]
+},
+{
+  "title": "Generics",
+  "sections": [
+    {
+      "type": "heading",
+      "heading": "1. Introduction to Generics"
+    },
+    {
+      "type": "definition",
+      "text": "Generics in Java allow you to create classes, interfaces, and methods with a parameterized type, ensuring type safety at compile time."
+    },
+    {
+      "type": "text",
+      "text": "👉 Introduced in Java 5\n👉 Avoids ClassCastException\n👉 Improves code readability"
+    },
+
+    {
+      "type": "image",
+      "heading": "Generics Working Concept",
+      "url": "https://media.geeksforgeeks.org/wp-content/uploads/20220920164314/Generics-in-Java.png"
+    },
+
+    {
+      "type": "heading",
+      "heading": "2. Why Generics?"
+    },
+    {
+      "type": "text",
+      "text": "Without generics, collections can store any type of object, leading to runtime errors."
+    },
+
+    {
+      "type": "code",
+      "language": "java",
+      "code": "ArrayList list = new ArrayList();\nlist.add(\"Hello\");\nlist.add(100); // problem"
+    },
+
+    {
+      "type": "heading",
+      "heading": "3. Using Generics"
+    },
+    {
+      "type": "code",
+      "language": "java",
+      "code": "ArrayList<String> list = new ArrayList<>();\nlist.add(\"Hello\");\n// list.add(100); ❌ Compile-time error"
+    },
+
+    {
+      "type": "heading",
+      "heading": "4. Generic Class"
+    },
+    {
+      "type": "code",
+      "language": "java",
+      "code": "class Box<T> {\n    T data;\n\n    void set(T data) {\n        this.data = data;\n    }\n\n    T get() {\n        return data;\n    }\n}"
+    },
+
+    {
+      "type": "heading",
+      "heading": "5. Generic Method"
+    },
+    {
+      "type": "code",
+      "language": "java",
+      "code": "class Demo {\n    public <T> void print(T data) {\n        System.out.println(data);\n    }\n}"
+    },
+
+    {
+      "type": "heading",
+      "heading": "6. Wildcards"
+    },
+    {
+      "type": "list",
+      "items": [
+        "<?> → unknown type",
+        "<? extends T> → upper bound",
+        "<? super T> → lower bound"
+      ]
+    },
+
+    {
+      "type": "heading",
+      "heading": "7. Advantages"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Type safety",
+        "Compile-time checking",
+        "No casting required",
+        "Reusable code"
+      ]
+    }
+  ]
+},
+{
+  "title": "Exception Handling in Java",
+  "sections": [
+    {
+      "type": "heading",
+      "heading": "1. What is Exception?"
+    },
+    {
+      "type": "definition",
+      "text": "An exception is an unwanted or unexpected event that occurs during the execution of a program and disrupts the normal flow of instructions."
+    },
+    {
+      "type": "text",
+      "text": "👉 Example: Dividing a number by zero, accessing invalid array index, file not found.\n👉 If not handled, program will terminate abnormally."
+    },
+
+    {
+      "type": "image",
+      "heading": "Exception Handling Flow in Java",
+      "url": "https://media.geeksforgeeks.org/wp-content/uploads/20230314144926/Exception-Handling-in-Java.png"
+    },
+
+    {
+      "type": "heading",
+      "heading": "2. Exception Hierarchy"
+    },
+    {
+      "type": "text",
+      "text": "👉 Root class: Throwable\n👉 Two main types:\n1. Error (serious problems, not handled)\n2. Exception (can be handled)"
+    },
+    {
+      "type": "text",
+      "text": "Throwable\n  ├── Error (OutOfMemoryError, StackOverflowError)\n  └── Exception\n        ├── Checked Exception\n        └── Unchecked Exception"
+    },
+
+    {
+      "type": "heading",
+      "heading": "3. Types of Exceptions"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Checked Exception → Checked at compile time (IOException, SQLException)",
+        "Unchecked Exception → Occurs at runtime (ArithmeticException, NullPointerException)",
+        "Error → JVM issues (OutOfMemoryError)"
+      ]
+    },
+
+    {
+      "type": "heading",
+      "heading": "4. try-catch Block"
+    },
+    {
+      "type": "definition",
+      "text": "try block contains risky code and catch block handles the exception."
+    },
+    {
+      "type": "code",
+      "language": "java",
+      "code": "public class Demo {\n    public static void main(String[] args) {\n        try {\n            int a = 10 / 0;\n        } catch (ArithmeticException e) {\n            System.out.println(\"Cannot divide by zero\");\n        }\n    }\n}"
+    },
+    {
+      "type": "output",
+      "text": "Cannot divide by zero"
+    },
+
+    {
+      "type": "heading",
+      "heading": "5. finally Block"
+    },
+    {
+      "type": "definition",
+      "text": "finally block always executes whether exception occurs or not."
+    },
+    {
+      "type": "code",
+      "language": "java",
+      "code": "try {\n    int a = 5;\n} finally {\n    System.out.println(\"Always executed\");\n}"
+    },
+
+    {
+      "type": "heading",
+      "heading": "6. Multiple Catch Blocks"
+    },
+    {
+      "type": "text",
+      "text": "👉 You can handle multiple exceptions using multiple catch blocks."
+    },
+    {
+      "type": "code",
+      "language": "java",
+      "code": "try {\n    int arr[] = new int[5];\n    arr[10] = 50;\n} catch (ArrayIndexOutOfBoundsException e) {\n    System.out.println(\"Array Error\");\n} catch (Exception e) {\n    System.out.println(\"General Error\");\n}"
+    },
+
+    {
+      "type": "heading",
+      "heading": "7. Nested try Block"
+    },
+    {
+      "type": "code",
+      "language": "java",
+      "code": "try {\n    try {\n        int a = 10 / 0;\n    } catch (ArithmeticException e) {\n        System.out.println(\"Inner catch\");\n    }\n} catch (Exception e) {\n    System.out.println(\"Outer catch\");\n}"
+    },
+
+    {
+      "type": "heading",
+      "heading": "8. throw Keyword"
+    },
+    {
+      "type": "definition",
+      "text": "throw keyword is used to explicitly throw an exception."
+    },
+    {
+      "type": "code",
+      "language": "java",
+      "code": "public class Demo {\n    static void checkAge(int age) {\n        if (age < 18) {\n            throw new ArithmeticException(\"Not eligible to vote\");\n        }\n        System.out.println(\"Eligible\");\n    }\n}"
+    },
+
+    {
+      "type": "heading",
+      "heading": "9. throws Keyword"
+    },
+    {
+      "type": "definition",
+      "text": "throws keyword is used to declare exceptions in method signature."
+    },
+    {
+      "type": "code",
+      "language": "java",
+      "code": "import java.io.*;\n\nclass Demo {\n    void readFile() throws IOException {\n        FileReader file = new FileReader(\"test.txt\");\n    }\n}"
+    },
+
+    {
+      "type": "heading",
+      "heading": "10. Custom Exception"
+    },
+    {
+      "type": "definition",
+      "text": "User-defined exceptions created by extending Exception class."
+    },
+    {
+      "type": "code",
+      "language": "java",
+      "code": "class MyException extends Exception {\n    MyException(String msg) {\n        super(msg);\n    }\n}"
+    },
+
+    {
+      "type": "heading",
+      "heading": "11. Important Methods"
+    },
+    {
+      "type": "list",
+      "items": [
+        "e.printStackTrace() → prints error details",
+        "e.getMessage() → returns error message",
+        "e.toString() → returns exception info"
+      ]
+    },
+
+    {
+      "type": "heading",
+      "heading": "12. Advantages of Exception Handling"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Prevents abnormal termination",
+        "Maintains program flow",
+        "Improves readability",
+        "Separates error handling code",
+        "Helps debugging"
+      ]
+    },
+
+    {
+      "type": "heading",
+      "heading": "13. Memory Trick"
+    },
+    {
+      "type": "text",
+      "text": "👉 try → risky code\n👉 catch → handle error\n👉 finally → always run\n👉 throw → create error\n👉 throws → declare error"
+    }
+  ]
+},
+{
+  "title": "File Handling in Java",
+  "sections": [
+    {
+      "type": "heading",
+      "heading": "1. Introduction to File Handling"
+    },
+    {
+      "type": "definition",
+      "text": "File handling in Java is used to create, read, write, and delete files. It allows programs to store data permanently in storage devices."
+    },
+    {
+      "type": "text",
+      "text": "👉 Java provides java.io and java.nio packages for file handling.\n👉 Data stored in files remains even after program execution ends."
+    },
+
+    {
+      "type": "image",
+      "heading": "Java File Handling Process",
+      "url": "https://media.geeksforgeeks.org/wp-content/uploads/20230314145839/File-Handling-in-Java.png"
+    },
+
+    {
+      "type": "heading",
+      "heading": "2. File Class"
+    },
+    {
+      "type": "definition",
+      "text": "File class is used to create and manage files and directories."
+    },
+    {
+      "type": "code",
+      "language": "java",
+      "code": "import java.io.File;\n\npublic class Demo {\n    public static void main(String[] args) {\n        File file = new File(\"test.txt\");\n\n        try {\n            if(file.createNewFile()) {\n                System.out.println(\"File created\");\n            } else {\n                System.out.println(\"File already exists\");\n            }\n        } catch(Exception e) {\n            System.out.println(e);\n        }\n    }\n}"
+    },
+
+    {
+      "type": "heading",
+      "heading": "3. Writing to File"
+    },
+    {
+      "type": "code",
+      "language": "java",
+      "code": "import java.io.FileWriter;\n\nFileWriter fw = new FileWriter(\"test.txt\");\nfw.write(\"Hello Java File\");\nfw.close();"
+    },
+
+    {
+      "type": "heading",
+      "heading": "4. Reading from File"
+    },
+    {
+      "type": "code",
+      "language": "java",
+      "code": "import java.io.File;\nimport java.util.Scanner;\n\nFile file = new File(\"test.txt\");\nScanner sc = new Scanner(file);\n\nwhile(sc.hasNextLine()) {\n    System.out.println(sc.nextLine());\n}\nsc.close();"
+    },
+
+    {
+      "type": "heading",
+      "heading": "5. Important Classes"
+    },
+    {
+      "type": "list",
+      "items": [
+        "File → create and manage files",
+        "FileWriter → write data",
+        "FileReader → read data",
+        "BufferedReader → fast reading",
+        "BufferedWriter → fast writing",
+        "Scanner → read file easily"
+      ]
+    },
+
+    {
+      "type": "heading",
+      "heading": "6. NIO Package (Advanced)"
+    },
+    {
+      "type": "text",
+      "text": "👉 java.nio.file package provides faster and modern file handling."
+    },
+    {
+      "type": "code",
+      "language": "java",
+      "code": "import java.nio.file.*;\n\nPath path = Paths.get(\"test.txt\");\nFiles.write(path, \"Hello NIO\".getBytes());"
+    },
+
+    {
+      "type": "heading",
+      "heading": "7. Advantages"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Permanent data storage",
+        "Supports large data",
+        "Reusable data",
+        "Efficient input/output operations"
+      ]
+    },
+
+    {
+      "type": "heading",
+      "heading": "8. Memory Trick"
+    },
+    {
+      "type": "text",
+      "text": "👉 Create → Write → Read → Close"
+    }
+  ]
+},
+{
+  "title": "Multithreading in Java",
+  "sections": [
+    {
+      "type": "heading",
+      "heading": "1. Introduction to Multithreading"
+    },
+    {
+      "type": "definition",
+      "text": "Multithreading is a process of executing multiple threads simultaneously to improve performance and CPU utilization."
+    },
+    {
+      "type": "text",
+      "text": "👉 Thread is a lightweight process.\n👉 Used in games, animations, background tasks, etc."
+    },
+
+    {
+      "type": "image",
+      "heading": "Multithreading Execution Flow",
+      "url": "https://media.geeksforgeeks.org/wp-content/uploads/20230410144458/Multithreading-in-Java.png"
+    },
+
+    {
+      "type": "heading",
+      "heading": "2. Thread Creation Methods"
+    },
+    {
+      "type": "list",
+      "items": [
+        "1. Extending Thread class",
+        "2. Implementing Runnable interface"
+      ]
+    },
+
+    {
+      "type": "heading",
+      "heading": "3. Example using Thread Class"
+    },
+    {
+      "type": "code",
+      "language": "java",
+      "code": "class MyThread extends Thread {\n    public void run() {\n        System.out.println(\"Thread running\");\n    }\n}\n\npublic class Demo {\n    public static void main(String[] args) {\n        MyThread t = new MyThread();\n        t.start();\n    }\n}"
+    },
+
+    {
+      "type": "heading",
+      "heading": "4. Example using Runnable"
+    },
+    {
+      "type": "code",
+      "language": "java",
+      "code": "class MyRunnable implements Runnable {\n    public void run() {\n        System.out.println(\"Runnable thread\");\n    }\n}\n\npublic class Demo {\n    public static void main(String[] args) {\n        Thread t = new Thread(new MyRunnable());\n        t.start();\n    }\n}"
+    },
+
+    {
+      "type": "heading",
+      "heading": "5. Thread Lifecycle"
+    },
+    {
+      "type": "list",
+      "items": [
+        "New → thread created",
+        "Runnable → ready to run",
+        "Running → executing",
+        "Blocked/Waiting → paused",
+        "Terminated → finished"
+      ]
+    },
+
+    {
+      "type": "heading",
+      "heading": "6. Important Methods"
+    },
+    {
+      "type": "list",
+      "items": [
+        "start() → starts thread",
+        "run() → thread logic",
+        "sleep() → pause thread",
+        "join() → wait for thread",
+        "isAlive() → check status"
+      ]
+    },
+
+    {
+      "type": "heading",
+      "heading": "7. Synchronization"
+    },
+    {
+      "type": "definition",
+      "text": "Synchronization is used to control access to shared resources to avoid data inconsistency."
+    },
+    {
+      "type": "code",
+      "language": "java",
+      "code": "synchronized void display() {\n    System.out.println(\"Safe thread access\");\n}"
+    },
+
+    {
+      "type": "heading",
+      "heading": "8. Advantages"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Better CPU utilization",
+        "Faster execution",
+        "Parallel processing",
+        "Improved performance"
+      ]
+    }
+  ]
+}
+  ]
+
+}

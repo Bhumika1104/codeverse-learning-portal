@@ -1,0 +1,512 @@
+{
+  "Java": [
+    {
+      "id": 1,
+      "question": "What is Java?",
+      "answer": "Java is an object-oriented, platform-independent programming language."
+    },
+    {
+      "id": 2,
+      "question": "What is JVM?",
+      "answer": "JVM stands for Java Virtual Machine which executes Java bytecode."
+    },
+    {
+      "id": 3,
+      "question": "Explain OOP concepts in Java.",
+      "answer": "OOP in Java consists of Encapsulation, Inheritance, Polymorphism, and Abstraction."
+    },
+    {
+      "id": 4,
+      "question": "What is a Class in Java?",
+      "answer": "A class is a blueprint from which objects are created."
+    },
+    {
+      "id": 5,
+      "question": "What is an Object in Java?",
+      "answer": "Object is an instance of a class that contains states and behaviors."
+    },
+    {
+      "id": 6,
+      "question": "What is JDK?",
+      "answer": "JDK stands for Java Development Kit, used to develop Java applications."
+    },
+    {
+      "id": 7,
+      "question": "What is JRE?",
+      "answer": "JRE stands for Java Runtime Environment which provides libraries and JVM."
+    },
+    {
+      "id": 8,
+      "question": "What is Inheritance?",
+      "answer": "Inheritance allows one class to acquire properties of another class."
+    },
+    {
+      "id": 9,
+      "question": "What is Polymorphism?",
+      "answer": "Polymorphism means performing a single task in different ways."
+    },
+    {
+      "id": 10,
+      "question": "What is Encapsulation?",
+      "answer": "Encapsulation wraps data and methods into a single unit called a class."
+    },
+    {
+      "id": 11,
+      "question": "What is Abstraction?",
+      "answer": "Abstraction hides internal implementation and shows only essential features."
+    },
+    {
+      "id": 12,
+      "question": "What is Method Overloading?",
+      "answer": "Method overloading means multiple methods with the same name but different parameters."
+    },
+    {
+      "id": 13,
+      "question": "What is Method Overriding?",
+      "answer": "Method overriding means redefining a method of the parent class in a child class."
+    },
+    {
+      "id": 14,
+      "question": "What is a Constructor?",
+      "answer": "A constructor is a special method used to initialize objects."
+    },
+    {
+      "id": 15,
+      "question": "What are Access Modifiers?",
+      "answer": "Access modifiers control the visibility of classes, methods, and variables."
+    },
+    {
+      "id": 16,
+      "question": "What is a Package in Java?",
+      "answer": "A package is a group of related classes and interfaces."
+    },
+    {
+      "id": 17,
+      "question": "What is Exception Handling?",
+      "answer": "Exception handling deals with runtime errors to maintain program flow."
+    },
+    {
+      "id": 18,
+      "question": "What is Garbage Collection?",
+      "answer": "Garbage collection removes unused objects from memory automatically."
+    },
+    {
+      "id": 19,
+      "question": "What is an Interface?",
+      "answer": "An interface is a collection of abstract methods used to achieve abstraction."
+    },
+    {
+      "id": 20,
+      "question": "What is a Thread?",
+      "answer": "A thread is a lightweight sub-process used for multitasking in Java."
+    }
+  ],
+  "Python": [
+    {
+      "id": 1,
+      "question": "What is Python?",
+      "answer": "Python is a high-level, interpreted programming language."
+    },
+    {
+      "id": 2,
+      "question": "What are Python's key features?",
+      "answer": "Python is simple, interpreted, dynamically typed, and supports OOP."
+    },
+    {
+      "id": 3,
+      "question": "What is PEP 8?",
+      "answer": "PEP 8 is Python's official style guide for writing clean code."
+    },
+    {
+      "id": 4,
+      "question": "What is a List?",
+      "answer": "A list is a mutable ordered collection of items."
+    },
+    {
+      "id": 5,
+      "question": "What is a Tuple?",
+      "answer": "A tuple is an immutable ordered collection of items."
+    },
+    {
+      "id": 6,
+      "question": "What is a Dictionary?",
+      "answer": "A dictionary stores data in key-value pairs."
+    },
+    {
+      "id": 7,
+      "question": "What is a Set?",
+      "answer": "A set is an unordered collection of unique items."
+    },
+    {
+      "id": 8,
+      "question": "What is Python Interpreter?",
+      "answer": "The interpreter executes Python code line by line."
+    },
+    {
+      "id": 9,
+      "question": "What is a Function in Python?",
+      "answer": "A function is a block of reusable code."
+    },
+    {
+      "id": 10,
+      "question": "What is Lambda Function?",
+      "answer": "Lambda is a small anonymous function created using the lambda keyword."
+    },
+    {
+      "id": 11,
+      "question": "What is OOP in Python?",
+      "answer": "Python OOP includes classes, objects, inheritance, polymorphism, and encapsulation."
+    },
+    {
+      "id": 12,
+      "question": "What is a Module?",
+      "answer": "A module is a Python file containing functions, variables, and classes."
+    },
+    {
+      "id": 13,
+      "question": "What is a Package?",
+      "answer": "A package is a collection of modules stored in a directory with __init__.py file."
+    },
+    {
+      "id": 14,
+      "question": "What is Exception Handling?",
+      "answer": "Exception handling deals with runtime errors using try-except blocks."
+    },
+    {
+      "id": 15,
+      "question": "What is List Comprehension?",
+      "answer": "List comprehension provides a shorter syntax to create lists."
+    },
+    {
+      "id": 16,
+      "question": "What is a Virtual Environment?",
+      "answer": "A virtual environment is an isolated workspace for Python projects."
+    },
+    {
+      "id": 17,
+      "question": "What is a Decorator?",
+      "answer": "Decorator is a function that modifies another function's behavior."
+    },
+    {
+      "id": 18,
+      "question": "What is a Generator?",
+      "answer": "A generator returns values using yield instead of return and saves memory."
+    },
+    {
+      "id": 19,
+      "question": "What is NumPy?",
+      "answer": "NumPy is a Python library used for numerical and scientific computations."
+    },
+    {
+      "id": 20,
+      "question": "What is Pandas?",
+      "answer": "Pandas is a library for data manipulation, cleaning, and analysis."
+    }
+  ],
+  "C++": [
+  {
+    "id": 1,
+    "question": "What is C++?",
+    "answer": "C++ is a high-level, object-oriented programming language developed by Bjarne Stroustrup."
+  },
+  {
+    "id": 2,
+    "question": "What are the key features of C++?",
+    "answer": "C++ supports OOP, classes, inheritance, polymorphism, encapsulation, and templates."
+  },
+  {
+    "id": 3,
+    "question": "What is OOP in C++?",
+    "answer": "OOP is a programming paradigm based on objects and classes."
+  },
+  {
+    "id": 4,
+    "question": "What is a class in C++?",
+    "answer": "A class is a blueprint for creating objects."
+  },
+  {
+    "id": 5,
+    "question": "What is an object?",
+    "answer": "An object is an instance of a class."
+  },
+  {
+    "id": 6,
+    "question": "What is inheritance?",
+    "answer": "Inheritance allows a class to acquire properties of another class."
+  },
+  {
+    "id": 7,
+    "question": "What is polymorphism?",
+    "answer": "Polymorphism allows functions or methods to behave differently based on input or object."
+  },
+  {
+    "id": 8,
+    "question": "What is encapsulation?",
+    "answer": "Encapsulation is wrapping data and methods into a single unit."
+  },
+  {
+    "id": 9,
+    "question": "What is abstraction?",
+    "answer": "Abstraction hides internal implementation and shows only functionality."
+  },
+  {
+    "id": 10,
+    "question": "What is constructor?",
+    "answer": "A constructor is a special function used to initialize objects."
+  },
+  {
+    "id": 11,
+    "question": "What is destructor?",
+    "answer": "A destructor is used to destroy objects and free memory."
+  },
+  {
+    "id": 12,
+    "question": "What is function overloading?",
+    "answer": "Function overloading allows multiple functions with the same name but different parameters."
+  },
+  {
+    "id": 13,
+    "question": "What is operator overloading?",
+    "answer": "It allows redefining operators for user-defined types."
+  },
+  {
+    "id": 14,
+    "question": "What is a pointer?",
+    "answer": "A pointer stores the memory address of another variable."
+  },
+  {
+    "id": 15,
+    "question": "What is reference in C++?",
+    "answer": "A reference is an alias for an existing variable."
+  },
+  {
+    "id": 16,
+    "question": "What is STL?",
+    "answer": "STL (Standard Template Library) provides ready-to-use data structures and algorithms."
+  },
+  {
+    "id": 17,
+    "question": "What is vector in C++?",
+    "answer": "Vector is a dynamic array in STL."
+  },
+  {
+    "id": 18,
+    "question": "What is exception handling?",
+    "answer": "Exception handling is used to handle runtime errors using try, catch, and throw."
+  },
+  {
+    "id": 19,
+    "question": "What is namespace?",
+    "answer": "Namespace is used to avoid name conflicts in large programs."
+  },
+  {
+    "id": 20,
+    "question": "What is virtual function?",
+    "answer": "A virtual function is used for runtime polymorphism."
+  }
+],
+"C": [
+  {
+    "id": 1,
+    "question": "What is C language?",
+    "answer": "C is a general-purpose programming language used to develop system and application software."
+  },
+  {
+    "id": 2,
+    "question": "Who developed C language?",
+    "answer": "C language was developed by Dennis Ritchie."
+  },
+  {
+    "id": 3,
+    "question": "What is a variable?",
+    "answer": "A variable is a name given to a memory location to store data."
+  },
+  {
+    "id": 4,
+    "question": "What are data types in C?",
+    "answer": "Common data types are int, float, char, and double."
+  },
+  {
+    "id": 5,
+    "question": "What is a function?",
+    "answer": "A function is a block of code that performs a specific task."
+  },
+  {
+    "id": 6,
+    "question": "What is printf()?",
+    "answer": "printf() is used to display output on the screen."
+  },
+  {
+    "id": 7,
+    "question": "What is scanf()?",
+    "answer": "scanf() is used to take input from the user."
+  },
+  {
+    "id": 8,
+    "question": "What is a pointer?",
+    "answer": "A pointer is a variable that stores the address of another variable."
+  },
+  {
+    "id": 9,
+    "question": "What is an array?",
+    "answer": "An array is a collection of elements of the same type."
+  },
+  {
+    "id": 10,
+    "question": "What is a loop?",
+    "answer": "A loop is used to repeat a block of code multiple times."
+  },
+  {
+    "id": 11,
+    "question": "Types of loops in C?",
+    "answer": "for loop, while loop, and do-while loop."
+  },
+  {
+    "id": 12,
+    "question": "What is a structure?",
+    "answer": "A structure is a user-defined data type to store different types of data together."
+  },
+  {
+    "id": 13,
+    "question": "What is main() function?",
+    "answer": "main() is the starting point of a C program."
+  },
+  {
+    "id": 14,
+    "question": "What is return 0?",
+    "answer": "It indicates that the program executed successfully."
+  },
+  {
+    "id": 15,
+    "question": "Difference between = and ==?",
+    "answer": "= is used for assignment, == is used for comparison."
+  },
+  {
+    "id": 16,
+    "question": "What is a header file?",
+    "answer": "A header file contains declarations of functions and macros."
+  },
+  {
+    "id": 17,
+    "question": "What is #include?",
+    "answer": "It is used to include header files in a program."
+  },
+  {
+    "id": 18,
+    "question": "What is #define?",
+    "answer": "It is used to define constants or macros."
+  },
+  {
+    "id": 19,
+    "question": "What is recursion?",
+    "answer": "Recursion is when a function calls itself."
+  },
+  {
+    "id": 20,
+    "question": "What is a null pointer?",
+    "answer": "A null pointer is a pointer that does not point to any valid memory location."
+  }
+],
+"JavaScript": [
+  {
+    "id": 1,
+    "question": "What is JavaScript?",
+    "answer": "JavaScript is a high-level, interpreted programming language used for web development."
+  },
+  {
+    "id": 2,
+    "question": "What are JavaScript data types?",
+    "answer": "JavaScript data types include String, Number, Boolean, Null, Undefined, Object, and Symbol."
+  },
+  {
+    "id": 3,
+    "question": "What is the difference between let, var, and const?",
+    "answer": "var is function scoped, let and const are block scoped; const cannot be reassigned."
+  },
+  {
+    "id": 4,
+    "question": "What is a function in JavaScript?",
+    "answer": "A function is a block of reusable code that performs a specific task."
+  },
+  {
+    "id": 5,
+    "question": "What is an array?",
+    "answer": "An array is a collection of multiple values stored in a single variable."
+  },
+  {
+    "id": 6,
+    "question": "What is an object in JavaScript?",
+    "answer": "An object is a collection of key-value pairs."
+  },
+  {
+    "id": 7,
+    "question": "What is DOM?",
+    "answer": "DOM (Document Object Model) represents the structure of a web page."
+  },
+  {
+    "id": 8,
+    "question": "What is event handling?",
+    "answer": "Event handling is the process of responding to user actions like clicks and keypresses."
+  },
+  {
+    "id": 9,
+    "question": "What is hoisting?",
+    "answer": "Hoisting is JavaScript's behavior of moving declarations to the top of scope."
+  },
+  {
+    "id": 10,
+    "question": "What is closure?",
+    "answer": "A closure is a function that remembers its outer scope even after execution."
+  },
+  {
+    "id": 11,
+    "question": "What is callback function?",
+    "answer": "A callback is a function passed as an argument to another function."
+  },
+  {
+    "id": 12,
+    "question": "What is promise?",
+    "answer": "A promise is an object representing the eventual completion or failure of an async operation."
+  },
+  {
+    "id": 13,
+    "question": "What is async/await?",
+    "answer": "async/await is used to handle asynchronous code in a cleaner way."
+  },
+  {
+    "id": 14,
+    "question": "What is difference between == and ===?",
+    "answer": "== checks value only, while === checks value and type both."
+  },
+  {
+    "id": 15,
+    "question": "What is arrow function?",
+    "answer": "Arrow function is a shorter syntax for writing functions in JavaScript."
+  },
+  {
+    "id": 16,
+    "question": "What is NaN?",
+    "answer": "NaN means Not a Number, representing invalid numeric operations."
+  },
+  {
+    "id": 17,
+    "question": "What is localStorage?",
+    "answer": "localStorage is used to store data in the browser permanently."
+  },
+  {
+    "id": 18,
+    "question": "What is sessionStorage?",
+    "answer": "sessionStorage stores data temporarily until the browser tab is closed."
+  },
+  {
+    "id": 19,
+    "question": "What is JSON?",
+    "answer": "JSON is a format for storing and exchanging data."
+  },
+  {
+    "id": 20,
+    "question": "What is event loop?",
+    "answer": "Event loop handles asynchronous operations in JavaScript runtime."
+  }
+]
+}

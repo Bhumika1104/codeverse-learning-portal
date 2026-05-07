@@ -1,0 +1,1065 @@
+{
+  "C": [
+    {
+      "id": 1,
+      "question": "What is C language?",
+      "answer": "C is a structured, general-purpose programming language developed by Dennis Ritchie. It is widely used for system programming, operating systems, embedded systems, and performance-critical applications due to its low-level memory access and fast execution."
+    },
+    {
+      "id": 2,
+      "question": "What are the main features of C?",
+      "answer": "C provides low-level memory manipulation, rich built-in operators, structured programming, dynamic memory allocation, portability, and fast performance. Programs written in C can run on almost any hardware with minimal changes."
+    },
+    {
+      "id": 3,
+      "question": "What is a variable in C?",
+      "answer": "A variable is a named memory location used to store data. Its value can change during program execution. Every variable must have a data type that defines the memory size and value range."
+    },
+    {
+      "id": 4,
+      "question": "What is a data type?",
+      "answer": "Data types specify what kind of data a variable can hold, such as int for integers, float for decimal numbers, char for characters. They define memory usage and valid operations."
+    },
+    {
+      "id": 5,
+      "question": "What is the difference between local and global variables?",
+      "answer": "Local variables are declared inside a function/block and accessible only there. Global variables are declared outside all functions and accessible throughout the program."
+    },
+    {
+      "id": 6,
+      "question": "What is a pointer?",
+      "answer": "A pointer is a variable that stores the memory address of another variable. It allows dynamic memory allocation, array handling, and efficient parameter passing."
+    },
+    {
+      "id": 7,
+      "question": "What is NULL pointer?",
+      "answer": "A NULL pointer stores the value 0 and points to nowhere. It is used to represent an invalid or empty memory address, commonly used in conditions to check if a pointer is initialized."
+    },
+    {
+      "id": 8,
+      "question": "What is dangling pointer?",
+      "answer": "A dangling pointer points to memory that has already been freed. Accessing it may cause undefined behavior or crashes. Always set freed pointers to NULL."
+    },
+    {
+      "id": 9,
+      "question": "What is the sizeof operator?",
+      "answer": "sizeof is a compile-time operator used to find the memory size (in bytes) of data types and variables. Example: sizeof(int) returns typically 4 bytes."
+    },
+    {
+      "id": 10,
+      "question": "What is an array in C?",
+      "answer": "An array is a collection of elements of the same data type stored in contiguous memory locations. It allows storing multiple values using a single variable name."
+    },
+    {
+      "id": 11,
+      "question": "What is a string in C?",
+      "answer": "A string is a character array terminated with a null character '\\0'. Example: char name[] = \"Bhumika\";"
+    },
+    {
+      "id": 12,
+      "question": "What is structure in C?",
+      "answer": "A structure is a user-defined data type that groups variables of different types under one name. Example: struct Student { int roll; char name[20]; };"
+    },
+    {
+      "id": 13,
+      "question": "What is union?",
+      "answer": "Union is similar to structure but all members share the same memory location. Only one member can hold a value at a time. Useful in memory-sensitive applications."
+    },
+    {
+      "id": 14,
+      "question": "What is pointer arithmetic?",
+      "answer": "Pointer arithmetic allows operations like increment, decrement, addition, subtraction directly on memory addresses. Example: p++ moves pointer to next memory location of its data type."
+    },
+    {
+      "id": 15,
+      "question": "What is dynamic memory allocation?",
+      "answer": "Dynamic memory allocation assigns memory during runtime using malloc(), calloc(), realloc(), and free(). It allows efficient memory management based on program needs."
+    },
+    {
+      "id": 16,
+      "question": "Difference between malloc and calloc?",
+      "answer": "malloc allocates uninitialized memory, whereas calloc allocates memory and initializes all bytes to zero. calloc also takes number of blocks and block size."
+    },
+    {
+      "id": 17,
+      "question": "What is segmentation fault?",
+      "answer": "A segmentation fault occurs when a program tries to access restricted memory (e.g., invalid pointers or freed memory). It stops program execution immediately."
+    },
+    {
+      "id": 18,
+      "question": "What is recursion?",
+      "answer": "Recursion is a technique where a function calls itself. Useful for tasks like factorial, Fibonacci, tree traversal. Must include a base condition to avoid infinite loops."
+    },
+    {
+      "id": 19,
+      "question": "What is a function prototype?",
+      "answer": "A function prototype declares the function name, return type, and parameters before its actual definition. It allows compiler to check correctness of function usage."
+    },
+    {
+      "id": 20,
+      "question": "What is the difference between call by value and call by reference?",
+      "answer": "In call by value, a copy of variable is passed and changes do not affect original. In call by reference, the address is passed using pointers and changes reflect in original variable."
+    },
+    {
+      "id": 21,
+      "question": "What is a header file?",
+      "answer": "Header files contain declarations of functions, macros, and structures. They are included using #include <file.h>. Example: stdio.h provides printf and scanf."
+    },
+    {
+      "id": 22,
+      "question": "What is pointer to pointer?",
+      "answer": "A pointer to pointer stores the address of another pointer. Useful in dynamic arrays and passing pointers to functions. Example: int **ptr;"
+    },
+    {
+      "id": 23,
+      "question": "Explain storage classes in C.",
+      "answer": "C has four storage classes: auto (default local), static (persistent), extern (global reference), and register (fast CPU register storage)."
+    },
+    {
+      "id": 24,
+      "question": "What is static variable?",
+      "answer": "A static variable retains its value between function calls. It has internal linkage and is initialized only once."
+    },
+    {
+      "id": 25,
+      "question": "What is the purpose of break and continue?",
+      "answer": "break exits a loop or switch statement immediately. continue skips current iteration and moves to the next iteration."
+    },
+    {
+      "id": 26,
+      "question": "What is a macro?",
+      "answer": "#define macro is a preprocessor directive that replaces code at compile time. Example: #define PI 3.14"
+    },
+    {
+      "id": 27,
+      "question": "What is the difference between ++i and i++?",
+      "answer": "++i increments the value first and then uses it. i++ uses the current value first and then increments. Used in loops and expressions."
+    },
+    {
+      "id": 28,
+      "question": "What is type casting?",
+      "answer": "Type casting converts one data type to another. Example: (float)5 converts integer to floating value."
+    },
+    {
+      "id": 29,
+      "question": "What is command line argument?",
+      "answer": "Command line arguments allow passing values to the program when executed. main() receives them using int argc, char *argv[]."
+    },
+    {
+      "id": 30,
+      "question": "What is file handling in C?",
+      "answer": "C provides functions like fopen(), fclose(), fprintf(), fscanf(), fread(), fwrite() to handle file operations such as reading/writing data."
+    },
+    {
+      "id": 31,
+      "question": "Difference between array and pointer?",
+      "answer": "An array stores multiple elements of the same type, pointer stores memory address. Array name gives base address but cannot be reassigned; pointer can be reassigned."
+    },
+    {
+      "id": 32,
+      "question": "What is volatile keyword?",
+      "answer": "volatile tells the compiler that a variable's value may change unexpectedly (hardware/multithreading). Compiler avoids optimization for that variable."
+    },
+    {
+      "id": 33,
+      "question": "What is const in C?",
+      "answer": "const makes variable read-only. Example: const int x = 10; You can't change x later."
+    },
+    {
+      "id": 34,
+      "question": "What is enumeration?",
+      "answer": "enum is a user-defined type consisting of a set of named integer constants. Example: enum week {Sun, Mon, Tue};"
+    },
+    {
+      "id": 35,
+      "question": "What is segmentation in memory layout?",
+      "answer": "C program memory is divided into segments: Code, Data, Heap, Stack. Each stores different program components like functions, static data, variables, and dynamic memory."
+    },
+    {
+      "id": 36,
+      "question": "What is the difference between stack and heap?",
+      "answer": "Stack stores local variables and function calls; managed automatically. Heap stores dynamically allocated memory; must be manually managed using malloc/free."
+    },
+    {
+      "id": 37,
+      "question": "What is inline function in C?",
+      "answer": "Inline functions request the compiler to substitute function code directly at call location to improve performance. Implemented using static inline."
+    },
+    {
+      "id": 38,
+      "question": "What is token in C?",
+      "answer": "A token is the smallest element of a C program, such as keywords, identifiers, constants, strings, operators, and separators."
+    },
+    {
+      "id": 39,
+      "question": "Difference between scanf and gets?",
+      "answer": "scanf stops reading at space; gets reads entire line including spaces but is unsafe. fgets is recommended alternative."
+    },
+    {
+      "id": 40,
+      "question": "What is wildcard in C?",
+      "answer": "Wildcard characters like * are used in file matching and patterns, but not directly in C syntax. Frequently used in shell commands and regex."
+    },
+    {
+      "id": 41,
+      "question": "What is a memory leak?",
+      "answer": "A memory leak occurs when dynamically allocated memory is not freed using free(). Over time, it reduces available memory and may crash the application."
+    },
+    {
+      "id": 42,
+      "question": "What is the purpose of return statement?",
+      "answer": "The return statement exits a function and optionally returns a value. Every non-void function must return a value."
+    },
+    {
+      "id": 43,
+      "question": "What is conditional operator?",
+      "answer": "The conditional operator (?:) provides shorthand for if-else. Example: int x = (a > b) ? a : b;"
+    },
+    {
+      "id": 44,
+      "question": "Explain the switch statement.",
+      "answer": "switch allows multi-way branching based on an integer expression. Each case block runs when matching value is found, and break prevents fall-through."
+    },
+    {
+      "id": 45,
+      "question": "What is bitwise operator?",
+      "answer": "Bitwise operators (&, |, ^, ~, <<, >>) perform operations at the bit level. Used in embedded systems, encryption, optimization."
+    },
+    {
+      "id": 46,
+      "question": "What is preprocessor in C?",
+      "answer": "Preprocessor runs before compilation and handles commands starting with # like include, define, ifdef. It prepares code for the compiler."
+    },
+    {
+      "id": 47,
+      "question": "What is the purpose of typedef?",
+      "answer": "typedef creates an alias for existing data types. Example: typedef unsigned long int ULI; makes code cleaner and easier to read."
+    },
+    {
+      "id": 48,
+      "question": "Explain multi-dimensional array.",
+      "answer": "A multi-dimensional array is an array of arrays like 2D: int a[3][3]; Used for matrices and grids."
+    },
+    {
+      "id": 49,
+      "question": "What is the difference between break and exit?",
+      "answer": "break only exits loops or switch; exit() terminates the entire program immediately."
+    },
+    {
+      "id": 50,
+      "question": "What is main() return type and why?",
+      "answer": "main() returns int because it returns status code to the operating system. return 0 indicates successful execution."
+    }
+
+  ],
+
+  "Python": [
+    {
+      "id": 1,
+      "question": "What is Python and why is it so popular?",
+      "answer": "Python is a high-level, interpreted, general-purpose programming language created by Guido van Rossum. It is extremely popular because of its simple and readable syntax that resembles English, making it easy for beginners. Python supports multiple paradigms such as object-oriented, functional, and procedural programming. It also has an extensive ecosystem of libraries like NumPy, Pandas, Django, Flask, TensorFlow, and PyTorch, which makes it suitable for areas like web development, machine learning, data science, automation, artificial intelligence, and more. Python is platform-independent and has strong community support, which helps developers solve problems faster."
+    },
+    {
+      "id": 2,
+      "question": "What are Python's main features?",
+      "answer": "Python has several important features: (1) Easy-to-read syntax, making development faster. (2) Interpreted language, meaning code runs line-by-line. (3) Dynamically typed, so you don’t need to declare variable types. (4) Cross-platform support — the same code runs on Windows, macOS, and Linux. (5) Large standard library with modules for networking, math, file handling, etc. (6) Supports object-oriented and functional programming. (7) Huge ecosystem of third-party libraries for almost any domain. These features make Python extremely powerful for beginners and professionals."
+    },
+    {
+      "id": 3,
+      "question": "What is PEP 8 and why is it important?",
+      "answer": "PEP 8 is Python's official style guide that provides coding standards on how to format Python code for maximum readability. It includes rules for naming variables, writing functions, indentation, line length, imports, and comments. Following PEP 8 improves code readability not just for you but for teams working on large projects. It ensures uniform coding style and reduces errors. Tools like flake8 and black automatically format code according to PEP 8."
+    },
+    {
+      "id": 4,
+      "question": "What is the difference between list, tuple, and set?",
+      "answer": "Lists are ordered, mutable collections that allow duplicate values. You can add, remove, or modify items in a list. Tuples are ordered but immutable, meaning their values cannot be changed after creation; tuples are used for fixed data. Sets are unordered collections of unique elements; they do not allow duplicates and support mathematical operations like union and intersection. Lists are used when frequent changes are required, tuples are used for constant data, and sets are useful for fast membership testing or removing duplicates."
+    },
+    {
+      "id": 5,
+      "question": "What is a dictionary in Python?",
+      "answer": "A dictionary is an unordered collection of key-value pairs. Each key must be unique, and values can be any data type. Dictionaries provide fast lookups using hashing. Example: {'name': 'Bhumika', 'age': 20}. They are widely used for structured data, JSON handling, fast lookup operations, frequency counting, and database-like records."
+    },
+    {
+      "id": 6,
+      "question": "What is the difference between == and is?",
+      "answer": "The == operator checks for value equality — whether the data inside the objects is the same. The 'is' keyword checks for identity — whether two variables point to the same memory location. Example: two lists with same elements are equal (==) but not identical (is). 'is' is mainly used for comparing None or checking if two variables refer to the same object."
+    },
+    {
+      "id": 7,
+      "question": "What is Python's memory management model?",
+      "answer": "Python uses automatic memory management through a system called reference counting combined with garbage collection. Every object has a reference count that increases when assigned and decreases when deleted. When reference count reaches zero, the memory is released. Python also has a cyclic garbage collector to detect reference cycles. Memory allocation and deallocation are handled internally by Python's memory manager, making memory handling easier for developers."
+    },
+    {
+      "id": 8,
+      "question": "Explain the concept of decorators in Python.",
+      "answer": "Decorators are functions that modify the behavior of another function without permanently changing it. A decorator takes a function as input, adds new functionality, and returns the modified function. They are widely used in logging, authentication, caching, performance measurement, and frameworks like Flask and Django. Example: @login_required ensures only logged-in users can access a webpage. Decorators help maintain clean and reusable code."
+    },
+    {
+      "id": 9,
+      "question": "What are generators in Python?",
+      "answer": "Generators are special functions that return an iterator using the 'yield' keyword. They allow lazy evaluation, meaning values are generated one at a time only when needed, instead of storing the entire sequence in memory. This makes generators extremely memory-efficient, especially for handling large files, massive datasets, or infinite sequences. Example: reading a file line-by-line using a generator reduces memory usage."
+    },
+    {
+      "id": 10,
+      "question": "What is the Global Interpreter Lock (GIL)?",
+      "answer": "The GIL is a lock used by Python's CPython interpreter that allows only one thread to execute Python bytecode at a time. It prevents race conditions in memory but limits true multithreading. As a result, Python threads are not ideal for CPU-intensive tasks but work well for I/O-bound tasks. To overcome GIL limitations, multiprocessing or alternative Python interpreters like Jython or PyPy can be used."
+    },
+    {
+      "id": 11,
+      "question": "Explain OOP concepts in Python.",
+      "answer": "Python supports all key OOP concepts: (1) Class — blueprint for creating objects. (2) Object — instance of a class. (3) Encapsulation — hiding data using private variables. (4) Inheritance — one class can inherit attributes and methods of another. (5) Polymorphism — same method name works differently depending on the class. (6) Abstraction — hiding implementation details. These principles allow scalable, reusable, and maintainable code."
+    },
+    {
+      "id": 12,
+      "question": "What is exception handling in Python?",
+      "answer": "Exception handling is a way to manage runtime errors without crashing the program. Python provides try, except, finally, and else blocks. try contains risky code; except handles errors; finally always executes (used for cleanup). Proper exception handling ensures smooth program execution and user-friendly error messages. Custom exceptions can also be created by inheriting from Exception class."
+    },
+    {
+      "id": 13,
+      "question": "What are lambda functions in Python?",
+      "answer": "Lambda functions are small anonymous functions without a name, defined using the lambda keyword. They are used for short operations like sorting, filtering, and mapping data. Example: lambda x: x * 2. They help write concise code and are widely used in functional programming patterns."
+    },
+    {
+      "id": 14,
+      "question": "What is the difference between range and xrange?",
+      "answer": "In Python 3, only range exists and it behaves like xrange of Python 2. range generates numbers lazily (on-demand) and is memory efficient. In Python 2, range created a full list while xrange created an iterator. In modern Python (3.x), range is preferred and efficient for loops."
+    },
+    {
+      "id": 15,
+      "question": "Explain list comprehension with an example.",
+      "answer": "List comprehension is a concise way to create lists using a single line of code. It improves readability and performance. Example: [x * 2 for x in range(5)] generates [0, 2, 4, 6, 8]. It supports conditions, nested loops, and is widely used in data processing and transformations."
+    },
+    {
+      "id": 16,
+      "question": "What are modules and packages in Python?",
+      "answer": "A module is a single '.py' file containing Python code. A package is a collection of modules inside a folder with an __init__.py file. Modules and packages help organize large applications, improve reusability, and reduce duplicate code. Python’s standard library contains hundreds of built-in modules like math, os, sys, datetime, etc."
+    },
+    {
+      "id": 17,
+      "question": "What is virtual environment in Python?",
+      "answer": "A virtual environment is an isolated environment that allows you to install packages separately for each project. This avoids version conflicts and ensures that one project's dependencies do not affect another. Tools like venv and virtualenv help create and manage virtual environments. Every professional Python project uses virtual environments."
+    },
+    {
+      "id": 18,
+      "question": "What are Python libraries used in Data Science?",
+      "answer": "Python offers powerful libraries for data science and machine learning: NumPy for numerical computing, Pandas for data analysis, Matplotlib and Seaborn for visualization, Scikit-learn for machine learning algorithms, TensorFlow and PyTorch for deep learning, SciPy for scientific computing. These libraries make Python the No. 1 choice for AI and ML."
+    },
+    {
+      "id": 19,
+      "question": "What is the difference between deep copy and shallow copy?",
+      "answer": "Shallow copy creates a new object but does not copy nested objects — they remain shared. It uses copy.copy(). Deep copy creates a completely independent copy of the object and all nested objects using copy.deepcopy(). Deep copy is used when independent datasets are required. Shallow copies are faster but can cause unintended changes if nested objects are modified."
+    },
+    {
+      "id": 20,
+      "question": "What is recursion in Python and when should it be used?",
+      "answer": "Recursion is a programming technique where a function calls itself until a base condition is reached. It is useful for tasks like factorial, Fibonacci, tree traversal, backtracking, and divide-and-conquer algorithms. However, recursion should be used carefully because Python has a recursion depth limit. For very deep recursion, iterative solutions may be better to avoid stack overflow."
+    }
+  ],
+
+  "Java": [
+    {
+    "id": 1,
+    "question": "What is Java?",
+    "answer": "Java is a high-level, object-oriented, platform-independent programming language. It follows the 'Write Once, Run Anywhere' principle, meaning Java programs can run on any device that has a JVM. Java is widely used for enterprise applications, Android apps, distributed systems, and web applications."
+  },
+  {
+    "id": 2,
+    "question": "What are the main features of Java?",
+    "answer": "Java offers key features including object-oriented programming, platform independence using JVM, automatic memory management via Garbage Collection, strong security model, multithreading support, rich standard libraries, and high performance using Just-In-Time (JIT) compiler."
+  },
+  {
+    "id": 3,
+    "question": "What is JVM?",
+    "answer": "The Java Virtual Machine (JVM) is a runtime environment that executes Java bytecode. JVM performs tasks such as memory allocation, garbage collection, bytecode verification, and security checks. It makes Java platform-independent because bytecode can run on any device containing a JVM."
+  },
+  {
+    "id": 4,
+    "question": "What is JDK?",
+    "answer": "The Java Development Kit (JDK) is a complete software development kit that includes the compiler (javac), debugger, JRE, and development tools. It is required to write and compile Java programs."
+  },
+  {
+    "id": 5,
+    "question": "What is JRE?",
+    "answer": "The Java Runtime Environment (JRE) includes the JVM and essential libraries required to run Java applications. It does not contain development tools like the compiler, so it cannot be used to create Java programs."
+  },
+  {
+    "id": 6,
+    "question": "Explain Object-Oriented Programming in Java.",
+    "answer": "Object-Oriented Programming (OOP) allows organizing code into objects that contain data (fields) and behavior (methods). Java implements OOP using four main principles: Encapsulation, Inheritance, Polymorphism, and Abstraction. This allows better code reusability, maintainability, and modularity."
+  },
+  {
+    "id": 7,
+    "question": "What is a Class?",
+    "answer": "A class is a blueprint or template that defines the properties (attributes) and behaviors (methods) of objects. It does not occupy memory until an object is created from it."
+  },
+  {
+    "id": 8,
+    "question": "What is an Object?",
+    "answer": "An object is an instance of a class. It represents a real-world entity with state (data) and behavior (methods). Objects are stored in heap memory and are created using the 'new' keyword."
+  },
+  {
+    "id": 9,
+    "question": "What is Encapsulation?",
+    "answer": "Encapsulation is the process of wrapping data and methods within a single unit (class). It protects data by restricting access using private fields and exposing behavior through public methods, ensuring better security and maintainability."
+  },
+  {
+    "id": 10,
+    "question": "What is Inheritance?",
+    "answer": "Inheritance enables one class (child/subclass) to acquire properties and methods of another class (parent/superclass). This promotes code reuse and reduces redundancy. Java supports single inheritance but allows multiple inheritance through interfaces."
+  },
+  {
+    "id": 11,
+    "question": "What is Polymorphism?",
+    "answer": "Polymorphism allows the same method to behave differently based on the context. Java supports compile-time polymorphism through method overloading and runtime polymorphism through method overriding."
+  },
+  {
+    "id": 12,
+    "question": "What is Abstraction?",
+    "answer": "Abstraction hides implementation details and exposes only essential features. Java supports abstraction using abstract classes and interfaces. This helps simplify complex systems and improves code usability."
+  },
+  {
+    "id": 13,
+    "question": "What is Method Overloading?",
+    "answer": "Method overloading occurs when multiple methods in the same class have the same name but different parameter lists. It increases readability and allows performing similar actions using different input types."
+  },
+  {
+    "id": 14,
+    "question": "What is Method Overriding?",
+    "answer": "Method overriding occurs when a subclass defines a method with the same name and signature as in the superclass. It allows runtime polymorphism, enabling dynamic method dispatch."
+  },
+  {
+    "id": 15,
+    "question": "What is an Interface?",
+    "answer": "An interface in Java is a blueprint that contains abstract methods, default methods, and static methods. It provides 100% abstraction before Java 8 and supports multiple inheritance."
+  },
+  {
+    "id": 16,
+    "question": "What is an Abstract Class?",
+    "answer": "An abstract class is a class that cannot be instantiated and may contain abstract methods (without implementation) and concrete methods. It is used when subclasses need to share common behavior but also implement specific details."
+  },
+  {
+    "id": 17,
+    "question": "Difference between Abstract Class and Interface?",
+    "answer": "An abstract class can have both implemented and unimplemented methods, while an interface mainly contains abstract methods. A class can extend only one abstract class but implement multiple interfaces. Interfaces support default and static methods from Java 8 onward."
+  },
+  {
+    "id": 18,
+    "question": "Explain Constructor in Java.",
+    "answer": "A constructor initializes objects when they are created. Constructors have the same name as the class and do not have a return type. Java provides default, parameterized, and copy constructors."
+  },
+  {
+    "id": 19,
+    "question": "What is the difference between Constructor and Method?",
+    "answer": "A constructor initializes the object and has no return type, while a method performs some action and may return a value. A constructor is invoked automatically when an object is created."
+  },
+  {
+    "id": 20,
+    "question": "What are Access Modifiers?",
+    "answer": "Java provides access modifiers to define visibility: Public (accessible everywhere), Private (within class only), Protected (within package and subclasses), and Default (package-private)."
+  },
+  {
+    "id": 21,
+    "question": "What is 'this' keyword?",
+    "answer": "The 'this' keyword refers to the current object. It is used to differentiate between local and instance variables, call constructors, and access current class members."
+  },
+  {
+    "id": 22,
+    "question": "What is 'super' keyword?",
+    "answer": "The 'super' keyword refers to the parent class. It is used to call parent class constructors, methods, or access variables overridden by the subclass."
+  },
+  {
+    "id": 23,
+    "question": "What is Static Keyword?",
+    "answer": "Static members belong to the class rather than an object. Static fields, methods, and blocks are loaded once when the class is loaded, making memory usage efficient."
+  },
+  {
+    "id": 24,
+    "question": "What is a Static Block?",
+    "answer": "A static block initializes static variables and runs only once when the class is loaded. It is useful for performing complex initialization tasks."
+  },
+  {
+    "id": 25,
+    "question": "What is String immutability?",
+    "answer": "Strings in Java are immutable, meaning once created, they cannot be changed. This ensures thread-safety, improves performance, and allows string constant pooling."
+  },
+  {
+    "id": 26,
+    "question": "Difference between String, StringBuilder, and StringBuffer?",
+    "answer": "String is immutable, StringBuilder is mutable and faster but not thread-safe, while StringBuffer is mutable and thread-safe but slower than StringBuilder."
+  },
+  {
+    "id": 27,
+    "question": "What is Garbage Collection?",
+    "answer": "Garbage Collection automatically frees memory by removing unreachable objects. It improves memory management and reduces memory leaks without needing manual handling."
+  },
+  {
+    "id": 28,
+    "question": "Explain JVM Memory Structure.",
+    "answer": "The JVM memory model includes: Heap (objects), Stack (method calls), Method Area (class definitions), PC Register (current instruction), and Native Method Stack (JNI calls)."
+  },
+  {
+    "id": 29,
+    "question": "What are Exceptions?",
+    "answer": "Exceptions are unexpected events that disrupt normal program execution. Java categorizes them into checked exceptions, unchecked exceptions, and errors."
+  },
+  {
+    "id": 30,
+    "question": "Difference between Checked and Unchecked Exceptions?",
+    "answer": "Checked exceptions must be handled at compile-time (IOException), while unchecked exceptions occur at runtime (NullPointerException)."
+  },
+  {
+    "id": 31,
+    "question": "What is try-catch-finally?",
+    "answer": "try contains risky code, catch handles exceptions, and finally executes whether or not an exception occurs, making it suitable for cleanup operations."
+  },
+  {
+    "id": 32,
+    "question": "What is throw and throws?",
+    "answer": "throw is used to explicitly throw an exception, while throws declares exceptions a method may throw."
+  },
+  {
+    "id": 33,
+    "question": "What is Multithreading?",
+    "answer": "Multithreading allows concurrent execution of two or more threads, improving performance. Java provides multithreading via Thread class and Runnable interface."
+  },
+  {
+    "id": 34,
+    "question": "What is a Thread?",
+    "answer": "A thread is the smallest unit of execution. Threads can be created by extending Thread class or implementing Runnable."
+  },
+  {
+    "id": 35,
+    "question": "What is Synchronization?",
+    "answer": "Synchronization ensures that only one thread accesses a shared resource at a time, preventing data inconsistency."
+  },
+  {
+    "id": 36,
+    "question": "What is a Deadlock?",
+    "answer": "Deadlock occurs when two threads wait on each other forever, causing the program to freeze. It happens when multiple locks are acquired in conflicting order."
+  },
+  {
+    "id": 37,
+    "question": "What is the Collections Framework?",
+    "answer": "The Collections Framework provides interfaces (List, Set, Map) and classes (ArrayList, HashMap, HashSet) to store and manipulate data efficiently."
+  },
+  {
+    "id": 38,
+    "question": "What is List?",
+    "answer": "List is an ordered collection of elements that allows duplicates. Common implementations include ArrayList and LinkedList."
+  },
+  {
+    "id": 39,
+    "question": "What is Set?",
+    "answer": "Set is an unordered collection that does not allow duplicate elements. Common implementations include HashSet and TreeSet."
+  },
+  {
+    "id": 40,
+    "question": "What is Map?",
+    "answer": "Map stores key–value pairs. Keys must be unique, but values may duplicate. Implementations include HashMap, TreeMap, and LinkedHashMap."
+  },
+  {
+    "id": 41,
+    "question": "What is HashMap?",
+    "answer": "HashMap stores data using key–value pairs and provides O(1) average lookup speed. It is not synchronized and allows null keys and values."
+  },
+  {
+    "id": 42,
+    "question": "What is HashSet?",
+    "answer": "HashSet stores unique elements and is based on hashing. It does not maintain insertion order and is ideal for fast membership checking."
+  },
+  {
+    "id": 43,
+    "question": "What is ArrayList?",
+    "answer": "ArrayList is a resizable array implementation. It provides fast access but slower insertion/deletion compared to LinkedList."
+  },
+  {
+    "id": 44,
+    "question": "What is LinkedList?",
+    "answer": "LinkedList stores elements using doubly linked nodes. It provides fast insertion and deletion but slower random access."
+  },
+  {
+    "id": 45,
+    "question": "Difference between ArrayList and LinkedList?",
+    "answer": "ArrayList is faster for reading data, while LinkedList is faster for insert/delete operations. ArrayList uses contiguous memory, LinkedList uses node references."
+  },
+  {
+    "id": 46,
+    "question": "What is Iterator?",
+    "answer": "Iterator is used to traverse collections. It provides methods like hasNext(), next(), and remove(). It works for List, Set, and other collections."
+  },
+  {
+    "id": 47,
+    "question": "What is Generics in Java?",
+    "answer": "Generics enable type safety by allowing classes, interfaces, and methods to operate on specific types. It prevents runtime type errors and increases reusability."
+  },
+  {
+    "id": 48,
+    "question": "What is Enum?",
+    "answer": "Enum represents a fixed set of constants. It provides type safety and is commonly used for predefined values like directions or status codes."
+  },
+  {
+    "id": 49,
+    "question": "What is Serialization?",
+    "answer": "Serialization converts an object into a byte stream, allowing it to be stored or transferred. It is useful for saving state or sending objects over networks."
+  },
+  {
+    "id": 50,
+    "question": "What is Deserialization?",
+    "answer": "Deserialization reconstructs an object from a byte stream. It is the reverse process of serialization."
+  },
+  {
+    "id": 51,
+    "question": "What is transient keyword?",
+    "answer": "The transient keyword prevents a variable from being serialized. It is used when certain object fields should not be stored for security or performance reasons."
+  },
+  {
+    "id": 52,
+    "question": "What is the difference between final, finally, and finalize?",
+    "answer": "final is a keyword used to restrict modification; finally is a block that executes after try-catch; finalize is a method called before object destruction but is deprecated."
+  },
+  {
+    "id": 53,
+    "question": "What is the Java Memory Model?",
+    "answer": "The Java Memory Model defines how threads interact through memory. It specifies rules for visibility, ordering, and atomic operations to ensure predictable behavior in multithreaded programs."
+  },
+  {
+    "id": 54,
+    "question": "What is JIT Compiler?",
+    "answer": "The Just-In-Time compiler improves performance by converting bytecode into native machine code at runtime, reducing execution time significantly."
+  },
+  {
+    "id": 55,
+    "question": "Explain the difference between JDK, JRE, and JVM.",
+    "answer": "JDK contains all development tools including compiler and JRE. JRE contains libraries and JVM required to run Java programs. JVM executes bytecode and provides platform independence."
+  },
+  {
+    "id": 56,
+    "question": "What are Wrapper Classes?",
+    "answer": "Wrapper classes convert primitive data types into objects. Examples include Integer, Double, Boolean. They allow primitives to be used in collections and generics."
+  },
+  {
+    "id": 57,
+    "question": "What is Autoboxing and Unboxing?",
+    "answer": "Autoboxing automatically converts primitives to wrapper objects, while unboxing converts wrapper objects back to primitives."
+  },
+  {
+    "id": 58,
+    "question": "Explain the difference between equals() and ==.",
+    "answer": "== compares references, while equals() compares values or object content. For Strings, equals() checks characters, whereas == checks memory location."
+  },
+  {
+    "id": 59,
+    "question": "What is a Lambda Expression?",
+    "answer": "Lambda expressions allow functional-style coding by providing compact syntax for implementing functional interfaces using -> operator."
+  },
+  {
+    "id": 60,
+    "question": "What is a Functional Interface?",
+    "answer": "A functional interface contains exactly one abstract method. Common examples include Runnable, Callable, and Comparator."
+  },
+  {
+    "id": 61,
+    "question": "What are Streams in Java?",
+    "answer": "Streams allow processing collections using functional operations like filter(), map(), sorted(), and reduce(). They support parallel execution and improve readability."
+  },
+  {
+    "id": 62,
+    "question": "What is Optional in Java?",
+    "answer": "Optional is a class used to handle null values safely. It prevents NullPointerException by providing methods like isPresent(), orElse(), and get()."
+  },
+  {
+    "id": 63,
+    "question": "What is Reflection?",
+    "answer": "Reflection allows inspecting or modifying classes, methods, and fields at runtime. It is used in frameworks like Spring and Hibernate but may impact performance."
+  },
+  {
+    "id": 64,
+    "question": "What is JDBC?",
+    "answer": "Java Database Connectivity (JDBC) enables communication between Java programs and relational databases using drivers, connections, statements, and result sets."
+  },
+  {
+    "id": 65,
+    "question": "What is PreparedStatement?",
+    "answer": "PreparedStatement precompiles SQL queries, improves performance, and prevents SQL injection by binding parameters safely."
+  },
+  {
+    "id": 66,
+    "question": "What is the difference between Statement and PreparedStatement?",
+    "answer": "Statement executes static SQL queries, while PreparedStatement supports dynamic queries with parameters and offers better performance and security."
+  },
+  {
+    "id": 67,
+    "question": "What is a Singleton Class?",
+    "answer": "A Singleton class restricts the instantiation of a class to a single object. It uses a private constructor and provides a static instance method."
+  },
+  {
+    "id": 68,
+    "question": "What is the Factory Design Pattern?",
+    "answer": "The Factory pattern provides an interface to create objects without exposing the creation logic. It helps achieve loose coupling and reusability."
+  },
+  {
+    "id": 69,
+    "question": "What is the Observer Pattern?",
+    "answer": "The Observer pattern defines a one-to-many relationship so when one object changes state, all its observers are notified automatically."
+  },
+  {
+    "id": 70,
+    "question": "What is the Builder Pattern?",
+    "answer": "The Builder pattern constructs complex objects step-by-step. It separates object construction from representation and is used heavily in object creation scenarios."
+  },
+  {
+    "id": 71,
+    "question": "What is the difference between Interface and Implementation classes?",
+    "answer": "Interfaces define contracts without implementations, while implementation classes provide concrete code for interface methods."
+  },
+  {
+    "id": 72,
+    "question": "What is Thread Pool?",
+    "answer": "Thread pools manage a group of worker threads, improving performance by reusing threads instead of creating new ones each time a task is needed."
+  },
+  {
+    "id": 73,
+    "question": "What is Executors Framework?",
+    "answer": "The Executors framework provides thread pool management, scheduling, task execution, and asynchronous processing support via ExecutorService."
+  },
+  {
+    "id": 74,
+    "question": "What is Callable in Java?",
+    "answer": "Callable is similar to Runnable but returns a result and can throw checked exceptions. It is executed using ExecutorService."
+  },
+  {
+    "id": 75,
+    "question": "What is Future in Java?",
+    "answer": "Future represents the result of an asynchronous computation. It allows checking task completion, canceling tasks, and retrieving results."
+  },
+  {
+    "id": 76,
+    "question": "Explain volatile keyword.",
+    "answer": "volatile ensures visibility of changes to a variable across threads. It prevents caching and forces threads to read the latest value from main memory."
+  },
+  {
+    "id": 77,
+    "question": "What is Atomic Variable?",
+    "answer": "Atomic variables provide lock-free thread-safe operations using low-level CPU instructions. They prevent race conditions without synchronization."
+  },
+  {
+    "id": 78,
+    "question": "What is ClassLoader?",
+    "answer": "ClassLoader loads Java classes into memory. Types include Bootstrap, Extension, and Application ClassLoaders. It allows dynamic loading of classes at runtime."
+  },
+  {
+    "id": 79,
+    "question": "What is the difference between ClassNotFoundException and NoClassDefFoundError?",
+    "answer": "ClassNotFoundException occurs when a class is missing at compile-time loading, while NoClassDefFoundError occurs when the JVM cannot load a previously available class at runtime."
+  },
+  {
+    "id": 80,
+    "question": "What is Java Annotation?",
+    "answer": "Annotations provide metadata information to classes, methods, and variables. They are used by frameworks for configuration, compile-time checks, and runtime processing."
+  },
+  {
+    "id": 81,
+    "question": "What is the Diamond Problem in Java?",
+    "answer": "The diamond problem arises with multiple inheritance. Java prevents it using interfaces and resolves ambiguity via default methods or explicit method overriding."
+  },
+  {
+    "id": 82,
+    "question": "What is a Marker Interface?",
+    "answer": "A marker interface contains no methods and is used to signal metadata to JVM or frameworks. Examples: Serializable, Cloneable."
+  },
+  {
+    "id": 83,
+    "question": "What is a Copy Constructor in Java?",
+    "answer": "Java does not provide built-in copy constructors like C++, but developers can create custom constructors to duplicate objects manually."
+  },
+  {
+    "id": 84,
+    "question": "What is Pass by Value in Java?",
+    "answer": "Java is strictly pass-by-value. For objects, a copy of the reference is passed, meaning changes affect the original object but not the reference variable."
+  },
+  {
+    "id": 85,
+    "question": "Explain Memory Leak in Java.",
+    "answer": "Memory leaks occur when objects are no longer in use but still referenced, preventing garbage collection. They degrade performance and may cause OutOfMemoryError."
+  },
+  {
+    "id": 86,
+    "question": "Explain OutOfMemoryError.",
+    "answer": "OutOfMemoryError occurs when JVM cannot allocate more memory in heap, permgen/metaspace, or native memory, often due to memory leaks or insufficient heap size."
+  },
+  {
+    "id": 87,
+    "question": "What is Soft Reference?",
+    "answer": "Soft references are used for caching. JVM clears soft-referenced objects only when memory is low, providing a balance between memory usage and performance."
+  },
+  {
+    "id": 88,
+    "question": "What is Weak Reference?",
+    "answer": "Weak references are cleared immediately by the garbage collector when no strong reference exists, making them useful for weakly referenced collections."
+  },
+  {
+    "id": 89,
+    "question": "What is Phantom Reference?",
+    "answer": "Phantom references track objects that have been finalized but not yet collected. They are used for special cleanup operations."
+  },
+  {
+    "id": 90,
+    "question": "What is Java Stream API?",
+    "answer": "The Stream API processes collections in a functional style using operations like map, filter, reduce. It supports parallel execution to improve performance."
+  },
+  {
+    "id": 91,
+    "question": "Explain Parallel Streams.",
+    "answer": "Parallel streams divide tasks into multiple threads using Fork/Join Framework. They improve performance but may cause unpredictable ordering."
+  },
+  {
+    "id": 92,
+    "question": "What is method reference?",
+    "answer": "Method references provide shorthand for calling methods using :: operator. They improve readability in functional programming."
+  },
+  {
+    "id": 93,
+    "question": "What is Java Time API?",
+    "answer": "The Java Time API (java.time) provides classes for date and time operations. It is immutable, thread-safe, and replaces legacy classes like Date and Calendar."
+  },
+  {
+    "id": 94,
+    "question": "What is Immutable Class?",
+    "answer": "An immutable class cannot be modified after creation. All fields are final, class is final, and no setters exist. Example: String, LocalDate."
+  },
+  {
+    "id": 95,
+    "question": "What is Comparable?",
+    "answer": "Comparable defines natural ordering for objects using compareTo() method. It is used for default sorting."
+  },
+  {
+    "id": 96,
+    "question": "What is Comparator?",
+    "answer": "Comparator allows custom sorting of objects using compare() method. It can define multiple sorting rules unlike Comparable."
+  },
+  {
+    "id": 97,
+    "question": "What is Java Bean?",
+    "answer": "A Java Bean is a reusable software component with private fields, public getters and setters, and a no-argument constructor. Used widely in JSP, Spring, and Hibernate."
+  },
+  {
+    "id": 98,
+    "question": "What is POJO?",
+    "answer": "POJO stands for Plain Old Java Object. It is a simple object without restrictions like extending classes or implementing interfaces. Used in data models."
+  },
+  {
+    "id": 99,
+    "question": "What is Dependency Injection?",
+    "answer": "Dependency Injection supplies objects with dependencies instead of creating them internally. It improves modularity, testability, and reduces coupling. Spring heavily uses DI."
+  },
+  {
+    "id": 100,
+    "question": "What is REST API in Java?",
+    "answer": "REST API uses HTTP methods like GET, POST, PUT, DELETE to perform operations. Java provides frameworks like Spring Boot and JAX-RS to build RESTful services."
+  }
+  ],
+  "JavaScript": [
+  {
+    "id": 1,
+    "question": "What is JavaScript?",
+    "answer": "JavaScript is a high-level, interpreted programming language used for web development."
+  },
+  {
+    "id": 2,
+    "question": "What are JavaScript data types?",
+    "answer": "JavaScript data types include String, Number, Boolean, Null, Undefined, Object, and Symbol."
+  },
+  {
+    "id": 3,
+    "question": "What is the difference between let, var, and const?",
+    "answer": "var is function scoped, let and const are block scoped; const cannot be reassigned."
+  },
+  {
+    "id": 4,
+    "question": "What is a function in JavaScript?",
+    "answer": "A function is a block of reusable code that performs a specific task."
+  },
+  {
+    "id": 5,
+    "question": "What is an array?",
+    "answer": "An array is a collection of multiple values stored in a single variable."
+  },
+  {
+    "id": 6,
+    "question": "What is an object in JavaScript?",
+    "answer": "An object is a collection of key-value pairs."
+  },
+  {
+    "id": 7,
+    "question": "What is DOM?",
+    "answer": "DOM (Document Object Model) represents the structure of a web page."
+  },
+  {
+    "id": 8,
+    "question": "What is event handling?",
+    "answer": "Event handling is the process of responding to user actions like clicks and keypresses."
+  },
+  {
+    "id": 9,
+    "question": "What is hoisting?",
+    "answer": "Hoisting is JavaScript's behavior of moving declarations to the top of scope."
+  },
+  {
+    "id": 10,
+    "question": "What is closure?",
+    "answer": "A closure is a function that remembers its outer scope even after execution."
+  },
+  {
+    "id": 11,
+    "question": "What is callback function?",
+    "answer": "A callback is a function passed as an argument to another function."
+  },
+  {
+    "id": 12,
+    "question": "What is promise?",
+    "answer": "A promise is an object representing the eventual completion or failure of an async operation."
+  },
+  {
+    "id": 13,
+    "question": "What is async/await?",
+    "answer": "async/await is used to handle asynchronous code in a cleaner way."
+  },
+  {
+    "id": 14,
+    "question": "What is difference between == and ===?",
+    "answer": "== checks value only, while === checks value and type both."
+  },
+  {
+    "id": 15,
+    "question": "What is arrow function?",
+    "answer": "Arrow function is a shorter syntax for writing functions in JavaScript."
+  },
+  {
+    "id": 16,
+    "question": "What is NaN?",
+    "answer": "NaN means Not a Number, representing invalid numeric operations."
+  },
+  {
+    "id": 17,
+    "question": "What is localStorage?",
+    "answer": "localStorage is used to store data in the browser permanently."
+  },
+  {
+    "id": 18,
+    "question": "What is sessionStorage?",
+    "answer": "sessionStorage stores data temporarily until the browser tab is closed."
+  },
+  {
+    "id": 19,
+    "question": "What is JSON?",
+    "answer": "JSON is a format for storing and exchanging data."
+  },
+  {
+    "id": 20,
+    "question": "What is event loop?",
+    "answer": "Event loop handles asynchronous operations in JavaScript runtime."
+  }
+],
+"C++": [
+  {
+    "id": 1,
+    "question": "What is C++?",
+    "answer": "C++ is a high-level, object-oriented programming language developed by Bjarne Stroustrup."
+  },
+  {
+    "id": 2,
+    "question": "What are the key features of C++?",
+    "answer": "C++ supports OOP, classes, inheritance, polymorphism, encapsulation, and templates."
+  },
+  {
+    "id": 3,
+    "question": "What is OOP in C++?",
+    "answer": "OOP is a programming paradigm based on objects and classes."
+  },
+  {
+    "id": 4,
+    "question": "What is a class in C++?",
+    "answer": "A class is a blueprint for creating objects."
+  },
+  {
+    "id": 5,
+    "question": "What is an object?",
+    "answer": "An object is an instance of a class."
+  },
+  {
+    "id": 6,
+    "question": "What is inheritance?",
+    "answer": "Inheritance allows a class to acquire properties of another class."
+  },
+  {
+    "id": 7,
+    "question": "What is polymorphism?",
+    "answer": "Polymorphism allows functions or methods to behave differently based on input or object."
+  },
+  {
+    "id": 8,
+    "question": "What is encapsulation?",
+    "answer": "Encapsulation is wrapping data and methods into a single unit."
+  },
+  {
+    "id": 9,
+    "question": "What is abstraction?",
+    "answer": "Abstraction hides internal implementation and shows only functionality."
+  },
+  {
+    "id": 10,
+    "question": "What is constructor?",
+    "answer": "A constructor is a special function used to initialize objects."
+  },
+  {
+    "id": 11,
+    "question": "What is destructor?",
+    "answer": "A destructor is used to destroy objects and free memory."
+  },
+  {
+    "id": 12,
+    "question": "What is function overloading?",
+    "answer": "Function overloading allows multiple functions with the same name but different parameters."
+  },
+  {
+    "id": 13,
+    "question": "What is operator overloading?",
+    "answer": "It allows redefining operators for user-defined types."
+  },
+  {
+    "id": 14,
+    "question": "What is a pointer?",
+    "answer": "A pointer stores the memory address of another variable."
+  },
+  {
+    "id": 15,
+    "question": "What is reference in C++?",
+    "answer": "A reference is an alias for an existing variable."
+  },
+  {
+    "id": 16,
+    "question": "What is STL?",
+    "answer": "STL (Standard Template Library) provides ready-to-use data structures and algorithms."
+  },
+  {
+    "id": 17,
+    "question": "What is vector in C++?",
+    "answer": "Vector is a dynamic array in STL."
+  },
+  {
+    "id": 18,
+    "question": "What is exception handling?",
+    "answer": "Exception handling is used to handle runtime errors using try, catch, and throw."
+  },
+  {
+    "id": 19,
+    "question": "What is namespace?",
+    "answer": "Namespace is used to avoid name conflicts in large programs."
+  },
+  {
+    "id": 20,
+    "question": "What is virtual function?",
+    "answer": "A virtual function is used for runtime polymorphism."
+  }
+]
+}

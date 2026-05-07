@@ -1,0 +1,1042 @@
+{
+  "C": [
+    {
+      "title": "Introduction to C Programming",
+      "sections": [
+        {
+          "type": "definition",
+          "heading": "What is C?",
+          "text": "C is a general-purpose, procedural, middle-level programming language developed by Dennis Ritchie at Bell Labs in 1972. It is known for its efficiency and is widely used for system programming."
+        },
+        {
+          "type": "list",
+          "heading": "Key Features of C",
+          "items": [
+            "Procedural Language – Follows a step-by-step approach",
+            "Fast and Efficient – Offers low-level memory access",
+            "Portability – Programs can run on different machines with little or no change",
+            "Statically Typed – Data types are checked at compile-time",
+            "Rich Library – Provides many built-in functions",
+            "Extensible – Can easily adopt new features"
+          ]
+        },
+        {
+          "type": "list",
+          "heading": "Applications of C",
+          "items": [
+            "Operating Systems (Windows, Linux, Unix)",
+            "Embedded Systems",
+            "Compilers and Interpreters",
+            "Database Systems (MySQL, PostgreSQL)",
+            "Browsers and Graphics Engines",
+            "Drivers and Kernels"
+          ]
+        },
+        {
+          "type": "textblock",
+          "heading": "C Preprocessor",
+          "items": "Processes directives starting with # (like #include) before the actual compilation begins."
+        },
+        {
+          "type": "textblock",
+          "heading": "Compiler",
+          "text": "Translates the human-readable source code into machine-understandable object code."
+        },
+        {
+          "type": "textblock",
+          "heading": "Linker",
+          "text": "Combines object files and library files into a single executable file."
+        },
+        {
+          "type": "image",
+          "heading": "C Compilation Process",
+          "url": "https://media.geeksforgeeks.org/wp-content/uploads/20230614111326/C-Compilation-Process.png"
+        },
+        {
+          "type": "syntax",
+          "heading": "Execution Flow",
+          "text": "Source Code (.c) → Preprocessor → Expanded Code → Compiler → Assembly Code → Assembler → Object Code (.obj/.o) → Linker → Executable (.exe/.out)"
+        },
+        {
+          "type": "code",
+          "heading": "First C Program",
+          "language": "c",
+          "code": "#include <stdio.h>\n\nint main() {\n    printf(\"Hello, C Programming!\\n\");\n    return 0;\n}"
+        }
+      ]
+    },
+
+    {
+      "title": "Detailed Structure of a C Program",
+      "sections": [
+        {
+          "type": "definition",
+          "heading": "Conceptual Overview",
+          "text": "The structure of a C program refers to the specific order in which different parts of the code are written. It is highly modular and organized into specific 'sections' to ensure the compiler can resolve dependencies and manage memory effectively."
+        },
+        {
+          "type": "image",
+          "heading": "Visualizing C Program Hierarchy",
+          "url": "https://media.geeksforgeeks.org/wp-content/uploads/20230302123533/Structure-of-C-program-768.png"
+        },
+        {
+          "type": "list",
+          "heading": "1. Documentation Section",
+          "items": [
+            "Purpose: To describe the program's intent and metadata.",
+            "Syntax: Uses multi-line comments /* ... */ or single-line //.",
+            "Details: Includes Author name, Date of creation, and Program logic description."
+          ]
+        },
+        {
+          "type": "list",
+          "heading": "2. Link Section (Pre-processor)",
+          "items": [
+            "Purpose: Tells the compiler to include system library files.",
+            "Syntax: #include <header_file.h>",
+            "Common Headers: stdio.h (Input/Output), math.h (Mathematical functions), conio.h (Console operations)."
+          ]
+        },
+        {
+          "type": "list",
+          "heading": "3. Definition Section",
+          "items": [
+            "Purpose: To define symbolic constants that remain fixed throughout execution.",
+            "Syntax: #define CONSTANT_NAME value",
+            "Example: #define MAX_LIMIT 100"
+          ]
+        },
+        {
+          "type": "list",
+          "heading": "4. Global Declaration Section",
+          "items": [
+            "Purpose: To declare variables or user-defined functions that are accessible across multiple functions.",
+            "Scope: These variables live for the entire duration of the program execution."
+          ]
+        },
+        {
+          "type": "list",
+          "heading": "5. Main Function Section",
+          "items": [
+            "Every C program must have a main(). It is the entry point.",
+            "Declaration Part: Variables used inside main are declared here.",
+            "Executable Part: The actual logic/statements are written within { } braces."
+          ]
+        },
+        {
+          "type": "list",
+          "heading": "6. Sub-program (Function) Section",
+          "items": [
+            "Contains user-defined functions that perform specific tasks.",
+            "Improves readability and reusability by breaking the code into modules."
+          ]
+        },
+        {
+          "type": "code",
+          "heading": "Comprehensive Structural Example",
+          "language": "c",
+          "code": "/* \n * Documentation Section: Simple interest calculator\n * Author: Gemini AI \n */\n\n#include <stdio.h>    // Link Section\n\n#define RATE 5.5      // Definition Section\n\nfloat principal;      // Global Declaration\n\nint main() {          // Main Function Section\n    float time = 2;\n    float si;\n    \n    principal = 1000;\n    si = (principal * RATE * time) / 100;\n    \n    printf(\"Simple Interest: %f\", si);\n    \n    return 0;\n}"
+        }
+      ]
+    },
+    {
+      "title": "Compilation & Execution Process in C",
+      "sections": [
+        {
+          "type": "definition",
+          "heading": "What is Compilation?",
+          "text": "Compilation is the process of converting human-readable high-level C code into machine-readable code (binary) so that the computer's CPU can execute it. In C, this is not a single step but a multi-stage workflow."
+        },
+        {
+          "type": "image",
+          "heading": "C Compilation Flowchart",
+          "url": "https://media.geeksforgeeks.org/wp-content/uploads/20230614111326/C-Compilation-Process.png"
+        },
+        {
+          "type": "list",
+          "heading": "Step 1: Preprocessing",
+          "items": [
+            "Input: Source Code (.c file)",
+            "Action: The preprocessor handles directives starting with '#'. It removes comments, expands macros (#define), and includes header files (#include).",
+            "Output: Expanded Source Code (.i file)"
+          ]
+        },
+        {
+          "type": "list",
+          "heading": "Step 2: Compilation",
+          "items": [
+            "Input: Expanded Source Code (.i file)",
+            "Action: The compiler checks for syntax errors. If the code is correct, it translates the code into Assembly Language, which is specific to the processor architecture.",
+            "Output: Assembly Code (.s or .asm file)"
+          ]
+        },
+        {
+          "type": "list",
+          "heading": "Step 3: Assembly",
+          "items": [
+            "Input: Assembly Code (.s file)",
+            "Action: The Assembler converts assembly instructions into machine code (binary). However, this code isn't ready to run yet because it lacks library function definitions.",
+            "Output: Object Code (.obj or .o file)"
+          ]
+        },
+        {
+          "type": "list",
+          "heading": "Step 4: Linking",
+          "items": [
+            "Input: Object Code (.obj file) + Library Files",
+            "Action: The Linker combines your object code with library code (like printf function from stdio.lib). It resolves all function calls and produces the final file.",
+            "Output: Executable File (.exe on Windows, .out on Linux/Unix)"
+          ]
+        },
+        {
+          "type": "syntax",
+          "heading": "The Summary Path",
+          "text": "Source Code (.c) → Preprocessor (.i) → Compiler (.s) → Assembler (.o) → Linker → Executable (.exe)"
+        },
+        {
+          "type": "textblock",
+          "heading": "Execution Phase",
+          "text": "Once the .exe file is generated, the 'Loader' (a part of the OS) loads the program from the hard disk into the RAM. The CPU then reads the instructions and executes the program output."
+        },
+        {
+          "type": "code",
+          "heading": "How to Compile via Terminal (GCC)",
+          "language": "bash",
+          "code": "// 1. Compile the program\ngcc hello.c -o hello\n\n// 2. Run the executable\n./hello"
+        }
+      ]
+    },
+    {
+      "title": "Variables in C",
+      "sections": [
+        {
+          "type": "definition",
+          "heading": "What is a Variable?",
+          "text": "In C, a variable is a named location in memory used to store data that can be changed during program execution. It acts as a container for holding data values. When you declare a variable, the operating system reserves a block of memory based on the variable's data type."
+        },
+        {
+          "type": "image",
+          "heading": "Variable Memory Mapping",
+          "url": "https://media.geeksforgeeks.org/wp-content/uploads/20230217112002/Variables-in-C.png"
+        },
+        {
+          "type": "list",
+          "heading": "Rules for Identifier (Variable) Naming",
+          "items": [
+            "Character Set: Names can contain letters (both uppercase and lowercase), digits, and underscores (_).",
+            "First Character: Must be a letter or an underscore. It cannot start with a digit.",
+            "Keywords: Reserved words (like int, return, if) cannot be used as names.",
+            "Case Sensitivity: 'total', 'Total', and 'TOTAL' are three distinct variables.",
+            "Length: While there is no strict limit, the first 31 characters are usually significant for compilers.",
+            "No Whitespace: Spaces are not allowed (e.g., 'int student age' is invalid; use 'student_age')."
+          ]
+        },
+        {
+          "type": "list",
+          "heading": "Variable Lifecycle: Declaration vs. Initialization",
+          "items": [
+            "Declaration: Telling the compiler the name and type (e.g., int age;).",
+            "Initialization: Assigning an initial value for the first time (e.g., age = 20;).",
+            "Definition: When declaration and initialization happen together (e.g., int age = 20;)."
+          ]
+        },
+        {
+          "type": "code",
+          "heading": "Variable Implementation Example",
+          "language": "c",
+          "code": "#include <stdio.h>\n\nint main() {\n    // Declaration\n    int score;\n    \n    // Initialization\n    score = 100;\n    \n    // Declaration + Initialization\n    float temperature = 98.6;\n    char grade = 'A';\n\n    printf(\"Score: %d, Temp: %.1f, Grade: %c\", score, temperature, grade);\n    return 0;\n}"
+        }
+      ]
+    },
+    {
+      "title": "Data Types",
+      "sections": [
+        {
+          "type": "definition",
+          "heading": "Understanding Data Types",
+          "text": "Data types define the type of data a variable can hold and how many bytes of memory it occupies. C is a 'statically typed' language, meaning the data type must be known at compile time."
+        },
+        {
+          "type": "image",
+          "heading": "C Data Type Hierarchy",
+          "url": "https://media.geeksforgeeks.org/wp-content/uploads/20221020164627/CDataTypes.png"
+        },
+        {
+          "type": "list",
+          "heading": "1. Basic / Primitive Data Types",
+          "items": [
+            "Integer (int): Used for whole numbers. Size is usually 2 or 4 bytes. Range: -2,147,483,648 to 2,147,483,647.",
+            "Character (char): Stores a single character using ASCII values. Size: 1 byte. Range: -128 to 127.",
+            "Floating Point (float): For numbers with decimals (6 decimal places precision). Size: 4 bytes.",
+            "Double (double): For high-precision decimals (15 decimal places precision). Size: 8 bytes."
+          ]
+        },
+        {
+          "type": "list",
+          "heading": "2. Derived Data Types",
+          "items": [
+            "Arrays: Collection of similar data types stored in contiguous memory.",
+            "Pointers: Special variables that store the address of another variable.",
+            "Structures (struct): Collection of different data types under a single name."
+          ]
+        },
+        {
+          "type": "list",
+          "heading": "3. Enumeration & Void",
+          "items": [
+            "Enum: User-defined type consisting of named integer constants.",
+            "Void: Represents the absence of a value; usually used for functions that return nothing."
+          ]
+        },
+        {
+          "type": "syntax",
+          "heading": "Format Specifiers Table",
+          "text": "int -> %d | char -> %c | float -> %f | double -> %lf | pointer -> %p"
+        },
+        {
+          "type": "code",
+          "heading": "Memory Size Check Program",
+          "language": "c",
+          "code": "#include <stdio.h>\n\nint main() {\n    printf(\"Size of int: %zu bytes\\n\", sizeof(int));\n    printf(\"Size of char: %zu byte\\n\", sizeof(char));\n    printf(\"Size of float: %zu bytes\\n\", sizeof(float));\n    printf(\"Size of double: %zu bytes\\n\", sizeof(double));\n    return 0;\n}"
+        }
+      ]
+    },
+    {
+      "title": "Input and Output in C (printf & scanf)",
+      "sections": [
+        {
+          "type": "definition",
+          "heading": "Introduction to I/O Operations",
+          "text": "Input and Output (I/O) operations are essential for any program to interact with the user. In C, the 'stdio.h' (Standard Input Output) header file provides the necessary functions to perform these tasks. The most commonly used functions are printf() for output and scanf() for input."
+        },
+        {
+          "type": "image",
+          "heading": "Standard I/O Flow",
+          "url": "https://media.geeksforgeeks.org/wp-content/uploads/20220421115144/CStandardInputOutput-660x319.jpg"
+        },
+        {
+          "type": "list",
+          "heading": "1. The printf() Function (Output)",
+          "items": [
+            "Purpose: Used to display information (text, variable values) on the standard output (screen).",
+            "Syntax: printf(\"format string\", argument_list);",
+            "Format String: Contains the text to be printed and format specifiers (like %d, %f).",
+            "Escape Sequences: Special characters like \\n (new line) and \\t (tab) are used to format the output."
+          ]
+        },
+        {
+          "type": "list",
+          "heading": "2. The scanf() Function (Input)",
+          "items": [
+            "Purpose: Used to read formatted input from the standard input (keyboard).",
+            "Syntax: scanf(\"format string\", &variable_list);",
+            "The '&' Symbol: Known as the 'Address of' operator. It tells scanf where in memory to store the user's input.",
+            "Behavior: It waits for the user to type data and press Enter."
+          ]
+        },
+        {
+          "type": "syntax",
+          "heading": "Common Format Specifiers",
+          "text": "| Specifier | Data Type | Description |\n| :--- | :--- | :--- |\n| %d | int | Signed decimal integer |\n| %f | float | Decimal floating point |\n| %c | char | Single character |\n| %s | char[] | String of characters |\n| %lf | double | Long float (double precision) |"
+        },
+        {
+          "type": "image",
+          "heading": "How scanf Works in Memory",
+          "url": "https://media.geeksforgeeks.org/wp-content/uploads/20230222121320/Working-of-scanf-in-C.png"
+        },
+        {
+          "type": "code",
+          "heading": "Example: Combined I/O Program",
+          "language": "c",
+          "code": "#include <stdio.h>\n\nint main() {\n    int age;\n    float weight;\n\n    // Output: Asking user for input\n    printf(\"Enter your age: \");\n    // Input: Reading integer\n    scanf(\"%d\", &age);\n\n    printf(\"Enter your weight: \");\n    // Input: Reading float\n    scanf(\"%f\", &weight);\n\n    // Final Output\n    printf(\"\\n--- User Profile ---\\n\");\n    printf(\"Age: %d years\\n\", age);\n    printf(\"Weight: %.2f kg\\n\", weight);\n\n    return 0;\n}"
+        },
+        {
+          "type": "list",
+          "heading": "Common Pitfalls and Tips",
+          "items": [
+            "Forgetting the &: A common error in scanf is omitting the '&' before the variable name, which causes a segmentation fault.",
+            "Buffer Issues: When reading characters (%c) after numbers, a leftover newline (\\n) in the buffer might be skipped. Use a space in scanf(\" %c\", &ch) to fix this.",
+            "Precision Control: In printf, use %.2f to limit decimal places to two positions."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Operators in C Programming",
+      "sections": [
+        {
+          "type": "definition",
+          "heading": "What is an Operator?",
+          "text": "An operator is a symbol that tells the compiler to perform specific mathematical or logical functions. C is rich in built-in operators that allow you to manipulate data and variables."
+        },
+        {
+          "type": "image",
+          "heading": "Types of Operators in C",
+          "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuRuvV0Csk0yWrW9vSG7WmW8Gd3r5R92ccNg&s"
+        },
+        {
+          "type": "list",
+          "heading": "1. Arithmetic Operators",
+          "items": [
+            "+ (Addition): Adds two values.",
+            "- (Subtraction): Subtracts the second value from the first.",
+            "* (Multiplication): Multiplies two values.",
+            "/ (Division): Divides the numerator by the denominator.",
+            "% (Modulus): Returns the remainder of an integer division."
+          ]
+        },
+        {
+          "type": "list",
+          "heading": "2. Relational Operators",
+          "items": [
+            "== (Equal to): Checks if two values are equal.",
+            "!= (Not equal to): Checks if two values are different.",
+            "> (Greater than): Checks if the left value is larger.",
+            "< (Less than): Checks if the left value is smaller.",
+            ">= and <=: Greater than/Less than or equal to."
+          ]
+        },
+        {
+          "type": "list",
+          "heading": "3. Logical Operators",
+          "items": [
+            "&& (Logical AND): True if both conditions are true.",
+            "|| (Logical OR): True if at least one condition is true.",
+            "! (Logical NOT): Reverses the logical state (True becomes False)."
+          ]
+        },
+        {
+          "type": "list",
+          "heading": "4. Bitwise Operators",
+          "items": [
+            "Used to perform operations at the bit level (binary).",
+            "Examples: & (AND), | (OR), ^ (XOR), ~ (NOT), << (Left Shift), >> (Right Shift)."
+          ]
+        },
+        {
+          "type": "list",
+          "heading": "5. Assignment Operators",
+          "items": [
+            "= : Assigns value from right to left.",
+            "+=, -=, *=, /= : Shorthand assignments (e.g., a += 5 is the same as a = a + 5)."
+          ]
+        },
+        {
+          "type": "list",
+          "heading": "6. Unary Operators",
+          "items": [
+            "++ (Increment): Increases value by 1.",
+            "-- (Decrement): Decreases value by 1.",
+            "sizeof(): Returns the size of data types or variables."
+          ]
+        },
+        {
+          "type": "code",
+          "heading": "Operator Example Program",
+          "language": "c",
+          "code": "#include <stdio.h>\n\nint main() {\n    int a = 10, b = 20;\n    int res_sum, res_mod;\n\n    // Arithmetic\n    res_sum = a + b;\n    res_mod = b % a;\n\n    // Logical & Relational\n    if (a < b && b > 15) {\n        printf(\"Sum: %d\\n\", res_sum);\n        printf(\"Remainder: %d\\n\", res_mod);\n    }\n\n    return 0;\n}"
+        }
+      ]
+    },
+    {
+      "title": "Control Statements ",
+      "sections": [
+        {
+          "type": "definition",
+          "heading": "What are Control Statements?",
+          "text": "Control statements in C are used to determine the flow of program execution. By default, a program runs line-by-line (sequentially). Control statements allow you to skip certain blocks of code or choose between different paths based on specific conditions."
+        },
+        {
+          "type": "image",
+          "heading": "Classification of Control Statements",
+          "url": "https://d8it4huxumps7.cloudfront.net/uploads/images/658d12a76adba_control_statements_in_c_1.jpg?d=2000x2000"
+        },
+        {
+          "type": "list",
+          "heading": "Decision Making Types",
+          "items": [
+            "if Statement: Executes a block if the condition is true.",
+            "if-else Statement: Executes one block if true, and another if false.",
+            "else-if Ladder: Checks multiple conditions one after another.",
+            "switch Statement: Selects one of many code blocks to be executed based on a variable's value."
+          ]
+        },
+        {
+          "type": "code",
+          "heading": "Example: if-else and switch",
+          "language": "c",
+          "code": "#include <stdio.h>\n\nint main() {\n    int grade = 85;\n    // if-else logic\n    if (grade >= 50) {\n        printf(\"Passed!\\n\");\n    } else {\n        printf(\"Failed!\\n\");\n    }\n\n    char option = 'B';\n    // switch logic\n    switch(option) {\n        case 'A': printf(\"Excellent\"); break;\n        case 'B': printf(\"Good\"); break;\n        default: printf(\"Invalid\");\n    }\n    return 0;\n}"
+        }
+      ]
+    },
+    {
+      "title": "Loops in C ",
+      "sections": [
+        {
+          "type": "definition",
+          "heading": "What are Loops?",
+          "text": "Loops are used to execute a block of code repeatedly as long as a specified condition remains true. They help in reducing code redundancy and performing repetitive tasks efficiently."
+        },
+        {
+          "type": "image",
+          "heading": "Loop Types and Flow",
+          "url": "https://media.geeksforgeeks.org/wp-content/uploads/20230221121021/loops-in-C.png"
+        },
+        {
+          "type": "list",
+          "heading": "1. While Loop (Entry-Controlled)",
+          "items": [
+            "The condition is checked before entering the loop body.",
+            "If the condition is false initially, the loop will never execute.",
+            "Ideal when the number of iterations is not known beforehand."
+          ]
+        },
+        {
+          "type": "list",
+          "heading": "2. For Loop (Entry-Controlled)",
+          "items": [
+            "Includes Initialization, Condition, and Increment/Decrement in a single line.",
+            "Most commonly used loop when the number of iterations is known.",
+            "Syntax: for(initialization; condition; update) { ... }"
+          ]
+        },
+        {
+          "type": "list",
+          "heading": "3. Do-While Loop (Exit-Controlled)",
+          "items": [
+            "The condition is checked at the end of the loop body.",
+            "Guarantees that the code block will execute at least once, even if the condition is false.",
+            "Note: It must end with a semicolon (;)."
+          ]
+        },
+        {
+          "type": "code",
+          "heading": "Loops Comparison Example",
+          "language": "c",
+          "code": "#include <stdio.h>\n\nint main() {\n    // For Loop: Print 1 to 3\n    printf(\"For Loop: \");\n    for(int i = 1; i <= 3; i++) {\n        printf(\"%d \", i);\n    }\n\n    // While Loop: Print 1 to 3\n    printf(\"\\nWhile Loop: \");\n    int j = 1;\n    while(j <= 3) {\n        printf(\"%d \", j);\n        j++;\n    }\n\n    // Do-While: Runs at least once\n    printf(\"\\nDo-While: \");\n    int k = 10;\n    do {\n        printf(\"%d \", k);\n    } while(k < 5); // False, but prints 10\n\n    return 0;\n}"
+        }
+      ]
+    },
+    {
+      "title": "Functions in C (Modular Programming)",
+      "sections": [
+        {
+          "type": "definition",
+          "heading": "Deep Dive into Functions",
+          "text": "A function is a self-contained block of statements that performs a specific task. In C, functions are the building blocks of the language. They allow you to practice the 'Don't Repeat Yourself' (DRY) principle by breaking a large program into smaller, logical modules."
+        },
+        {
+          "type": "image",
+          "heading": "Function Lifecycle",
+          "url": "https://media.geeksforgeeks.org/wp-content/uploads/20230302123904/User-Defined-Function-in-C.png"
+        },
+        {
+          "type": "list",
+          "heading": "Anatomy of a Function",
+          "items": [
+            "**Return Type:** The data type of the value the function returns to the caller (e.g., int, float, void).",
+            "**Function Name:** A unique identifier used to call the function.",
+            "**Parameters (Arguments):** Variables that receive data passed from the caller. They act as local variables within the function.",
+            "**Function Body:** The collection of statements defined inside curly braces { }.",
+            "**Return Statement:** Terminates the function and optionally sends a value back."
+          ]
+        },
+        {
+          "type": "list",
+          "heading": "Parameter Passing Methods",
+          "items": [
+            "**Call by Value:** A copy of the actual value is passed. Changes inside the function do not affect the original variable.",
+            "**Call by Reference:** The address (pointer) of the variable is passed. Changes inside the function reflect in the original variable."
+          ]
+        },
+        {
+          "type": "code",
+          "heading": "Advanced Function Example",
+          "language": "c",
+          "code": "#include <stdio.h>\n\n// Global Declaration (Prototype)\nvoid greetUser(char name[]);\nint calculateSquare(int num);\n\nint main() {\n    greetUser(\"Developer\");\n    int result = calculateSquare(5);\n    printf(\"Square is: %d\\n\", result);\n    return 0;\n}\n\n// Definition\nvoid greetUser(char name[]) {\n    printf(\"Welcome, %s!\\n\", name);\n}\n\nint calculateSquare(int num) {\n    return num * num;\n}"
+        }
+      ]
+    },
+    {
+      "title": "Recursion: The Infinite Mirror",
+      "sections": [
+        {
+          "type": "definition",
+          "heading": "What is Recursion?",
+          "text": "Recursion occurs when a function calls itself. It is a powerful tool for solving problems that have a repetitive structure, such as mathematical sequences, tree traversals, and sorting algorithms."
+        },
+        {
+          "type": "image",
+          "heading": "Recursive Stack visualization",
+          "url": "https://media.geeksforgeeks.org/wp-content/uploads/20220525174157/RecursioninC.png"
+        },
+        {
+          "type": "list",
+          "heading": "The Two Golden Rules of Recursion",
+          "items": [
+            "**Base Case:** The 'exit condition'. It prevents the function from calling itself forever. Without it, you get a 'Stack Overflow' error.",
+            "**Recursive Case:** The logic where the function calls itself with a slightly smaller version of the original problem."
+          ]
+        },
+        {
+          "type": "code",
+          "heading": "Fibonacci Series via Recursion",
+          "language": "c",
+          "code": "#include <stdio.h>\n\nint fibonacci(int n) {\n    if (n <= 1) return n; // Base case\n    return fibonacci(n - 1) + fibonacci(n - 2); // Recursive case\n}\n\nint main() {\n    int limit = 6;\n    printf(\"Fibonacci at position %d is %d\", limit, fibonacci(limit));\n    return 0;\n}"
+        }
+      ]
+    },
+   {
+      "title": "Arrays in C",
+      "sections": [
+        {
+          "type": "definition",
+          "heading": "What is an Array?",
+          "text": "An array is a fixed-size, sequenced collection of elements of the same data type stored in contiguous memory locations. It allows you to store multiple values (like marks of 50 students) under a single variable name, rather than declaring 50 separate variables."
+        },
+        {
+          "type": "image",
+          "heading": "Array Memory Layout",
+          "url": "https://media.geeksforgeeks.org/wp-content/uploads/20230302124734/Arrays-in-C.png"
+        },
+        {
+          "type": "list",
+          "heading": "Core Characteristics",
+          "items": [
+            "**Homogeneity:** All elements must be of the same type (all int, all float, etc.).",
+            "**Contiguous Memory:** Elements are placed right next to each other in RAM, making access very fast.",
+            "**Static Size:** Once defined, the size of an array cannot be changed during runtime.",
+            "**Index-Based Access:** Elements are accessed using an index starting from 0 to (Size - 1)."
+          ]
+        },
+        {
+          "type": "textblock",
+          "heading": "1D Array: Declaration & Initialization",
+          "text": "A one-dimensional array is like a single row of data. You must specify the data type and the number of elements."
+        },
+        {
+          "type": "code",
+          "heading": "1D Array Example",
+          "language": "c",
+          "code": "// Declaration\nint numbers[5]; \n\n// Declaration with Initialization\nint scores[5] = {90, 85, 70, 95, 80};\n\n// Accessing elements\nint first = scores[0]; // 90\nscores[2] = 75;        // Updates 70 to 75"
+        },
+        {
+          "type": "textblock",
+          "heading": "2D Array: The Matrix",
+          "text": "A two-dimensional array is an array of arrays, representing data in rows and columns (like a table or matrix)."
+        },
+        {
+          "type": "image",
+          "heading": "2D Array Representation",
+          "url": "https://media.geeksforgeeks.org/wp-content/uploads/20240411132715/2d-array.webp"
+        },
+        {
+          "type": "code",
+          "heading": "2D Array Example",
+          "language": "c",
+          "code": "#include <stdio.h>\n\nint main() {\n    // [Rows][Columns]\n    int matrix[2][3] = {\n        {1, 2, 3}, \n        {4, 5, 6}\n    };\n\n    printf(\"Element at Row 1, Col 2: %d\", matrix[1][2]); // Prints 6\n    return 0;\n}"
+        },
+        {
+          "type": "list",
+          "heading": "Advantages & Disadvantages",
+          "items": [
+            "**Advantage:** Code Optimization (cleaner logic for large data sets).",
+            "**Advantage:** Random Access (access any element instantly via index).",
+            "**Disadvantage:** Fixed Size (memory wastage if not fully used, or insufficient space if data grows).",
+            "**Disadvantage:** Insertion/Deletion is costly as elements must be shifted."
+          ]
+        },
+        {
+          "type": "syntax",
+          "heading": "Array Boundary Danger",
+          "text": "C does not perform 'bound checking'. If you have an array of size 5 and try to access index 10, C will look at that memory location anyway, which often leads to garbage values or program crashes (Segmentation Fault)."
+        }
+      ]
+    },
+    {
+      "title": "Strings: Handling Text",
+      "sections": [
+        {
+          "type": "definition",
+          "heading": "Strings as Character Arrays",
+          "text": "Unlike other languages, C does not have a native 'string' data type. Instead, a string is a 1D array of characters ending with a special character called the Null Terminator (\\0). This character tells the computer, 'The text ends here'."
+        },
+        {
+          "type": "image",
+          "heading": "Null Terminator Visualization",
+          "url": "https://media.geeksforgeeks.org/wp-content/uploads/20230302124846/Strings-in-C.png"
+        },
+        {
+          "type": "list",
+          "heading": "Standard String Library (string.h)",
+          "items": [
+            "**strlen(s):** Counts characters until it hits \\0.",
+            "**strcpy(dest, src):** Overwrites destination with source text.",
+            "**strcat(s1, s2):** Appends s2 to the end of s1.",
+            "**strcmp(s1, s2):** Returns 0 if strings are identical, non-zero otherwise."
+          ]
+        },
+        {
+          "type": "code",
+          "heading": "Practical String manipulation",
+          "language": "c",
+          "code": "#include <stdio.h>\n#include <string.h>\n\nint main() {\n    char str1[20] = \"Programming\";\n    char str2[20];\n\n    // Copying\n    strcpy(str2, str1);\n    \n    // Comparison\n    if(strcmp(str1, str2) == 0) {\n        printf(\"Strings are identical.\\n\");\n    }\n\n    printf(\"Length: %zu\", strlen(str1));\n    return 0;\n}"
+        }
+      ]
+    },
+    {
+      "title": "Pointers and Pointer Arithmetic",
+      "sections": [
+        {
+          "type": "definition",
+          "heading": "1. What is a Pointer? (The 'Address' Concept)",
+          "text": "In C, a pointer is a variable that stores the memory address of another variable. Instead of holding a direct value like '10' or 'A', it holds a location code (like 0x7ffd) that tells the computer where to find that value in the RAM. Think of a variable as a house and a pointer as the 'GPS coordinates' or 'Postal Address' of that house."
+        },
+        {
+          "type": "image",
+          "heading": "Visualizing Memory Addresses",
+          "url": "https://media.geeksforgeeks.org/wp-content/uploads/20230224112140/Pointers-in-C.png"
+        },
+        {
+          "type": "list",
+          "heading": "Essential Pointer Operators",
+          "items": [
+            "**Address-of Operator (&):** Returns the memory address of a variable. Example: &x gives the location of x.",
+            "**Dereferencing Operator (*):** Used in two ways: 1) To declare a pointer. 2) To access the value stored at the address held by the pointer."
+          ]
+        },
+        {
+          "type": "syntax",
+          "heading": "Syntax for Pointer Declaration",
+          "text": "data_type *pointer_name;  // Declaration\npointer_name = &variable; // Initializing with address"
+        },
+        {
+          "type": "code",
+          "heading": "Complete Pointer Example",
+          "language": "c",
+          "code": "#include <stdio.h>\n\nint main() {\n    int age = 25;\n    int *ptr;      // ptr is a pointer to an integer\n\n    ptr = &age;    // ptr now holds the address of age\n\n    printf(\"Value of age: %d\\n\", age);\n    printf(\"Address of age: %p\\n\", &age);\n    printf(\"Pointer stores address: %p\\n\", ptr);\n    printf(\"Value at stored address: %d\\n\", *ptr); // Dereferencing\n\n    // Changing value via pointer\n    *ptr = 30;\n    printf(\"New value of age: %d\\n\", age);\n\n    return 0;\n}"
+        },
+        {
+          "type": "definition",
+          "heading": "2. Pointer Arithmetic (Navigating Memory)",
+          "text": "Pointer arithmetic is the process of performing mathematical operations on pointers. However, it is different from standard math. When you add 1 to a pointer, it doesn't move 1 byte; it moves by the 'size' of the data type it points to."
+        },
+        {
+          "type": "image",
+          "heading": "How Pointer Arithmetic Scales",
+          "url": "https://media.geeksforgeeks.org/wp-content/uploads/20230224115121/Pointer-Arithmetic-in-C.png"
+        },
+        {
+          "type": "list",
+          "heading": "Key Arithmetic Operations",
+          "items": [
+            "**Increment (ptr++):** Moves the pointer to the next memory location of the same type. If an int is 4 bytes, ptr++ increases the address by 4.",
+            "**Decrement (ptr--):** Moves the pointer back to the previous memory location.",
+            "**Addition/Subtraction (ptr + n):** Jumps 'n' elements forward or backward in memory.",
+            "**Pointer Subtraction (ptr1 - ptr2):** Gives the number of elements between two pointers of the same type."
+          ]
+        },
+        {
+          "type": "code",
+          "heading": "Pointer Arithmetic with Arrays",
+          "language": "c",
+          "code": "#include <stdio.h>\n\nint main() {\n    int arr[3] = {100, 200, 300};\n    int *p = arr; // Points to arr[0]\n\n    printf(\"Index 0: %d at address %p\\n\", *p, p);\n\n    p++; // Moves to next integer (usually 4 bytes ahead)\n    printf(\"Index 1: %d at address %p\\n\", *p, p);\n\n    p = p + 1;\n    printf(\"Index 2: %d at address %p\\n\", *p, p);\n\n    return 0;\n}"
+        },
+        {
+          "type": "list",
+          "heading": "Pro-Tips & Warnings",
+          "items": [
+            "**Void Pointers:** A 'void *' can point to any data type but cannot be dereferenced directly without typecasting.",
+            "**NULL Pointers:** Always initialize pointers to NULL if they don't have an address yet to avoid 'Dangling Pointers'.",
+            "**No Multiplication/Division:** You cannot multiply or divide pointers; it makes no sense to multiply a memory address!",
+            "**Boundaries:** C does not stop you from incrementing a pointer past the end of an array, which leads to 'Segmentation Faults'."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Dynamic Memory Allocation (DMA) in C",
+      "sections": [
+        {
+          "type": "definition",
+          "heading": "What is Dynamic Memory Allocation?",
+          "text": "Dynamic Memory Allocation is the process of allocating memory at 'runtime' (while the program is running) rather than at 'compile-time'. In static allocation (like normal arrays), the size is fixed and cannot change. DMA allows you to request exactly as much memory as you need, when you need it, using the Heap segment of memory."
+        },
+        {
+          "type": "image",
+          "heading": "Memory Layout: Stack vs Heap",
+          "url": "https://media.geeksforgeeks.org/wp-content/uploads/20230302125133/Memory-Layout-of-C.png"
+        },
+        {
+          "type": "list",
+          "heading": "Why use DMA?",
+          "items": [
+            "Flexibility: You can decide the size of an array during program execution.",
+            "Efficiency: Prevents memory wastage (allocating too much) or program crashes (allocating too little).",
+            "Lifespan Control: Unlike local variables (stack), dynamic memory stays until you manually delete it."
+          ]
+        },
+        {
+          "type": "syntax",
+          "heading": "The 4 Essential Functions (stdlib.h)",
+          "text": "To use DMA, you must include the <stdlib.h> header file. These functions return a 'void pointer' (void*), so you must typecast them to your desired data type."
+        },
+        {
+          "type": "list",
+          "heading": "1. malloc() - Memory Allocation",
+          "items": [
+            "Allocates a single large block of memory with the specified size.",
+            "Initializes memory with garbage values.",
+            "Syntax: ptr = (cast-type*) malloc(byte-size);"
+          ]
+        },
+        {
+          "type": "list",
+          "heading": "2. calloc() - Contiguous Allocation",
+          "items": [
+            "Allocates multiple blocks of memory of the same size.",
+            "Initializes all bytes to zero (0).",
+            "Syntax: ptr = (cast-type*) calloc(n, element-size);"
+          ]
+        },
+        {
+          "type": "list",
+          "heading": "3. realloc() - Re-allocation",
+          "items": [
+            "Used to change the size of previously allocated memory (expand or shrink).",
+            "Syntax: ptr = realloc(ptr, new-size);"
+          ]
+        },
+        {
+          "type": "list",
+          "heading": "4. free() - De-allocation",
+          "items": [
+            "Crucial Step! Releases the allocated memory back to the system.",
+            "Failing to do this causes a 'Memory Leak'.",
+            "Syntax: free(ptr);"
+          ]
+        },
+        {
+          "type": "code",
+          "heading": "Practical DMA Example (Dynamic Array)",
+          "language": "c",
+          "code": "#include <stdio.h>\n#include <stdlib.h>\n\nint main() {\n    int n, *ptr, i;\n\n    printf(\"Enter number of elements: \");\n    scanf(\"%d\", &n);\n\n    // Allocating memory using malloc\n    ptr = (int*) malloc(n * sizeof(int));\n\n    if (ptr == NULL) {\n        printf(\"Memory not allocated. System Full!\\n\");\n        exit(0);\n    }\n\n    printf(\"Memory successfully allocated using malloc.\\n\");\n\n    // Input elements\n    for (i = 0; i < n; ++i) {\n        ptr[i] = i + 1;\n    }\n\n    // Display elements\n    printf(\"The elements are: \");\n    for (i = 0; i < n; ++i) {\n        printf(\"%d \", ptr[i]);\n    }\n\n    // Free the memory\n    free(ptr);\n    printf(\"\\nMemory successfully freed.\\n\");\n\n    return 0;\n}"
+        },
+        {
+          "type": "textblock",
+          "heading": "Summary Table",
+          "text": "| Function | Description | Initial Value |\n| :--- | :--- | :--- |\n| malloc() | Allocates 1 block | Garbage |\n| calloc() | Allocates multiple blocks | Zero |\n| realloc() | Resizes existing block | Previous values |\n| free() | Clears memory | N/A |"
+        }
+      ]
+    },
+    {
+      "title": "Structures in C (User-Defined Data Types)",
+      "sections": [
+        {
+          "type": "definition",
+          "heading": "What is a Structure?",
+          "text": "A structure in C is a user-defined data type that allows you to group together variables of **different data types** under a single name. While an array holds elements of the same type, a structure is used to represent a record. For example, a 'Student' structure might group a string (name), an int (roll number), and a float (marks)."
+        },
+        {
+          "type": "image",
+          "heading": "Visualizing Structure Memory",
+          "url": "https://media.geeksforgeeks.org/wp-content/uploads/20230302125027/Structures-in-C.png"
+        },
+        {
+          "type": "list",
+          "heading": "Key Differences: Array vs. Structure",
+          "items": [
+            "**Array:** Collection of homogeneous elements (same type).",
+            "**Structure:** Collection of heterogeneous elements (different types).",
+            "**Access:** Array elements are accessed by index; structure members are accessed by name using the dot (.) operator."
+          ]
+        },
+        {
+          "type": "syntax",
+          "heading": "Defining and Declaring a Structure",
+          "text": "You use the 'struct' keyword to define the template, and then declare variables of that type.\n\nstruct StructureName {\n    data_type member1;\n    data_type member2;\n};"
+        },
+        {
+          "type": "list",
+          "heading": "Accessing Members",
+          "items": [
+            "**Dot Operator (.):** Used to access members of a structure variable.",
+            "**Arrow Operator (->):** Used to access members when dealing with a pointer to a structure."
+          ]
+        },
+        {
+          "type": "code",
+          "heading": "Complete Structure Example",
+          "language": "c",
+          "code": "#include <stdio.h>\n#include <string.h>\n\n// Defining the structure\nstruct Student {\n    int rollNo;\n    char name[50];\n    float marks;\n};\n\nint main() {\n    // Declaring a structure variable\n    struct Student s1;\n\n    // Assigning values\n    s1.rollNo = 101;\n    strcpy(s1.name, \"Rahul\");\n    s1.marks = 88.5;\n\n    // Printing values\n    printf(\"Student Details:\\n\");\n    printf(\"Roll No: %d\\n\", s1.rollNo);\n    printf(\"Name: %s\\n\", s1.name);\n    printf(\"Marks: %.2f\\n\", s1.marks);\n\n    return 0;\n}"
+        },
+        {
+          "type": "textblock",
+          "heading": "Memory Allocation in Structures",
+          "text": "The total size of a structure is the sum of the sizes of its members (though sometimes the compiler adds 'padding' for alignment). You can find the total size using: **sizeof(struct Student)**."
+        },
+        {
+          "type": "list",
+          "heading": "Advanced Concepts",
+          "items": [
+            "**Nested Structures:** A structure can contain another structure as a member.",
+            "**Array of Structures:** Used to store multiple records, e.g., struct Student classA[50];",
+            "**Typedef:** Used to create an alias, making the code cleaner. (e.g., typedef struct Student Stu; allows you to just write Stu s1;)"
+          ]
+        },
+        {
+          "type": "code",
+          "heading": "Example: Array of Structures",
+          "language": "c",
+          "code": "#include <stdio.h>\n\nstruct Point {\n    int x, y;\n};\n\nint main() {\n    struct Point arr[2] = {{1, 2}, {3, 4}};\n\n    for(int i = 0; i < 2; i++) {\n        printf(\"Point %d: (%d, %d)\\n\", i+1, arr[i].x, arr[i].y);\n    }\n    return 0;\n}"
+        }
+      ]
+    },
+    {
+      "title": "File Handling in C",
+      "sections": [
+        {
+          "type": "definition",
+          "heading": "What is File Handling?",
+          "text": "File handling in C is the process of storing data permanently in a file on the disk. Without file handling, the data in a program is lost once the program terminates. By using file handling, we can read data from files, write data to them, and manage them using the 'FILE' structure defined in <stdio.h>."
+        },
+        {
+          "type": "image",
+          "heading": "File Operations Flow",
+          "url": "https://media.geeksforgeeks.org/wp-content/uploads/20230302125224/File-Handling-in-C.png"
+        },
+        {
+          "type": "list",
+          "heading": "Basic File Operations",
+          "items": [
+            "**Opening a file:** Creating a new file or opening an existing one using fopen().",
+            "**Reading/Writing:** Transferring data between the program and the file.",
+            "**Closing a file:** Saving changes and releasing memory using fclose()."
+          ]
+        },
+        {
+          "type": "syntax",
+          "heading": "File Pointer and Opening",
+          "text": "To handle a file, you must declare a pointer of type FILE.\n\nFILE *fp;\nfp = fopen(\"filename.txt\", \"mode\");"
+        },
+        {
+          "type": "list",
+          "heading": "Common File Modes",
+          "items": [
+            "**'r':** Opens a file for reading. If the file doesn't exist, it returns NULL.",
+            "**'w':** Opens a file for writing. If the file exists, its content is overwritten. If not, a new file is created.",
+            "**'a':** Opens a file for appending. New data is added at the end without deleting old content.",
+            "**'r+':** Opens for both reading and writing.",
+            "**'w+':** Opens for both reading and writing (overwrites existing)."
+          ]
+        },
+        {
+          "type": "list",
+          "heading": "Essential Functions",
+          "items": [
+            "**fprintf() / fscanf():** Formatted writing and reading (similar to printf/scanf).",
+            "**fputc() / fgetc():** Writing and reading a single character.",
+            "**fputs() / fgets():** Writing and reading a full string.",
+            "**fwrite() / fread():** Used for binary file operations."
+          ]
+        },
+        {
+          "type": "code",
+          "heading": "Example: Writing to a File",
+          "language": "c",
+          "code": "#include <stdio.h>\n\nint main() {\n    FILE *fp;\n    fp = fopen(\"test.txt\", \"w\"); // Open for writing\n\n    if (fp == NULL) {\n        printf(\"Error opening file!\");\n        return 1;\n    }\n\n    fprintf(fp, \"Hello! This is stored in a file.\\n\");\n    fprintf(fp, \"File handling is powerful.\");\n\n    fclose(fp); // Always close the file\n    printf(\"Data successfully written.\");\n\n    return 0;\n}"
+        },
+        {
+          "type": "code",
+          "heading": "Example: Reading from a File",
+          "language": "c",
+          "code": "#include <stdio.h>\n\nint main() {\n    FILE *fp;\n    char buffer[100];\n    fp = fopen(\"test.txt\", \"r\"); // Open for reading\n\n    if (fp == NULL) {\n        printf(\"File not found!\");\n        return 1;\n    }\n\n    // Read file line by line until EOF (End Of File)\n    while (fgets(buffer, 100, fp) != NULL) {\n        printf(\"%s\", buffer);\n    }\n\n    fclose(fp);\n    return 0;\n}"
+        },
+        {
+          "type": "textblock",
+          "heading": "Important Note: Closing Files",
+          "text": "Always use **fclose(fp)**. If you don't close a file, data might not be saved correctly, and it can lead to memory leaks or file corruption as the system resources remain locked."
+        }
+      ]
+    },
+    {
+      "title": "Preprocessor Directives in C",
+      "sections": [
+        {
+          "type": "definition",
+          "heading": "What is a Preprocessor?",
+          "text": "The preprocessor is a program that processes your source code **before** it is passed to the compiler. Preprocessor directives are instructions that start with a hash symbol (#). They tell the preprocessor to perform specific actions like including files, defining constants, or conditional compilation."
+        },
+        {
+          "type": "image",
+          "heading": "C Compilation Process",
+          "url": "https://media.geeksforgeeks.org/wp-content/uploads/20230302125310/C-Compilation-Process.png"
+        },
+        {
+          "type": "list",
+          "heading": "Key Characteristics",
+          "items": [
+            "All directives begin with the **#** symbol.",
+            "They are not C statements, so they **do not end with a semicolon (;)**.",
+            "They are usually placed at the very top of the source file.",
+            "The preprocessor replaces these directives with actual code before the compiler sees it."
+          ]
+        },
+        {
+          "type": "list",
+          "heading": "1. File Inclusion (#include)",
+          "items": [
+            "Used to include external files into the current source file.",
+            "**#include <stdio.h>**: Searches for the file in standard system directories (used for library files).",
+            "**#include \"myheader.h\"**: Searches for the file in the current working directory (used for user-defined files)."
+          ]
+        },
+        {
+          "type": "list",
+          "heading": "2. Macros (#define)",
+          "items": [
+            "Used to define symbolic constants or small code snippets.",
+            "**Constant Macro:** #define PI 3.14 (Replaces every 'PI' in the code with 3.14).",
+            "**Function-like Macro:** #define SQUARE(x) (x*x) (Calculates square at preprocessing time)."
+          ]
+        },
+        {
+          "type": "list",
+          "heading": "3. Conditional Compilation (#ifdef, #ifndef, #if, #else, #endif)",
+          "items": [
+            "Allows the compiler to compile specific parts of the code only if certain conditions are met.",
+            "Highly useful for cross-platform development (e.g., executing different code for Windows vs. Linux).",
+            "**#ifndef** (if not defined) is commonly used in header files to prevent multiple inclusion (Header Guards)."
+          ]
+        },
+        {
+          "type": "code",
+          "heading": "Preprocessor Directives Example",
+          "language": "c",
+          "code": "#include <stdio.h>\n\n// Macro definition\n#define LIMIT 5\n#define AREA(r) (3.14 * r * r)\n\nint main() {\n    #ifdef LIMIT\n        printf(\"The limit is: %d\\n\", LIMIT);\n    #endif\n\n    float radius = 2.0;\n    printf(\"Area of circle: %.2f\\n\", AREA(radius));\n\n    return 0;\n}"
+        },
+        {
+          "type": "list",
+          "heading": "4. Miscellaneous Directives",
+          "items": [
+            "**#undef:** Used to undefine an existing macro.",
+            "**#pragma:** Used to provide machine-specific or operating system-specific instructions to the compiler (e.g., #pragma pack to prevent padding)."
+          ]
+        },
+        {
+          "type": "textblock",
+          "heading": "Summary Table",
+          "text": "| Directive | Usage |\n| :--- | :--- |\n| #include | Includes a directory/file |\n| #define | Defines a macro constant or function |\n| #undef | Removes a macro definition |\n| #ifdef | Checks if a macro is defined |\n| #error | Stops compilation and shows an error message |"
+        }
+      ]
+    }
+
+
+
+
+
+
+
+  ]
+}
+
